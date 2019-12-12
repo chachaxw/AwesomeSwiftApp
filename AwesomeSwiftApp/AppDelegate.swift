@@ -5,11 +5,13 @@
 //  Copyright © Chacha. All rights reserved.
 //
 
+import Log
 import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let log = Logger(formatter: .detailed, theme: .tomorrowNight)
     lazy private var router = RootRouter()
     lazy private var deeplinkHandler = DeeplinkHandler()
     lazy private var notificationsHandler = NotificationsHandler()
@@ -24,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // App structure
         router.loadMainAppStructure()
+
+        log.debug("App Delegate", self)
 
         return true
     }
