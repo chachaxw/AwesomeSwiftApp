@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "R.swift.Library",
+        "repositoryURL": "https://github.com/mac-cain13/R.swift.Library",
+        "state": {
+          "branch": null,
+          "revision": "4a09ece7d0a30edcd95462ce7d252dd4d3a49843",
+          "version": "5.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
