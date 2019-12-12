@@ -18,7 +18,7 @@
 		38CF65B3160534529D8C0ADD /* Pods_AwesomeSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ABCB4B50669FECE8F50EB5 /* Pods_AwesomeSwiftApp.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
-		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
+		93DB5E2E23A0DFD500D14761 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* SwiftPackageProductDependency */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
 		C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -70,7 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38CF65B3160534529D8C0ADD /* Pods_AwesomeSwiftApp.framework in Frameworks */,
-				93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */,
+				93DB5E2E23A0DFD500D14761 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,6 @@
 				55F50BE321404BDD00FAC039 /* Readme.md */,
 				2A1E77351F384BFC006C84D4 /* AwesomeSwiftApp */,
 				2A1E774A1F384BFD006C84D4 /* AwesomeSwiftAppTests */,
-				2A1E77341F384BFC006C84D4 /* Products */,
 				0E08FF9F96844540D9BD1466 /* Pods */,
 				B112C7DFF94DFDA6D7C8C8CB /* Frameworks */,
 			);
@@ -125,6 +124,7 @@
 				2A1E77471F384BFD006C84D4 /* AwesomeSwiftAppTests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2A1E77351F384BFC006C84D4 /* AwesomeSwiftApp */ = {
@@ -144,6 +144,7 @@
 		2A1E774A1F384BFD006C84D4 /* AwesomeSwiftAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2A1E77341F384BFC006C84D4 /* Products */,
 				2A9222841F387B1D00A648E6 /* AwesomeSwiftAppTests-Bridging-Header.h */,
 				2A1E774D1F384BFD006C84D4 /* Info.plist */,
 				C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */,
@@ -282,7 +283,7 @@
 			);
 			name = AwesomeSwiftApp;
 			packageProductDependencies = (
-				93DB5E2D23A0DFD500D14761 /* Rswift */,
+				93DB5E2D23A0DFD500D14761 /* SwiftPackageProductDependency */,
 			);
 			productName = AwesomeSwiftApp;
 			productReference = 2A1E77331F384BFC006C84D4 /* Swift App.app */;
@@ -337,7 +338,7 @@
 			);
 			mainGroup = 2A1E772A1F384BFC006C84D4;
 			packageReferences = (
-				93DB5E2C23A0DFD500D14761 /* XCRemoteSwiftPackageReference "R.swift" */,
+				93DB5E2C23A0DFD500D14761 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 2A1E77341F384BFC006C84D4 /* Products */;
 			projectDirPath = "";
@@ -376,15 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -401,7 +399,7 @@
 			);
 			name = R.swift;
 			outputPaths = (
-				$SRCROOT/AwesomeSwiftApp/Resources/Generated/R.generated.swift,
+				"$SRCROOT/AwesomeSwiftApp/Resources/Generated/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -851,7 +849,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		93DB5E2C23A0DFD500D14761 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+		93DB5E2C23A0DFD500D14761 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
 			requirement = {
@@ -862,9 +860,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		93DB5E2D23A0DFD500D14761 /* Rswift */ = {
+		93DB5E2D23A0DFD500D14761 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 93DB5E2C23A0DFD500D14761 /* XCRemoteSwiftPackageReference "R.swift" */;
+			package = 93DB5E2C23A0DFD500D14761 /* RemoteSwiftPackageReference */;
 			productName = Rswift;
 		};
 /* End XCSwiftPackageProductDependency section */

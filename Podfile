@@ -9,9 +9,12 @@ inhibit_all_warnings!
 
 target 'AwesomeSwiftApp' do
 
+  use_frameworks!
+
   pod 'R.swift', '5.0.0'
   pod 'SwiftLint', '0.31.0'
   pod 'AFNetworking', '~> 3.0'
+  pod 'Log'
 
   target 'AwesomeSwiftAppTests' do
     inherit! :search_paths

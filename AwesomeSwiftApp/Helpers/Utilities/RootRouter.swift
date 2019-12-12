@@ -27,7 +27,13 @@ class RootRouter {
     func loadMainAppStructure() {
         // Customize your app structure here
         let controller = UIViewController()
-        controller.view.backgroundColor = UIColor.red
+//        let textView = UITextView(frame: CGRect(20, 50, 200, 40)
+//
+//        textView.text = "Hello Chacha!"
+//        textView.textColor = UIColor.white
+
+        controller.view.backgroundColor = UIColor.init(red: 27/255.0, green: 95/255.0, blue: 191/255.0, alpha: 1)
+//        controller.view.addSubview(textView)
         setRootViewController(controller: controller, animatedWithOptions: nil)
     }
 }
