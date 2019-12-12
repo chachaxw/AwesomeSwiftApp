@@ -40,7 +40,7 @@
 		13D32124D49E463C8A070FB1 /* Pods-AwesomeSwiftAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftAppTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftAppTests/Pods-AwesomeSwiftAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A1DD4DE1F389C2200712195 /* DeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandler.swift; sourceTree = "<group>"; };
 		2A1DD4E01F389E2100712195 /* NotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHandler.swift; sourceTree = "<group>"; };
-		2A1E77331F384BFC006C84D4 /* AwesomeSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1E77331F384BFC006C84D4 /* Swift App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1E77361F384BFC006C84D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1E773D1F384BFD006C84D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A1E77401F384BFD006C84D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		2A1E77341F384BFC006C84D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A1E77331F384BFC006C84D4 /* AwesomeSwiftApp.app */,
+				2A1E77331F384BFC006C84D4 /* Swift App.app */,
 				2A1E77471F384BFD006C84D4 /* AwesomeSwiftAppTests.xctest */,
 			);
 			name = Products;
@@ -285,7 +285,7 @@
 				93DB5E2D23A0DFD500D14761 /* Rswift */,
 			);
 			productName = AwesomeSwiftApp;
-			productReference = 2A1E77331F384BFC006C84D4 /* AwesomeSwiftApp.app */;
+			productReference = 2A1E77331F384BFC006C84D4 /* Swift App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2A1E77461F384BFD006C84D4 /* AwesomeSwiftAppTests */ = {
@@ -641,7 +641,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -warn-long-expression-type-checking=500";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swift App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -661,7 +661,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swift App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -786,7 +786,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swift App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
