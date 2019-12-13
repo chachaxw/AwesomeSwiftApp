@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "FontAwesome",
+        "repositoryURL": "https://github.com/thii/FontAwesome.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "51f059d794d1435a02c0ec6212a930243e1e40e0",
+          "version": "1.8.2"
+        }
+      },
+      {
         "package": "R.swift.Library",
         "repositoryURL": "https://github.com/mac-cain13/R.swift.Library",
         "state": {

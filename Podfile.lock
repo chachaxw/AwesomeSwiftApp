@@ -14,33 +14,41 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FontAwesome.swift (1.8.2)
   - Log (2.0)
   - R.swift (5.0.0):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
   - SwiftLint (0.31.0)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - FontAwesome.swift
   - Log
   - R.swift (= 5.0.0)
   - SwiftLint (= 0.31.0)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - FontAwesome.swift
     - Log
     - R.swift
     - R.swift.Library
     - SwiftLint
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FontAwesome.swift: 7938d6a03113ff3f39001bde7f50be8a0903d605
   Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: fed16ef7428ce237a10f7f0137478a8ff67e7fc1
+PODFILE CHECKSUM: ac9b6da8713104e739721fc4bc79abd305e0c832
 
 COCOAPODS: 1.8.4
