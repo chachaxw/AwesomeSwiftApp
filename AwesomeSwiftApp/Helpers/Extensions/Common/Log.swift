@@ -20,5 +20,11 @@ extension Formatters {
 }
 
 extension Themes {
-    static let tomorrowNight = Theme(trace: "#C5C8C6", debug: "#81A2BE", info: "#B5BD68", warning: "#F0C674", error: "#CC6666")
+    static let tomorrowNight = Theme(
+        trace: "#C5C8C6",
+        debug: "#81A2BE",
+        info: "#B5BD68",
+        warning: "#F0C674",
+        error: "#CC6666"
+    )
 }
