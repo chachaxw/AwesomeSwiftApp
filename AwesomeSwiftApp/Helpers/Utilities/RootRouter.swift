@@ -8,7 +8,6 @@
 import UIKit
 
 class RootRouter {
-    let backgroundColor: UIColor = UIColor(red: 248 / 255.0, green: 248 / 255.0, blue: 248 / 255.0, alpha: 1)
 
     /** Replaces root view controller. You can specify the replacment animation type.
      If no animation type is specified, there is no animation */
@@ -28,7 +27,7 @@ class RootRouter {
     func loadMainAppStructure() {
         // Customize your app structure here
         let controller = UIViewController()
-        controller.view.backgroundColor = self.backgroundColor
+        controller.view.backgroundColor = UIColor.Theme.LightGrayColor
         setRootViewController(controller: controller, animatedWithOptions: nil)
     }
 }
