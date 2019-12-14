@@ -34,10 +34,12 @@ class RootRouter {
     func loadMainAppStructure() {
         // Customize your app structure here
         let controller = UIViewController()
-        let imageView = UIImageView(image: appleIcon)
+        let menuBtn = UIButton(frame: CGRect(x: 80, y: 80, width: 88, height: 88))
+
+        menuBtn.setImageAndTitle(image: appleIcon, title: "Applie", type: .positionTop, Space: 10)
 
         controller.view.backgroundColor = UIColor.Theme.LightGrayColor
-        controller.view.addSubview(imageView)
+        controller.view.addSubview(menuBtn)
         setRootViewController(controller: controller, animatedWithOptions: nil)
     }
 }

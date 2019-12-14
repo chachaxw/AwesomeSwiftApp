@@ -23,6 +23,7 @@
 		93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */; };
 		93A1759723A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */; };
 		93A1759823A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759523A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf */; };
+		93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A1759A23A4A1C200A684D6 /* UIButton+Image.swift */; };
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
@@ -69,6 +70,7 @@
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
 		93A1759523A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		93A1759A23A4A1C200A684D6 /* UIButton+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Image.swift"; sourceTree = "<group>"; };
 		93AC8F1823A39C6000303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AC8F1C23A39F4900303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		2AB31DA41F38745300B7D1F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				93A1759923A4A15400A684D6 /* UIKit */,
 				937A1E5D23A26CED0089B60F /* Common */,
 			);
 			path = Extensions;
@@ -289,6 +292,14 @@
 				93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */,
 			);
 			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		93A1759923A4A15400A684D6 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				93A1759A23A4A1C200A684D6 /* UIButton+Image.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		B112C7DFF94DFDA6D7C8C8CB /* Frameworks */ = {
@@ -518,6 +529,7 @@
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
+				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
