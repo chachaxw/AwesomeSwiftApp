@@ -22,8 +22,8 @@ extension UIButton {
         self.setImage(image, for: .normal)
         self.setTitleColor(UIColor.white, for: .normal)
 
-        let imageWidth: CGFloat = (self.imageView?.frame.width)!
-        let imageHeight: CGFloat = (self.imageView?.frame.height)!
+        let imageWidth: CGFloat = self.imageView?.frame.width ?? 88
+        let imageHeight: CGFloat = self.imageView?.frame.height ?? 88
 
         var labelWidth: CGFloat = 0.0
         var labelHeight: CGFloat = 0.0

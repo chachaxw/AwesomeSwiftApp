@@ -18,6 +18,7 @@
 		38CF65B3160534529D8C0ADD /* Pods_AwesomeSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ABCB4B50669FECE8F50EB5 /* Pods_AwesomeSwiftApp.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
+		932B291E23A5FEDC009FDBEF /* LaunchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B291D23A5FEDC009FDBEF /* LaunchScreenController.swift */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
 		93A1759123A3C76100A684D6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 93A1759023A3C76100A684D6 /* FontAwesome */; };
 		93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */; };
@@ -67,6 +68,7 @@
 		7047358B3341C2E87C7BE318 /* Pods-AwesomeSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.release.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7C5619126C0D57DADE3E9C71 /* Pods-AwesomeSwiftAppTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftAppTests.staging.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftAppTests/Pods-AwesomeSwiftAppTests.staging.xcconfig"; sourceTree = "<group>"; };
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		932B291D23A5FEDC009FDBEF /* LaunchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1E773F1F384BFD006C84D4 /* LaunchScreen.storyboard */,
+				932B291D23A5FEDC009FDBEF /* LaunchScreenController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -151,13 +154,13 @@
 			isa = PBXGroup;
 			children = (
 				C90395231FC622D2006F1DC0 /* main.swift */,
+				93A1759C23A4B0E800A684D6 /* Main.storyboard */,
 				2A1E77361F384BFC006C84D4 /* AppDelegate.swift */,
 				2AFB31021F3853C6009C4586 /* Resources */,
 				2AFB31071F38542E009C4586 /* SupportingFiles */,
 				2AB31D9E1F38740A00B7D1F3 /* Models */,
 				2AB31D9F1F38741400B7D1F3 /* Modules */,
 				2AFB310A1F385A20009C4586 /* Helpers */,
-				93A1759C23A4B0E800A684D6 /* Main.storyboard */,
 			);
 			path = AwesomeSwiftApp;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			files = (
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
+				932B291E23A5FEDC009FDBEF /* LaunchScreenController.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
