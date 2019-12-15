@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchScreen" id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -19,19 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zJA-xv-PN6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="zJA-xv-PN6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Chacha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dup-Xg-q6d">
-                                <rect key="frame" x="95" y="386" width="185" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="1dy-9j-7aB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <color key="highlightedColor" red="0.7696434258" green="0.90680781460000004" blue="0.95523184539999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
@@ -40,11 +31,8 @@
                         <constraints>
                             <constraint firstItem="zJA-xv-PN6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="KUF-Tl-YLt"/>
                             <constraint firstAttribute="trailing" secondItem="zJA-xv-PN6" secondAttribute="trailing" id="S2P-hI-blZ"/>
-                            <constraint firstItem="Dup-Xg-q6d" firstAttribute="centerX" secondItem="zJA-xv-PN6" secondAttribute="centerX" id="VSL-1t-fLt"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zJA-xv-PN6" secondAttribute="bottom" constant="-34" id="eSO-gZ-B21"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Dup-Xg-q6d" secondAttribute="bottom" constant="352" id="hgM-Fe-KiU"/>
                             <constraint firstItem="zJA-xv-PN6" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-44" id="qAz-TW-73G"/>
-                            <constraint firstItem="Dup-Xg-q6d" firstAttribute="centerY" secondItem="zJA-xv-PN6" secondAttribute="centerY" id="vG9-gQ-jDw"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -53,4 +41,7 @@
             <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash" width="375" height="812"/>
+    </resources>
 </document>

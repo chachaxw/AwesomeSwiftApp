@@ -28,8 +28,8 @@ extension UIButton {
         var labelWidth: CGFloat = 0.0
         var labelHeight: CGFloat = 0.0
 
-        labelWidth = CGFloat(self.titleLabel!.intrinsicContentSize.width)
-        labelHeight = CGFloat(self.titleLabel!.intrinsicContentSize.height)
+        labelWidth = CGFloat(self.titleLabel?.intrinsicContentSize.width ?? 88)
+        labelHeight = CGFloat(self.titleLabel?.intrinsicContentSize.height ?? 32)
 
         var imageEdgeInsets: UIEdgeInsets = UIEdgeInsets()
         var labelEdgeInsets: UIEdgeInsets = UIEdgeInsets()
