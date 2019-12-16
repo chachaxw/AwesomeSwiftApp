@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				2A1E773F1F384BFD006C84D4 /* LaunchScreen.storyboard */,
-				932B291D23A5FEDC009FDBEF /* LaunchScreenViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				C90395231FC622D2006F1DC0 /* main.swift */,
 				93A1759C23A4B0E800A684D6 /* Main.storyboard */,
 				2A1E77361F384BFC006C84D4 /* AppDelegate.swift */,
+				932B291D23A5FEDC009FDBEF /* LaunchScreenViewController.swift */,
 				2AFB31021F3853C6009C4586 /* Resources */,
 				2AFB31071F38542E009C4586 /* SupportingFiles */,
 				2AB31D9E1F38740A00B7D1F3 /* Models */,
