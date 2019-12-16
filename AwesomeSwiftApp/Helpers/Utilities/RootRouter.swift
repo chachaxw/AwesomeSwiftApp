@@ -9,12 +9,6 @@ import FontAwesome
 import UIKit
 
 class RootRouter {
-    let appleIcon = UIImage.fontAwesomeIcon(
-        name: .apple,
-        style: .brands,
-        textColor: UIColor.Theme.PrimaryColor,
-        size: CGSize(width: 120, height: 120)
-    )
 
     /** Replaces root view controller. You can specify the replacment animation type.
      If no animation type is specified, there is no animation */
@@ -33,7 +27,7 @@ class RootRouter {
 
     func loadMainAppStructure() {
         // Customize your app structure here
-        let controller = UIViewController()
+        let controller = RootViewController()
         controller.view.backgroundColor = UIColor.Theme.LightGrayColor
         setRootViewController(controller: controller, animatedWithOptions: nil)
     }

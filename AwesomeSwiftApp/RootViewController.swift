@@ -9,7 +9,7 @@
 import Log
 import UIKit
 
-class LaunchScreenViewController: UIViewController, CAAnimationDelegate {
+class RootViewController: UIViewController, CAAnimationDelegate {
     var maskView: UIView!
 
     override func viewDidLoad() {
@@ -18,6 +18,10 @@ class LaunchScreenViewController: UIViewController, CAAnimationDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let homeView = UIView()
+        homeView.backgroundColor = UIColor.Theme.LightGrayColor
+        self.view.addSubview(homeView)
 
         // Logo layer
         let logoLayer = CALayer()
@@ -38,6 +42,7 @@ class LaunchScreenViewController: UIViewController, CAAnimationDelegate {
 
         let logoAnimation = CAKeyframeAnimation(keyPath: "bounds")
         logoAnimation.beginTime = CACurrentMediaTime() + 1
+        logoAnimation.duration = 1
         logoAnimation.keyTimes = [0, 0.4, 1]
         logoAnimation.values = [
             NSValue(cgRect: CGRect(x: 0, y: 0, width: 181, height: 35)),
@@ -49,7 +54,15 @@ class LaunchScreenViewController: UIViewController, CAAnimationDelegate {
             CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         ]
         logoAnimation.fillMode = CAMediaTimingFillMode.forwards
-        logoLayer.add(logoAnimation, forKey: "opacityAnimation")
+        logoLayer.add(logoAnimation, forKey: "zoomAnimation")
+        
+        let logoOpacityAnimation = CABasicAnimation(keyPath: "opacity")
+        logoOpacityAnimation.beginTime = CACurrentMediaTime() + 1
+        logoOpacityAnimation.duration = 1
+        logoOpacityAnimation.fromValue = 1
+        logoOpacityAnimation.toValue = 0
+        logoOpacityAnimation.delegate = self
+        maskView.layer.add(logoOpacityAnimation, forKey: "opacityAnimation")
     }
 
     override var prefersStatusBarHidden: Bool {
