@@ -29,6 +29,8 @@
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
+		93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDCD5223A8D422000CC181 /* HomeViewController.swift */; };
+		93FDCD5523A8DB4D000CC181 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FDCD5423A8DB4C000CC181 /* HomeView.xib */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
 		C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -79,6 +81,8 @@
 		93AC8F1C23A39F4900303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		93FDCD5223A8D422000CC181 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		93FDCD5423A8DB4C000CC181 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		2AB31D9F1F38741400B7D1F3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				93FDCD5123A8D3F5000CC181 /* Home */,
 				2A1DD4E21F38A09700712195 /* Launch */,
 			);
 			path = Modules;
@@ -308,6 +313,15 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		93FDCD5123A8D3F5000CC181 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				93FDCD5223A8D422000CC181 /* HomeViewController.swift */,
+				93FDCD5423A8DB4C000CC181 /* HomeView.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B112C7DFF94DFDA6D7C8C8CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +430,7 @@
 			files = (
 				2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */,
 				93A1759723A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				93FDCD5523A8DB4D000CC181 /* HomeView.xib in Resources */,
 				93A1759823A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */,
 				FCB2C7CB1F57127800481080 /* Localizable.strings in Resources */,
@@ -538,6 +553,7 @@
 				932B291E23A5FEDC009FDBEF /* RootViewController.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
+				93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
