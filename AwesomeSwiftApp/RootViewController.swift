@@ -20,7 +20,7 @@ class RootViewController: UIViewController, CAAnimationDelegate {
         super.viewWillAppear(animated)
 
         let homeView = UIView()
-        homeView.backgroundColor = UIColor.Theme.LightGrayColor
+        homeView.backgroundColor = UIColor.Theme.PrimaryColor
         self.view.addSubview(homeView)
 
         // Logo layer
@@ -29,8 +29,6 @@ class RootViewController: UIViewController, CAAnimationDelegate {
         logoLayer.position = view.center
         logoLayer.contents = R.image.chacha()?.cgImage
         view.layer.mask = logoLayer
-
-        print("View", view as Any, "Self View", self.view ?? "Self view is nil")
 
         maskView = UIView(frame: view.frame)
         maskView.backgroundColor = UIColor.white

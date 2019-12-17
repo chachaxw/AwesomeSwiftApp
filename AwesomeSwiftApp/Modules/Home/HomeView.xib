@@ -14,19 +14,43 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-lk-huc">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-lk-huc">
+                    <rect key="frame" x="0.0" y="32" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1B-lj-Yd7">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1B-lj-Yd7">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-Ko-68w">
+                            <rect key="frame" x="142" y="8" width="130" height="31"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="OQm-BU-AeL" firstAttribute="bottom" secondItem="zmJ-Ko-68w" secondAttribute="bottom" constant="736" id="8Rv-7c-AuG"/>
+                        <constraint firstItem="zmJ-Ko-68w" firstAttribute="top" secondItem="G1B-lj-Yd7" secondAttribute="topMargin" id="LTp-ws-Vhd"/>
+                        <constraint firstAttribute="trailing" secondItem="zmJ-Ko-68w" secondAttribute="trailing" constant="141" id="OLA-c2-XgX"/>
+                        <constraint firstItem="zmJ-Ko-68w" firstAttribute="leading" secondItem="OQm-BU-AeL" secondAttribute="leading" constant="142" id="RDs-6x-MIv"/>
+                        <constraint firstAttribute="bottom" secondItem="zmJ-Ko-68w" secondAttribute="bottom" constant="736" id="ZPO-PZ-dR2"/>
+                        <constraint firstItem="zmJ-Ko-68w" firstAttribute="centerX" secondItem="G1B-lj-Yd7" secondAttribute="centerX" id="i4k-Hx-hVT"/>
+                    </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="sGe-Ya-7zU"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="OQm-BU-AeL"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="09c-Zq-WWg"/>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="leading" secondItem="ZSX-lk-huc" secondAttribute="leading" id="8ZP-Yg-8ZG"/>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="trailing" secondItem="ZSX-lk-huc" secondAttribute="trailing" id="Gid-ea-TDS"/>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="top" secondItem="ZSX-lk-huc" secondAttribute="bottom" id="S7m-8s-D1v"/>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gUt-Oy-oUa"/>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pn1-7S-SIH"/>
+                <constraint firstItem="G1B-lj-Yd7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="88" id="w4D-DX-OtR"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </view>
