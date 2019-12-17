@@ -18,7 +18,7 @@ class RootViewController: UIViewController, CAAnimationDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         let homeView = UIView()
         homeView.backgroundColor = UIColor.Theme.LightGrayColor
         self.view.addSubview(homeView)
@@ -55,7 +55,7 @@ class RootViewController: UIViewController, CAAnimationDelegate {
         ]
         logoAnimation.fillMode = CAMediaTimingFillMode.forwards
         logoLayer.add(logoAnimation, forKey: "zoomAnimation")
-        
+
         let logoOpacityAnimation = CABasicAnimation(keyPath: "opacity")
         logoOpacityAnimation.beginTime = CACurrentMediaTime() + 1
         logoOpacityAnimation.duration = 1
