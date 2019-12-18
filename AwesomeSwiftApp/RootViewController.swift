@@ -22,6 +22,8 @@ class RootViewController: UIViewController, CAAnimationDelegate {
 
         self.addChild(homeViewCtrl)
 
+        print("首页控制器", homeViewCtrl)
+
         // Logo layer
         let logoLayer = CALayer()
         logoLayer.bounds = CGRect(x: 0, y: 0, width: 181, height: 35)

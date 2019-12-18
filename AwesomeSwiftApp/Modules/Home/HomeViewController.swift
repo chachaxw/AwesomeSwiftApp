@@ -16,4 +16,8 @@ class HomeViewController: UIViewController {
 
         print("首页", homeView ?? "Hello World")
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
