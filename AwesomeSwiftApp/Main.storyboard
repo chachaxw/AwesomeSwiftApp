@@ -11,7 +11,7 @@
         <!--Root View Controller-->
         <scene sceneID="sjN-1p-h1f">
             <objects>
-                <viewController id="MGF-ES-gxb" customClass="RootViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MGF-ES-gxb" customClass="RootViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KnI-bV-tM0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,9 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var homeView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("首页", self)
+        print("首页", homeView ?? "Hello World")
     }
 }

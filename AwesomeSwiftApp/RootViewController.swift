@@ -11,6 +11,7 @@ import UIKit
 
 class RootViewController: UIViewController, CAAnimationDelegate {
     var maskView: UIView!
+    var homeViewCtrl = HomeViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,7 @@ class RootViewController: UIViewController, CAAnimationDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let homeView = UIView()
-        homeView.backgroundColor = UIColor.Theme.PrimaryColor
-        self.view.addSubview(homeView)
+        self.addChild(homeViewCtrl)
 
         // Logo layer
         let logoLayer = CALayer()
