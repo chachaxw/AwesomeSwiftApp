@@ -10,8 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target">
             <connections>
-                <outlet property="searchBar" destination="ZSX-lk-huc" id="GpU-Or-BKP"/>
-                <outlet property="tabBar" destination="qJz-Ki-XJz" id="Nia-pG-m3p"/>
+                <outlet property="searchBar" destination="ZSX-lk-huc" id="lwP-CY-PtW"/>
+                <outlet property="segmentBar" destination="zmJ-Ko-68w" id="Dqz-kR-R3a"/>
+                <outlet property="tabBar" destination="qJz-Ki-XJz" id="4Kh-gt-RdH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KYS-Oh-bsk"/>
             </connections>
         </placeholder>
@@ -20,42 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-lk-huc">
-                    <rect key="frame" x="0.0" y="32" width="414" height="56"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="56" id="gTH-hr-UJp"/>
-                    </constraints>
-                    <color key="tintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1B-lj-Yd7">
-                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                    <subviews>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-Ko-68w">
-                            <rect key="frame" x="75" y="8" width="264" height="31"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="264" id="G4d-Z4-9iJ"/>
-                                <constraint firstAttribute="height" constant="30" id="eNa-TT-CJP"/>
-                            </constraints>
-                            <segments>
-                                <segment title="Hot"/>
-                                <segment title="Recently"/>
-                            </segments>
-                        </segmentedControl>
-                    </subviews>
-                    <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="OQm-BU-AeL" firstAttribute="bottom" secondItem="zmJ-Ko-68w" secondAttribute="bottom" constant="736" id="8Rv-7c-AuG"/>
-                        <constraint firstItem="zmJ-Ko-68w" firstAttribute="top" secondItem="G1B-lj-Yd7" secondAttribute="topMargin" id="LTp-ws-Vhd"/>
-                        <constraint firstAttribute="trailing" secondItem="zmJ-Ko-68w" secondAttribute="trailing" constant="75" id="OLA-c2-XgX"/>
-                        <constraint firstItem="zmJ-Ko-68w" firstAttribute="leading" secondItem="OQm-BU-AeL" secondAttribute="leading" constant="75" id="RDs-6x-MIv"/>
-                        <constraint firstAttribute="bottom" secondItem="zmJ-Ko-68w" secondAttribute="bottom" constant="687" id="ZPO-PZ-dR2"/>
-                        <constraint firstItem="zmJ-Ko-68w" firstAttribute="centerX" secondItem="G1B-lj-Yd7" secondAttribute="centerX" id="i4k-Hx-hVT"/>
-                    </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="sGe-Ya-7zU"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="OQm-BU-AeL"/>
-                </scrollView>
                 <tabBar contentMode="scaleToFill" id="qJz-Ki-XJz">
                     <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -67,16 +32,44 @@
                     </items>
                     <color key="selectedImageTintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </tabBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1B-lj-Yd7">
+                    <rect key="frame" x="0.0" y="126" width="414" height="687"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="sGe-Ya-7zU"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="OQm-BU-AeL"/>
+                </scrollView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-Ko-68w">
+                    <rect key="frame" x="75" y="88" width="264" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5et-0P-IrL"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8ca-8U-RLG"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="264" id="9m1-DW-bIm"/>
+                        <constraint firstAttribute="width" constant="264" id="G4d-Z4-9iJ"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Hot"/>
+                        <segment title="Recently"/>
+                    </segments>
+                </segmentedControl>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-lk-huc">
+                    <rect key="frame" x="0.0" y="32" width="414" height="56"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="gTH-hr-UJp"/>
+                    </constraints>
+                    <color key="tintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="09c-Zq-WWg"/>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="leading" secondItem="ZSX-lk-huc" secondAttribute="leading" id="8ZP-Yg-8ZG"/>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="trailing" secondItem="ZSX-lk-huc" secondAttribute="trailing" id="Gid-ea-TDS"/>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="top" secondItem="ZSX-lk-huc" secondAttribute="bottom" id="S7m-8s-D1v"/>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-49" id="gUt-Oy-oUa"/>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pn1-7S-SIH"/>
-                <constraint firstItem="G1B-lj-Yd7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="88" id="w4D-DX-OtR"/>
+                <constraint firstItem="zmJ-Ko-68w" firstAttribute="top" secondItem="ZSX-lk-huc" secondAttribute="bottom" id="67P-QO-v1V"/>
+                <constraint firstItem="ZSX-lk-huc" firstAttribute="leading" secondItem="G1B-lj-Yd7" secondAttribute="leading" id="8kr-wU-mGL"/>
+                <constraint firstItem="ZSX-lk-huc" firstAttribute="centerX" secondItem="zmJ-Ko-68w" secondAttribute="centerX" id="YOe-lk-NRE"/>
+                <constraint firstItem="ZSX-lk-huc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="isu-qz-O0h"/>
+                <constraint firstItem="ZSX-lk-huc" firstAttribute="trailing" secondItem="G1B-lj-Yd7" secondAttribute="trailing" id="r3C-Mj-jXe"/>
+                <constraint firstItem="ZSX-lk-huc" firstAttribute="trailing" secondItem="qJz-Ki-XJz" secondAttribute="trailing" id="u0m-5a-rj5"/>
+                <constraint firstItem="ZSX-lk-huc" firstAttribute="leading" secondItem="qJz-Ki-XJz" secondAttribute="leading" id="x8N-eL-UmC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>

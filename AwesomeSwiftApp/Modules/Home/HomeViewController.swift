@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var segmentBar: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,6 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("首页", "Hello World")
+        print("首页tabBar", "Hello World", tabBar ?? "nil")
     }
 }
