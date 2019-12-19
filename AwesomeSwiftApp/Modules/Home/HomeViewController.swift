@@ -9,15 +9,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var homeView: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tabBar: UITabBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("首页", homeView ?? "Hello World")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("首页", "Hello World")
     }
 }

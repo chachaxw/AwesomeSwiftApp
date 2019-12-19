@@ -11,7 +11,6 @@ import UIKit
 
 class RootViewController: UIViewController, CAAnimationDelegate {
     var maskView: UIView!
-    var homeViewCtrl = HomeViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +18,6 @@ class RootViewController: UIViewController, CAAnimationDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        self.addChild(homeViewCtrl)
-
-        print("首页控制器", homeViewCtrl)
 
         // Logo layer
         let logoLayer = CALayer()

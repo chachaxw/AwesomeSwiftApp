@@ -27,8 +27,8 @@ class RootRouter {
 
     func loadMainAppStructure() {
         // Customize your app structure here
-        let controller = RootViewController()
-        controller.view.backgroundColor = UIColor.Theme.LightGrayColor
-        setRootViewController(controller: controller, animatedWithOptions: nil)
+        let root = RootViewController(nib: R.nib.homeView)
+        root.view.backgroundColor = UIColor.white
+        setRootViewController(controller: root, animatedWithOptions: nil)
     }
 }
