@@ -21,7 +21,7 @@ class RootViewController: UIViewController, CAAnimationDelegate {
     }
 
     convenience init() {
-        self.init(nib: R.nib.homeView)
+        self.init(nibName: "HomeView", bundle: nil)
     }
 
     override func viewDidLoad() {
