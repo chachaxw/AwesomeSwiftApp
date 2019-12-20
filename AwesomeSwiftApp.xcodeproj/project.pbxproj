@@ -18,7 +18,10 @@
 		38CF65B3160534529D8C0ADD /* Pods_AwesomeSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ABCB4B50669FECE8F50EB5 /* Pods_AwesomeSwiftApp.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
-		932B291E23A5FEDC009FDBEF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B291D23A5FEDC009FDBEF /* RootViewController.swift */; };
+		9324074623ACE0E50025013F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324074423ACE0E50025013F /* RootViewController.swift */; };
+		9324074723ACE0E50025013F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9324074523ACE0E50025013F /* RootViewController.xib */; };
+		9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */; };
+		9342D8C223ACCFAD00BD0989 /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9342D8C023ACCFAD00BD0989 /* FeaturedViewController.xib */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
 		93A1759123A3C76100A684D6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 93A1759023A3C76100A684D6 /* FontAwesome */; };
 		93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */; };
@@ -30,7 +33,7 @@
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
 		93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDCD5223A8D422000CC181 /* HomeViewController.swift */; };
-		93FDCD5523A8DB4D000CC181 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FDCD5423A8DB4C000CC181 /* HomeView.xib */; };
+		93FDCD5523A8DB4D000CC181 /* HomeViewContoller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FDCD5423A8DB4C000CC181 /* HomeViewContoller.xib */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
 		C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -70,7 +73,10 @@
 		7047358B3341C2E87C7BE318 /* Pods-AwesomeSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.release.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7C5619126C0D57DADE3E9C71 /* Pods-AwesomeSwiftAppTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftAppTests.staging.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftAppTests/Pods-AwesomeSwiftAppTests.staging.xcconfig"; sourceTree = "<group>"; };
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		932B291D23A5FEDC009FDBEF /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		9324074523ACE0E50025013F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		9342D8C023ACCFAD00BD0989 /* FeaturedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedViewController.xib; sourceTree = "<group>"; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
@@ -82,7 +88,7 @@
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		93FDCD5223A8D422000CC181 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		93FDCD5423A8DB4C000CC181 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		93FDCD5423A8DB4C000CC181 /* HomeViewContoller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewContoller.xib; sourceTree = "<group>"; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +165,8 @@
 				C90395231FC622D2006F1DC0 /* main.swift */,
 				93A1759C23A4B0E800A684D6 /* Main.storyboard */,
 				2A1E77361F384BFC006C84D4 /* AppDelegate.swift */,
-				932B291D23A5FEDC009FDBEF /* RootViewController.swift */,
+				9324074423ACE0E50025013F /* RootViewController.swift */,
+				9324074523ACE0E50025013F /* RootViewController.xib */,
 				2AFB31021F3853C6009C4586 /* Resources */,
 				2AFB31071F38542E009C4586 /* SupportingFiles */,
 				2AB31D9E1F38740A00B7D1F3 /* Models */,
@@ -190,6 +197,7 @@
 		2AB31D9F1F38741400B7D1F3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9342D8BA23AC949F00BD0989 /* Featured */,
 				93FDCD5123A8D3F5000CC181 /* Home */,
 				2A1DD4E21F38A09700712195 /* Launch */,
 			);
@@ -285,6 +293,15 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		9342D8BA23AC949F00BD0989 /* Featured */ = {
+			isa = PBXGroup;
+			children = (
+				9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */,
+				9342D8C023ACCFAD00BD0989 /* FeaturedViewController.xib */,
+			);
+			path = Featured;
+			sourceTree = "<group>";
+		};
 		937A1E5D23A26CED0089B60F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				93FDCD5223A8D422000CC181 /* HomeViewController.swift */,
-				93FDCD5423A8DB4C000CC181 /* HomeView.xib */,
+				93FDCD5423A8DB4C000CC181 /* HomeViewContoller.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -428,13 +445,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9342D8C223ACCFAD00BD0989 /* FeaturedViewController.xib in Resources */,
 				2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */,
 				93A1759723A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
-				93FDCD5523A8DB4D000CC181 /* HomeView.xib in Resources */,
+				93FDCD5523A8DB4D000CC181 /* HomeViewContoller.xib in Resources */,
 				93A1759823A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */,
 				FCB2C7CB1F57127800481080 /* Localizable.strings in Resources */,
 				2A1E77411F384BFD006C84D4 /* LaunchScreen.storyboard in Resources */,
+				9324074723ACE0E50025013F /* RootViewController.xib in Resources */,
 				2A1E773E1F384BFD006C84D4 /* Assets.xcassets in Resources */,
 				93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
@@ -550,9 +569,10 @@
 			files = (
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
-				932B291E23A5FEDC009FDBEF /* RootViewController.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
+				9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
+				9324074623ACE0E50025013F /* RootViewController.swift in Sources */,
 				93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */,

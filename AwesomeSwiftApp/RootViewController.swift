@@ -1,36 +1,22 @@
 //
-//  LaunchScreenController.swift
+//  RootViewController.swift
 //  AwesomeSwiftApp
 //
-//  Created by chacha on 2019/12/15.
+//  Created by chacha on 2019/12/20.
 //  Copyright © 2019 Chacha. All rights reserved.
 //
 
-import Log
 import UIKit
 
 class RootViewController: UIViewController, CAAnimationDelegate {
     var maskView: UIView!
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    convenience init() {
-        self.init(nibName: "HomeView", bundle: nil)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.animiation()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
+    func animiation() {
         // Logo layer
         let logoLayer = CALayer()
         logoLayer.bounds = CGRect(x: 0, y: 0, width: 181, height: 35)
@@ -71,6 +57,10 @@ class RootViewController: UIViewController, CAAnimationDelegate {
         maskView.layer.add(logoOpacityAnimation, forKey: "opacityAnimation")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -83,4 +73,5 @@ class RootViewController: UIViewController, CAAnimationDelegate {
         self.maskView.removeFromSuperview()
         super.view.layer.mask = nil
     }
+
 }

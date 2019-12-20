@@ -9,9 +9,20 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tabBar: UITabBar!
-    @IBOutlet weak var segmentBar: UISegmentedControl!
+    @IBOutlet weak private var searchBar: UISearchBar!
+    @IBOutlet weak private var segmentBar: UISegmentedControl!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    convenience init() {
+        self.init(nib: R.nib.homeViewContoller)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +30,6 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("首页tabBar", "Hello World", tabBar ?? "nil")
+        print("首页TabBar", "Hello World", searchBar ?? "nil")
     }
 }
