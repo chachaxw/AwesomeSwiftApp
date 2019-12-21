@@ -9,11 +9,26 @@
 import UIKit
 
 class RootViewController: UIViewController, CAAnimationDelegate {
+
+    @IBOutlet weak private var tabBar: UITabBar!
+    @IBOutlet weak private var homeTabItem: UITabBarItem!
+    @IBOutlet weak private var featuredTabItem: UITabBarItem!
+    @IBOutlet weak private var meTabItem: UITabBarItem!
+
     var maskView: UIView!
+    let homeViewCtrl = HomeViewController()
+    let featuredViewCtrl = FeaturedViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.animiation()
+
+        tabBar.selectedItem = homeTabItem
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     func animiation() {
@@ -55,10 +70,6 @@ class RootViewController: UIViewController, CAAnimationDelegate {
         logoOpacityAnimation.toValue = 0
         logoOpacityAnimation.delegate = self
         maskView.layer.add(logoOpacityAnimation, forKey: "opacityAnimation")
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
 
     override var prefersStatusBarHidden: Bool {
