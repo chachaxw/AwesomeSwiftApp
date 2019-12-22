@@ -21,8 +21,12 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tabBar.tintColor = UIColor.Theme.PrimaryColor
+
         homeViewCtrl.tabBarItem = homeTabItem
+        homeViewCtrl.tabBarItem.title = "Discover"
         featuredViewCtrl.tabBarItem = featuredTabItem
+        featuredViewCtrl.tabBarItem.title = "Featured"
 
         self.viewControllers = [
             homeViewCtrl,

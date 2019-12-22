@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak private var searchBar: UISearchBar!
     @IBOutlet weak private var segmentBar: UISegmentedControl!
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }

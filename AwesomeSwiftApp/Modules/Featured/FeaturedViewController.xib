@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -10,18 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturedViewController" customModule="Swift_App" customModuleProvider="target">
             <connections>
-                <outlet property="button" destination="XOd-0F-rNg" id="gEw-3k-DhB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cm6-So-7ic">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cm6-So-7ic">
+                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,15 +27,38 @@
                         <navigationItem title="Featured" id="ui8-n3-aeA"/>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-0F-rNg">
-                    <rect key="frame" x="184" y="433" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-46-BCY">
+                    <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-Av-wPN">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="yhC-Av-wPN" firstAttribute="top" secondItem="Dh0-91-TcE" secondAttribute="top" id="TJ3-cF-1tH"/>
+                        <constraint firstItem="yhC-Av-wPN" firstAttribute="trailing" secondItem="Dh0-91-TcE" secondAttribute="trailing" id="Wgu-PA-xik"/>
+                        <constraint firstItem="yhC-Av-wPN" firstAttribute="leading" secondItem="Dh0-91-TcE" secondAttribute="leading" id="bm9-19-mJZ"/>
+                        <constraint firstItem="yhC-Av-wPN" firstAttribute="trailing" secondItem="Dh0-91-TcE" secondAttribute="trailing" id="h6Q-LN-Oov"/>
+                        <constraint firstItem="yhC-Av-wPN" firstAttribute="leading" secondItem="Dh0-91-TcE" secondAttribute="leading" id="oWF-XU-gvC"/>
+                        <constraint firstItem="yhC-Av-wPN" firstAttribute="top" secondItem="wW4-46-BCY" secondAttribute="top" id="t8J-nc-LCD"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="wEl-s1-OcT"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Dh0-91-TcE"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wW4-46-BCY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9v7-ga-u8S"/>
+                <constraint firstItem="cm6-So-7ic" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GP0-TY-oA1"/>
+                <constraint firstItem="cm6-So-7ic" firstAttribute="leading" secondItem="wW4-46-BCY" secondAttribute="leading" id="KRC-VG-zVb"/>
+                <constraint firstItem="wW4-46-BCY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="VFY-kJ-OiW"/>
+                <constraint firstItem="wW4-46-BCY" firstAttribute="top" secondItem="cm6-So-7ic" secondAttribute="bottom" id="Wwa-pv-TgF"/>
+                <constraint firstItem="wW4-46-BCY" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-49" id="jf9-qT-vzb"/>
+                <constraint firstItem="cm6-So-7ic" firstAttribute="trailing" secondItem="wW4-46-BCY" secondAttribute="trailing" id="l7l-KB-jql"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="141"/>
+            <point key="canvasLocation" x="138.40000000000001" y="140.39408866995075"/>
         </view>
     </objects>
 </document>

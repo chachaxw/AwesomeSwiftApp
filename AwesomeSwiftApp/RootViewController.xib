@@ -26,8 +26,8 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <items>
-                        <tabBarItem title="Home" image="flame" catalog="system" selectedImage="flame.fill" id="4P7-39-Pas"/>
-                        <tabBarItem selectedImage="star.fill" catalog="system" systemItem="featured" id="16c-f7-Pw5"/>
+                        <tabBarItem title="Discover" image="safari" catalog="system" selectedImage="safari.fill" id="4P7-39-Pas"/>
+                        <tabBarItem title="Featured" image="star" catalog="system" selectedImage="star.fill" id="16c-f7-Pw5"/>
                         <tabBarItem title="Me" image="person" catalog="system" selectedImage="person.fill" id="dQo-Al-Hwn"/>
                     </items>
                     <color key="selectedImageTintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -49,10 +49,11 @@
         </view>
     </objects>
     <resources>
-        <image name="flame" catalog="system" width="54" height="64"/>
-        <image name="flame.fill" catalog="system" width="54" height="64"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="safari" catalog="system" width="64" height="60"/>
+        <image name="safari.fill" catalog="system" width="64" height="60"/>
+        <image name="star" catalog="system" width="64" height="58"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>
