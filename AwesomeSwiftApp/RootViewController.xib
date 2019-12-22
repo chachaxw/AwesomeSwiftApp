@@ -13,7 +13,6 @@
                 <outlet property="featuredTabItem" destination="16c-f7-Pw5" id="PVk-Iz-zyU"/>
                 <outlet property="homeTabItem" destination="4P7-39-Pas" id="ZDe-j3-QJY"/>
                 <outlet property="meTabItem" destination="dQo-Al-Hwn" id="ymv-iB-Zcv"/>
-                <outlet property="tabBar" destination="Pas-cQ-uAz" id="xrp-FZ-aTC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="88V-mg-Etn"/>
             </connections>
         </placeholder>

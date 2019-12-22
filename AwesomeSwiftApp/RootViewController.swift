@@ -8,9 +8,8 @@
 
 import UIKit
 
-class RootViewController: UIViewController, CAAnimationDelegate {
+class RootViewController: UITabBarController, CAAnimationDelegate {
 
-    @IBOutlet weak private var tabBar: UITabBar!
     @IBOutlet weak private var homeTabItem: UITabBarItem!
     @IBOutlet weak private var featuredTabItem: UITabBarItem!
     @IBOutlet weak private var meTabItem: UITabBarItem!
@@ -22,13 +21,22 @@ class RootViewController: UIViewController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.animiation()
+        homeViewCtrl.tabBarItem = homeTabItem
+        featuredViewCtrl.tabBarItem = featuredTabItem
 
-        tabBar.selectedItem = homeTabItem
+        self.viewControllers = [
+            homeViewCtrl,
+            featuredViewCtrl
+        ]
+        self.animiation()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("TabBar", tabBar, item)
     }
 
     func animiation() {
