@@ -22,6 +22,8 @@
 		9324074723ACE0E50025013F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9324074523ACE0E50025013F /* RootViewController.xib */; };
 		9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */; };
 		9342D8C223ACCFAD00BD0989 /* FeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9342D8C023ACCFAD00BD0989 /* FeaturedViewController.xib */; };
+		9356C1D523B1B3EC00FC9D0C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356C1D323B1B3EC00FC9D0C /* UserViewController.swift */; };
+		9356C1D623B1B3EC00FC9D0C /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9356C1D423B1B3EC00FC9D0C /* UserViewController.xib */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
 		93A1759123A3C76100A684D6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 93A1759023A3C76100A684D6 /* FontAwesome */; };
 		93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */; };
@@ -77,6 +79,8 @@
 		9324074523ACE0E50025013F /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		9342D8C023ACCFAD00BD0989 /* FeaturedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedViewController.xib; sourceTree = "<group>"; };
+		9356C1D323B1B3EC00FC9D0C /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		9356C1D423B1B3EC00FC9D0C /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		2AB31D9F1F38741400B7D1F3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9356C1D223B1B02800FC9D0C /* Me */,
 				9342D8BA23AC949F00BD0989 /* Featured */,
 				93FDCD5123A8D3F5000CC181 /* Home */,
 				2A1DD4E21F38A09700712195 /* Launch */,
@@ -300,6 +305,15 @@
 				9342D8C023ACCFAD00BD0989 /* FeaturedViewController.xib */,
 			);
 			path = Featured;
+			sourceTree = "<group>";
+		};
+		9356C1D223B1B02800FC9D0C /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				9356C1D323B1B3EC00FC9D0C /* UserViewController.swift */,
+				9356C1D423B1B3EC00FC9D0C /* UserViewController.xib */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		937A1E5D23A26CED0089B60F /* Common */ = {
@@ -446,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9342D8C223ACCFAD00BD0989 /* FeaturedViewController.xib in Resources */,
+				9356C1D623B1B3EC00FC9D0C /* UserViewController.xib in Resources */,
 				2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */,
 				93A1759723A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				93FDCD5523A8DB4D000CC181 /* HomeViewContoller.xib in Resources */,
@@ -568,6 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
+				9356C1D523B1B3EC00FC9D0C /* UserViewController.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */,

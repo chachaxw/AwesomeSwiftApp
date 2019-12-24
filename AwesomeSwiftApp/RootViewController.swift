@@ -17,6 +17,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     var maskView: UIView!
     let homeViewCtrl = HomeViewController()
     let featuredViewCtrl = FeaturedViewController()
+    let userViewCtrl = UserViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,13 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         homeViewCtrl.tabBarItem.title = "Discover"
         featuredViewCtrl.tabBarItem = featuredTabItem
         featuredViewCtrl.tabBarItem.title = "Featured"
+        userViewCtrl.tabBarItem = meTabItem
+        userViewCtrl.tabBarItem.title = "Me"
 
         self.viewControllers = [
             homeViewCtrl,
-            featuredViewCtrl
+            featuredViewCtrl,
+            userViewCtrl
         ]
         self.animiation()
     }
