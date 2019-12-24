@@ -30,6 +30,5 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("首页TabBar", "Hello World", searchBar ?? "nil")
     }
 }

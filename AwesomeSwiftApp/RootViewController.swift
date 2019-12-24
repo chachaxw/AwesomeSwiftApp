@@ -23,13 +23,34 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         super.viewDidLoad()
 
         self.tabBar.tintColor = UIColor.Theme.PrimaryColor
+        self.tabBar.isTranslucent = true
 
         homeViewCtrl.tabBarItem = homeTabItem
         homeViewCtrl.tabBarItem.title = "Discover"
+        if #available(iOS 13.0, *) {
+            homeViewCtrl.tabBarItem.image = UIImage(systemName: "safari")
+            homeViewCtrl.tabBarItem.selectedImage = UIImage(systemName: "safari.fill")
+        } else {
+            // Fallback on earlier versions
+        }
+
         featuredViewCtrl.tabBarItem = featuredTabItem
         featuredViewCtrl.tabBarItem.title = "Featured"
+        if #available(iOS 13.0, *) {
+            featuredViewCtrl.tabBarItem.image = UIImage(systemName: "star")
+            featuredViewCtrl.tabBarItem.selectedImage = UIImage(systemName: "star.fill")
+        } else {
+            // Fallback on earlier versions
+        }
+
         userViewCtrl.tabBarItem = meTabItem
         userViewCtrl.tabBarItem.title = "Me"
+        if #available(iOS 13.0, *) {
+            userViewCtrl.tabBarItem.image = UIImage(systemName: "person")
+            userViewCtrl.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        } else {
+            // Fallback on earlier versions
+        }
 
         self.viewControllers = [
             homeViewCtrl,
