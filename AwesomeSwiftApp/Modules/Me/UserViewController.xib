@@ -17,7 +17,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gh8-wL-9qc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-lI-TL4">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yo-S7-BSY">
+                            <rect key="frame" x="0.0" y="300" width="414" height="518"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fF8-lI-TL4" secondAttribute="trailing" id="3j0-s8-Iek"/>
+                        <constraint firstItem="9yo-S7-BSY" firstAttribute="top" secondItem="gzK-kg-x6V" secondAttribute="top" constant="300" id="7k0-lM-OMU"/>
+                        <constraint firstItem="9yo-S7-BSY" firstAttribute="bottom" secondItem="gzK-kg-x6V" secondAttribute="bottom" id="9z0-Kr-ioj"/>
+                        <constraint firstItem="fF8-lI-TL4" firstAttribute="centerX" secondItem="gh8-wL-9qc" secondAttribute="centerX" id="HDq-5E-q6X"/>
+                        <constraint firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="458" id="V8G-vE-dUZ"/>
+                        <constraint firstItem="fF8-lI-TL4" firstAttribute="top" secondItem="gh8-wL-9qc" secondAttribute="top" id="jm1-k7-AC5"/>
+                        <constraint firstItem="9yo-S7-BSY" firstAttribute="leading" secondItem="gzK-kg-x6V" secondAttribute="leading" id="jnm-nm-jKh"/>
+                        <constraint firstItem="fF8-lI-TL4" firstAttribute="leading" secondItem="gh8-wL-9qc" secondAttribute="leading" id="mgv-IH-VLc"/>
+                        <constraint firstItem="9yo-S7-BSY" firstAttribute="trailing" secondItem="gzK-kg-x6V" secondAttribute="trailing" id="vto-br-Urn"/>
+                        <constraint firstItem="T7W-9P-n4X" firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="458" id="zqd-h9-PeH"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="gzK-kg-x6V"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="T7W-9P-n4X"/>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gh8-wL-9qc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="A2a-Uh-V2m"/>
+                <constraint firstItem="gh8-wL-9qc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MDj-4l-vNJ"/>
+                <constraint firstItem="gh8-wL-9qc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hcv-2i-Km7"/>
+                <constraint firstItem="gh8-wL-9qc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lcK-2o-Ymf"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
         </view>

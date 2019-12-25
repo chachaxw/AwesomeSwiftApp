@@ -22,10 +22,10 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBar.tintColor = UIColor.Theme.PrimaryColor
-        self.tabBar.isTranslucent = true
+        tabBar.tintColor = UIColor.Theme.PrimaryColor
+        tabBar.isTranslucent = false
+        tabBar.backgroundColor = UIColor.white
 
-        homeViewCtrl.tabBarItem = homeTabItem
         homeViewCtrl.tabBarItem.title = "Discover"
         if #available(iOS 13.0, *) {
             homeViewCtrl.tabBarItem.image = UIImage(systemName: "safari")
