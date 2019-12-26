@@ -22,17 +22,6 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tabBar.tintColor = UIColor.Theme.SecondaryColor
-        tabBar.isTranslucent = false
-        tabBar.backgroundColor = UIColor.white
-        tabBar.layer.cornerRadius = 20
-
-        if #available(iOS 11.0, *) {
-            tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        } else {
-            // Fallback on earlier versions
-        }
-
         homeViewCtrl.tabBarItem.title = "Discover"
         if #available(iOS 13.0, *) {
             homeViewCtrl.tabBarItem.image = UIImage(systemName: "safari")
@@ -41,7 +30,6 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
             // Fallback on earlier versions
         }
 
-        featuredViewCtrl.tabBarItem = featuredTabItem
         featuredViewCtrl.tabBarItem.title = "Featured"
         if #available(iOS 13.0, *) {
             featuredViewCtrl.tabBarItem.image = UIImage(systemName: "star")
@@ -50,7 +38,6 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
             // Fallback on earlier versions
         }
 
-        userViewCtrl.tabBarItem = meTabItem
         userViewCtrl.tabBarItem.title = "Me"
         if #available(iOS 13.0, *) {
             userViewCtrl.tabBarItem.image = UIImage(systemName: "person")
@@ -64,6 +51,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
             featuredViewCtrl,
             userViewCtrl
         ]
+        self.setTabBar()
         self.animiation()
     }
 
@@ -73,6 +61,17 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         print("TabBar", tabBar, item)
+    }
+
+    func setTabBar() {
+        tabBar.tintColor = UIColor.Theme.SecondaryColor
+        tabBar.isTranslucent = false
+        tabBar.backgroundColor = UIColor.white
+        tabBar.layer.shadowColor = UIColor.gray.cgColor
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 10)
+        tabBar.layer.shadowOpacity = 0.15
+        tabBar.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20)
+        tabBar.layer.masksToBounds = true
     }
 
     func animiation() {

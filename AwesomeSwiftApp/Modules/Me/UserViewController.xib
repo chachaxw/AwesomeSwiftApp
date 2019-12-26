@@ -29,6 +29,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fF8-lI-TL4" secondAttribute="trailing" id="3j0-s8-Iek"/>
                         <constraint firstItem="9yo-S7-BSY" firstAttribute="top" secondItem="gzK-kg-x6V" secondAttribute="top" constant="300" id="7k0-lM-OMU"/>

@@ -33,6 +33,6 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func segmentedControl(_ sender: Any) {
-        
+        print("Segment Bar", sender)
     }
 }

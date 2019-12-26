@@ -27,11 +27,11 @@ extension UIColor {
         static let SecondaryColor = UIColor(netHex: 0x1b60c0)
         static let LightGrayColor = UIColor(netHex: 0xf4f6fc)
     }
-    
+
     func isDarkColor() -> Bool {
-        var w: CGFloat = 0
-        
-        self.getWhite(&w, alpha: nil)
-        return w > 0.5 ? false : true
+        var white: CGFloat = 0
+
+        self.getWhite(&white, alpha: nil)
+        return white > 0.5 ? false : true
     }
 }
