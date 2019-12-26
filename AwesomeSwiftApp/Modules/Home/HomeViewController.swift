@@ -31,4 +31,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+
+    @IBAction func segmentedControl(_ sender: Any) {
+        
+    }
 }

@@ -30,6 +30,9 @@
                         <segment title="Hot"/>
                         <segment title="Recently"/>
                     </segments>
+                    <connections>
+                        <action selector="segmentedControl:" destination="-1" eventType="primaryActionTriggered" id="mFv-2Y-1OH"/>
+                    </connections>
                 </segmentedControl>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-lk-huc">
                     <rect key="frame" x="0.0" y="31" width="375" height="56"/>

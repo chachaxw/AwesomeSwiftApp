@@ -10,9 +10,9 @@ import UIKit
 
 class RootViewController: UITabBarController, CAAnimationDelegate {
 
-    @IBOutlet weak private var homeTabItem: UITabBarItem!
-    @IBOutlet weak private var featuredTabItem: UITabBarItem!
-    @IBOutlet weak private var meTabItem: UITabBarItem!
+    var homeTabItem: UITabBarItem!
+    var featuredTabItem: UITabBarItem!
+    var meTabItem: UITabBarItem!
 
     var maskView: UIView!
     let homeViewCtrl = HomeViewController()
@@ -22,9 +22,16 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tabBar.tintColor = UIColor.Theme.PrimaryColor
+        tabBar.tintColor = UIColor.Theme.SecondaryColor
         tabBar.isTranslucent = false
         tabBar.backgroundColor = UIColor.white
+        tabBar.layer.cornerRadius = 20
+
+        if #available(iOS 11.0, *) {
+            tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
 
         homeViewCtrl.tabBarItem.title = "Discover"
         if #available(iOS 13.0, *) {

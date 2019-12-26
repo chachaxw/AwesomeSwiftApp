@@ -8,14 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="Swift_App" customModuleProvider="target">
-            <connections>
-                <outlet property="featuredTabItem" destination="16c-f7-Pw5" id="PVk-Iz-zyU"/>
-                <outlet property="homeTabItem" destination="4P7-39-Pas" id="ZDe-j3-QJY"/>
-                <outlet property="meTabItem" destination="dQo-Al-Hwn" id="ymv-iB-Zcv"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="88V-mg-Etn"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="Swift_App" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -31,6 +24,11 @@
                         <tabBarItem title="Me" image="person" catalog="system" selectedImage="person.fill" id="dQo-Al-Hwn"/>
                     </items>
                     <color key="selectedImageTintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </tabBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsM-Ly-ix8">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
