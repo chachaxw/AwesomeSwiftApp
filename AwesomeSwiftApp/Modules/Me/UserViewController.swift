@@ -10,10 +10,13 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    @IBOutlet weak private var headerImage: UIImageView!
+    @IBOutlet weak private var wrapperView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        wrapperView.roundCorners(corners: [.topLeft, .topRight], with: 32)
     }
 
     /*

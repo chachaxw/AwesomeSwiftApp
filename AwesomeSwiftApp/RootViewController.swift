@@ -70,7 +70,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         tabBar.layer.shadowColor = UIColor.gray.cgColor
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 10)
         tabBar.layer.shadowOpacity = 0.15
-        tabBar.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20)
+        tabBar.roundCorners(corners: [.topLeft, .topRight], with: 20)
     }
 
     func animiation() {

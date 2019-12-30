@@ -18,7 +18,7 @@ extension UIView {
             return .clear
         }
     }
-    
+
     @objc var radius: CGFloat {
         set {
             self.layer.masksToBounds = true
@@ -28,7 +28,7 @@ extension UIView {
             return 0
         }
     }
-    
+
     @objc var borderWidth: CGFloat {
         set {
             self.layer.borderWidth = newValue
@@ -39,7 +39,7 @@ extension UIView {
     }
 
     // Set round corners
-    func setRoundCorners(corners: UIRectCorner, with radii: CGFloat) {
+    func roundCorners(corners: UIRectCorner, with radii: CGFloat) {
         let bezierPath: UIBezierPath = UIBezierPath(
             roundedRect: self.bounds,
             byRoundingCorners: corners,
@@ -47,7 +47,12 @@ extension UIView {
         )
         let shape: CAShapeLayer = CAShapeLayer()
 
+        shape.frame = self.bounds
         shape.path = bezierPath.cgPath
+        shape.shadowOpacity = 0.1
+        shape.shadowRadius = 15
+        shape.shadowColor = UIColor.black.cgColor
+        shape.shadowOffset = CGSize(width: 0, height: -1)
         self.layer.mask = shape
     }
 }
