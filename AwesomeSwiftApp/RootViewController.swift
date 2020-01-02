@@ -69,6 +69,15 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         tabBar.backgroundColor = UIColor.white
         tabBar.roundCorners(corners: [.topLeft, .topRight], with: 20)
     }
+    
+    func playBounceAnimation(_ icon: UIImageView, _ repeatCount: Float) {
+        let bounce = CAKeyframeAnimation(keyPath: "transform.scale")
+        bounce.values = [1.0, 1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
+        bounce.duration = TimeInterval(0.5)
+        bounce.repeatCount = repeatCount;
+        bounce.calculationMode = CAAnimationCalculationMode.cubic
+        icon.layer.add(bounce, forKey: nil)
+    }
 
     func animiation() {
         // Logo layer
