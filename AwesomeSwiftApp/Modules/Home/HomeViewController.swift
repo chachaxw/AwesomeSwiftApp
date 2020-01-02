@@ -24,13 +24,10 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Home"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-
-    @IBAction func segmentedControl(_ sender: Any) {
-        print("Segment Bar", sender)
     }
 }
