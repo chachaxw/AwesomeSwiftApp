@@ -60,17 +60,14 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("TabBar", tabBar, item)
+//        print("TabBar", tabBar, item)
     }
 
     func setTabBar() {
         tabBar.tintColor = UIColor.Theme.SecondaryColor
         tabBar.isTranslucent = false
         tabBar.backgroundColor = UIColor.white
-        tabBar.layer.shadowColor = UIColor.black.cgColor
-        tabBar.layer.shadowOffset = CGSize(width: 0, height: 10)
-        tabBar.layer.shadowOpacity = 0.15
-//        tabBar.roundCorners(corners: [.topLeft, .topRight], with: 20)
+        tabBar.roundCorners(corners: [.topLeft, .topRight], with: 20)
     }
 
     func animiation() {

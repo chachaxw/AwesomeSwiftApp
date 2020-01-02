@@ -27,15 +27,16 @@
                         <navigationItem title="Featured" id="ui8-n3-aeA"/>
                     </items>
                 </navigationBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-46-BCY">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-46-BCY">
                     <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-Av-wPN">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                             <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         </tableView>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="19" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-jp-Bqn">
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="19" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-jp-Bqn">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WUm-jp-Bqn" id="fJB-Ts-Qna">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -46,15 +47,15 @@
                                             <constraint firstAttribute="width" constant="44" id="q7G-j0-MbW"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table View Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HX-cQ-Yza">
-                                        <rect key="frame" x="65" y="12" width="126" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table View Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HX-cQ-Yza">
+                                        <rect key="frame" x="65" y="12" width="130" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table View Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ5-VQ-qgj">
-                                        <rect key="frame" x="65" y="34" width="110" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table View Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ5-VQ-qgj">
+                                        <rect key="frame" x="65" y="34" width="115" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -74,16 +75,11 @@
                         </tableViewCell>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="WUm-jp-Bqn" firstAttribute="leading" secondItem="yhC-Av-wPN" secondAttribute="leading" id="3HZ-MO-dsK"/>
-                        <constraint firstItem="WUm-jp-Bqn" firstAttribute="trailing" secondItem="yhC-Av-wPN" secondAttribute="trailing" id="AFP-cI-kSG"/>
-                        <constraint firstItem="WUm-jp-Bqn" firstAttribute="top" secondItem="yhC-Av-wPN" secondAttribute="top" id="SS0-zV-7B4"/>
-                        <constraint firstItem="Dh0-91-TcE" firstAttribute="bottom" secondItem="WUm-jp-Bqn" secondAttribute="bottom" constant="622" id="SlG-FH-Jqh"/>
                         <constraint firstItem="yhC-Av-wPN" firstAttribute="top" secondItem="Dh0-91-TcE" secondAttribute="top" id="TJ3-cF-1tH"/>
                         <constraint firstItem="yhC-Av-wPN" firstAttribute="trailing" secondItem="Dh0-91-TcE" secondAttribute="trailing" id="Wgu-PA-xik"/>
                         <constraint firstItem="yhC-Av-wPN" firstAttribute="leading" secondItem="Dh0-91-TcE" secondAttribute="leading" id="oWF-XU-gvC"/>
                         <constraint firstAttribute="bottom" secondItem="yhC-Av-wPN" secondAttribute="bottom" constant="49" id="pa3-4X-PKW"/>
                         <constraint firstItem="yhC-Av-wPN" firstAttribute="bottom" secondItem="Dh0-91-TcE" secondAttribute="bottom" id="rWj-fP-Pr3"/>
-                        <constraint firstAttribute="trailing" secondItem="WUm-jp-Bqn" secondAttribute="trailing" id="zpo-eH-EHC"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="wEl-s1-OcT"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="Dh0-91-TcE"/>

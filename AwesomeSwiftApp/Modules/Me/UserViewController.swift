@@ -16,6 +16,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        headerImage.image = R.image.userImage()
         wrapperView.roundCorners(corners: [.topLeft, .topRight], with: 32)
     }
 

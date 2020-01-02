@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -17,17 +17,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gh8-wL-9qc">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-lI-TL4">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="406" id="jhS-KL-fCI"/>
+                            </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yo-S7-BSY">
-                            <rect key="frame" x="0.0" y="322" width="414" height="540"/>
+                            <rect key="frame" x="0.0" y="322" width="375" height="456"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                     </subviews>
@@ -36,13 +39,17 @@
                         <constraint firstAttribute="trailing" secondItem="fF8-lI-TL4" secondAttribute="trailing" id="3j0-s8-Iek"/>
                         <constraint firstItem="9yo-S7-BSY" firstAttribute="top" secondItem="gzK-kg-x6V" secondAttribute="top" constant="322" id="7k0-lM-OMU"/>
                         <constraint firstItem="9yo-S7-BSY" firstAttribute="bottom" secondItem="gzK-kg-x6V" secondAttribute="bottom" id="9z0-Kr-ioj"/>
+                        <constraint firstItem="fF8-lI-TL4" firstAttribute="leading" secondItem="gzK-kg-x6V" secondAttribute="leading" id="FIG-sn-qfH"/>
                         <constraint firstItem="fF8-lI-TL4" firstAttribute="centerX" secondItem="gh8-wL-9qc" secondAttribute="centerX" id="HDq-5E-q6X"/>
-                        <constraint firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="456" id="V8G-vE-dUZ"/>
+                        <constraint firstItem="fF8-lI-TL4" firstAttribute="trailing" secondItem="gzK-kg-x6V" secondAttribute="trailing" id="NfL-K4-iOT"/>
+                        <constraint firstItem="gzK-kg-x6V" firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="372" id="SOj-LK-Fw7"/>
+                        <constraint firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="372" id="V8G-vE-dUZ"/>
                         <constraint firstItem="fF8-lI-TL4" firstAttribute="top" secondItem="gh8-wL-9qc" secondAttribute="top" id="jm1-k7-AC5"/>
                         <constraint firstItem="9yo-S7-BSY" firstAttribute="leading" secondItem="gzK-kg-x6V" secondAttribute="leading" id="jnm-nm-jKh"/>
                         <constraint firstItem="fF8-lI-TL4" firstAttribute="leading" secondItem="gh8-wL-9qc" secondAttribute="leading" id="mgv-IH-VLc"/>
+                        <constraint firstItem="fF8-lI-TL4" firstAttribute="top" secondItem="gzK-kg-x6V" secondAttribute="top" id="s6H-aO-Lpa"/>
                         <constraint firstItem="9yo-S7-BSY" firstAttribute="trailing" secondItem="gzK-kg-x6V" secondAttribute="trailing" id="vto-br-Urn"/>
-                        <constraint firstItem="T7W-9P-n4X" firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="456" id="zqd-h9-PeH"/>
+                        <constraint firstItem="T7W-9P-n4X" firstAttribute="bottom" secondItem="fF8-lI-TL4" secondAttribute="bottom" constant="372" id="zqd-h9-PeH"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="gzK-kg-x6V"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="T7W-9P-n4X"/>
