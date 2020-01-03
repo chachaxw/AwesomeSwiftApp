@@ -54,6 +54,7 @@ extension UIView {
         shape.shadowPath = bezierPath.cgPath
         shape.shadowColor = UIColor.black.cgColor
         shape.shadowOffset = CGSize(width: 0, height: 2)
+
         self.layer.mask = shape
     }
 }

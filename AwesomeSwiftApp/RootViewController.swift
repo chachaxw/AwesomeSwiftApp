@@ -13,8 +13,9 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     var homeTabItem: UITabBarItem!
     var featuredTabItem: UITabBarItem!
     var meTabItem: UITabBarItem!
-
     var maskView: UIView!
+    var currentTabIndex: Int = 0
+
     let homeViewCtrl = HomeViewController()
     let featuredViewCtrl = FeaturedViewController()
     let userViewCtrl = UserViewController()
@@ -60,23 +61,30 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        print("TabBar", tabBar, item)
+        let tabIndex = tabBar.items?.firstIndex(of: item)
+
+        if tabIndex != currentTabIndex {
+            currentTabIndex = tabIndex ?? 0
+
+            let imageView = tabBar.subviews[currentTabIndex + 1]
+            playBounceAnimation(imageView, 1)
+        }
     }
 
     func setTabBar() {
         tabBar.tintColor = UIColor.Theme.SecondaryColor
         tabBar.isTranslucent = false
         tabBar.backgroundColor = UIColor.white
-        tabBar.roundCorners(corners: [.topLeft, .topRight], with: 20)
+        tabBar.roundCorners(corners: [.topLeft, .topRight], with: 32)
     }
-    
-    func playBounceAnimation(_ icon: UIImageView, _ repeatCount: Float) {
+
+    func playBounceAnimation(_ view: UIView, _ repeatCount: Float) {
         let bounce = CAKeyframeAnimation(keyPath: "transform.scale")
-        bounce.values = [1.0, 1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
+        bounce.values = [1.0, 1.2, 0.9, 1.15, 0.95, 1.02, 1.0]
         bounce.duration = TimeInterval(0.5)
-        bounce.repeatCount = repeatCount;
+        bounce.repeatCount = repeatCount
         bounce.calculationMode = CAAnimationCalculationMode.cubic
-        icon.layer.add(bounce, forKey: nil)
+        view.layer.add(bounce, forKey: nil)
     }
 
     func animiation() {
