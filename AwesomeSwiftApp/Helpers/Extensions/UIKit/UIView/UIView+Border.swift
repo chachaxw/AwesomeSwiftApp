@@ -49,11 +49,12 @@ extension UIView {
 
         shape.frame = self.bounds
         shape.path = bezierPath.cgPath
-        shape.shadowOpacity = 0.2
+        shape.fillColor = UIColor.white.cgColor
+        shape.shadowOpacity = 0.1
         shape.shadowRadius = 5
         shape.shadowPath = bezierPath.cgPath
         shape.shadowColor = UIColor.black.cgColor
-        shape.shadowOffset = CGSize(width: 0, height: 2)
+        shape.shadowOffset = CGSize(width: 0, height: -5)
 
         self.layer.mask = shape
     }

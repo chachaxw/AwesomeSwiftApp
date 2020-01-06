@@ -19,6 +19,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     let homeViewCtrl = HomeViewController()
     let featuredViewCtrl = FeaturedViewController()
     let userViewCtrl = UserViewController()
+    let tabbarBackgroundView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +75,15 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     func setTabBar() {
         tabBar.tintColor = UIColor.Theme.SecondaryColor
         tabBar.isTranslucent = false
+//        tabBar.shadowImage = UIImage(color: UIColor.clear)
+//        tabBar.backgroundImage = UIImage(color: UIColor.clear)
         tabBar.backgroundColor = UIColor.white
-        tabBar.roundCorners(corners: [.topLeft, .topRight], with: 32)
     }
 
     func playBounceAnimation(_ view: UIView, _ repeatCount: Float) {
         let bounce = CAKeyframeAnimation(keyPath: "transform.scale")
-        bounce.values = [1.0, 1.2, 0.9, 1.15, 0.95, 1.02, 1.0]
-        bounce.duration = TimeInterval(0.5)
+        bounce.values = [1.0, 1.15, 1.0]
+        bounce.duration = TimeInterval(0.3)
         bounce.repeatCount = repeatCount
         bounce.calculationMode = CAAnimationCalculationMode.cubic
         view.layer.add(bounce, forKey: nil)
