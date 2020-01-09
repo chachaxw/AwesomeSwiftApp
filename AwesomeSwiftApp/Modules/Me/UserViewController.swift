@@ -10,14 +10,8 @@ import UIKit
 
 class UserViewController: UIViewController {
 
-    @IBOutlet weak private var headerImage: UIImageView!
-    @IBOutlet weak private var wrapperView: UIView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        headerImage.image = R.image.userImage()
-        wrapperView.roundCorners(corners: [.topLeft, .topRight], with: 32)
     }
 
     /*
