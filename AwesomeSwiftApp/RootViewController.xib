@@ -13,45 +13,9 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <tabBar alpha="0.89999997615814209" contentMode="scaleToFill" id="Pas-cQ-uAz">
-                    <rect key="frame" x="0.0" y="729" width="375" height="49"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <items>
-                        <tabBarItem title="Discover" image="safari" catalog="system" selectedImage="safari.fill" id="4P7-39-Pas"/>
-                        <tabBarItem title="Featured" image="star" catalog="system" selectedImage="star.fill" id="16c-f7-Pw5"/>
-                        <tabBarItem title="Me" image="person" catalog="system" selectedImage="person.fill" id="dQo-Al-Hwn"/>
-                    </items>
-                    <color key="selectedImageTintColor" red="0.17851117250000001" green="0.25935766100000002" blue="0.56865954399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="12"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </tabBar>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsM-Ly-ix8">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </view>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="BsM-Ly-ix8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8q3-gv-1Bk"/>
-                <constraint firstItem="BsM-Ly-ix8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="V04-9z-bqj"/>
-                <constraint firstItem="BsM-Ly-ix8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Xi2-bg-YWn"/>
-                <constraint firstItem="Pas-cQ-uAz" firstAttribute="top" secondItem="BsM-Ly-ix8" secondAttribute="bottom" id="sNC-p5-vhh"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="118.96551724137932"/>
         </view>
     </objects>
-    <resources>
-        <image name="person" catalog="system" width="64" height="58"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="safari" catalog="system" width="64" height="60"/>
-        <image name="safari.fill" catalog="system" width="64" height="60"/>
-        <image name="star" catalog="system" width="64" height="58"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
-    </resources>
 </document>

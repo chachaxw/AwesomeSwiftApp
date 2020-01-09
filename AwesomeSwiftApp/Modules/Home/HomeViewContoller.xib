@@ -20,37 +20,7 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Gc-Tq-Ga5">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-yM-2GG" userLabel="Header View">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd3-Le-RoT">
-                                    <rect key="frame" x="14" y="91" width="88" height="41"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-FD-cG1">
-                                    <rect key="frame" x="339" y="52" width="24" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" image="SearchIcon"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="140" id="6Sm-AA-2BV"/>
-                                <constraint firstItem="hd3-Le-RoT" firstAttribute="leading" secondItem="QD7-yM-2GG" secondAttribute="leading" constant="14" id="UtB-Sl-D5i"/>
-                                <constraint firstAttribute="bottom" secondItem="hd3-Le-RoT" secondAttribute="bottom" constant="8" id="gZQ-iG-XV1"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="QD7-yM-2GG" firstAttribute="leading" secondItem="yLv-VD-jvh" secondAttribute="leading" id="3sY-Ah-06u"/>
-                        <constraint firstItem="QD7-yM-2GG" firstAttribute="trailing" secondItem="yLv-VD-jvh" secondAttribute="trailing" id="OUV-vY-9tH"/>
-                        <constraint firstItem="QD7-yM-2GG" firstAttribute="top" secondItem="yLv-VD-jvh" secondAttribute="top" id="szo-Og-H4i"/>
-                    </constraints>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="contentLayoutGuide" id="GUF-4c-ULG"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="yLv-VD-jvh"/>
                 </scrollView>
@@ -67,7 +37,4 @@
             <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
         </view>
     </objects>
-    <resources>
-        <image name="SearchIcon" width="20" height="20"/>
-    </resources>
 </document>

@@ -10,8 +10,6 @@ import UIKit
 
 class FeaturedViewController: UIViewController {
 
-    @IBOutlet weak private var button: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

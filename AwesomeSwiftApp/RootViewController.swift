@@ -73,7 +73,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     }
 
     func setTabBar() {
-        tabBar.tintColor = UIColor.Theme.SecondaryColor
+        tabBar.tintColor = UIColor.Theme.PrimaryColor
         tabBar.isTranslucent = false
 //        tabBar.shadowImage = UIImage(color: UIColor.clear)
 //        tabBar.backgroundImage = UIImage(color: UIColor.clear)
