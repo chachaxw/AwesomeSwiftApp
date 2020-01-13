@@ -33,6 +33,11 @@
 		93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */; };
 		93DCD01623C83EEF006DDEFD /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01523C83EEF006DDEFD /* Email.swift */; };
 		93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01823C8445C006DDEFD /* EmailView.swift */; };
+		93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01A23C88AC4006DDEFD /* EmailListView.swift */; };
+		93DCD01D23C898C7006DDEFD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01C23C898C7006DDEFD /* Data.swift */; };
+		93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01E23CC1629006DDEFD /* MenuItem.swift */; };
+		93DCD02123CC182D006DDEFD /* DefaultMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02023CC182D006DDEFD /* DefaultMenuItem.swift */; };
+		93DCD02323CC1AF3006DDEFD /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02223CC1AF3006DDEFD /* Array+Utilities.swift */; };
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
 		93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDCD5223A8D422000CC181 /* HomeViewController.swift */; };
@@ -90,6 +95,11 @@
 		93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		93DCD01523C83EEF006DDEFD /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		93DCD01823C8445C006DDEFD /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		93DCD01A23C88AC4006DDEFD /* EmailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListView.swift; sourceTree = "<group>"; };
+		93DCD01C23C898C7006DDEFD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		93DCD01E23CC1629006DDEFD /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		93DCD02023CC182D006DDEFD /* DefaultMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMenuItem.swift; sourceTree = "<group>"; };
+		93DCD02223CC1AF3006DDEFD /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		93FDCD5223A8D422000CC181 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +250,7 @@
 				2A9222811F38797600A648E6 /* ConfigurationManager.swift */,
 				2A1DD4DE1F389C2200712195 /* DeeplinkHandler.swift */,
 				2A1DD4E01F389E2100712195 /* NotificationsHandler.swift */,
+				93DCD02223CC1AF3006DDEFD /* Array+Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -373,6 +384,9 @@
 			isa = PBXGroup;
 			children = (
 				93DCD01523C83EEF006DDEFD /* Email.swift */,
+				93DCD01C23C898C7006DDEFD /* Data.swift */,
+				93DCD01E23CC1629006DDEFD /* MenuItem.swift */,
+				93DCD02023CC182D006DDEFD /* DefaultMenuItem.swift */,
 			);
 			path = GMenu;
 			sourceTree = "<group>";
@@ -381,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				93DCD01823C8445C006DDEFD /* EmailView.swift */,
+				93DCD01A23C88AC4006DDEFD /* EmailListView.swift */,
 			);
 			path = GMenuViews;
 			sourceTree = "<group>";
@@ -618,20 +633,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				9356C1D523B1B3EC00FC9D0C /* UserViewController.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
+				93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */,
 				9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */,
 				93DCD01623C83EEF006DDEFD /* Email.swift in Sources */,
+				93DCD02123CC182D006DDEFD /* DefaultMenuItem.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
 				9324074623ACE0E50025013F /* RootViewController.swift in Sources */,
 				93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */,
 				93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
+				93DCD02323CC1AF3006DDEFD /* Array+Utilities.swift in Sources */,
 				93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */,
 				93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */,
+				93DCD01D23C898C7006DDEFD /* Data.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
