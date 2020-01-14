@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EmailView: View {
     var email: Email
-    
+
     @available(iOS 13.0.0, *)
     var body: some View {
         HStack(alignment: VerticalAlignment.top) {

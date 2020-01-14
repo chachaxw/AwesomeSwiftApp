@@ -75,8 +75,8 @@ struct Data {
                 sender: "Weekly Digest",
                 time: "11:25",
                 title: "Weekly Digest",
-                description: "Tis the season to put your skills and creativity to the test. Photographers " +
-                    "can compete in 12 photo challenges for a chance to win an exciting prize from top photography brands."
+                description: "Tis the season to put your skills and creativity to the test. Photographers can " +
+                    "compete in 12 photo challenges for a chance to win an exciting prize from top photography brands."
             ),
             Email(
                 sender: "Goodreads",
