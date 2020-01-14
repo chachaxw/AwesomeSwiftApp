@@ -75,9 +75,17 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     func setTabBar() {
         tabBar.tintColor = UIColor.Theme.PrimaryColor
         tabBar.isTranslucent = false
-//        tabBar.shadowImage = UIImage(color: UIColor.clear)
-//        tabBar.backgroundImage = UIImage(color: UIColor.clear)
         tabBar.backgroundColor = UIColor.white
+        
+        if #available(iOS 13, *) {
+            let appearance = tabBar.standardAppearance.copy()
+//            appearance.backgroundImage = UIImage(color: UIColor.clear)
+//            appearance.shadowImage = UIImage(color: UIColor.clear)
+            tabBar.standardAppearance = appearance
+        } else {
+//            tabBar.shadowImage = UIImage(color: UIColor.clear)
+//            tabBar.backgroundImage = UIImage(color: UIColor.clear)
+        }
     }
 
     func playBounceAnimation(_ view: UIView, _ repeatCount: Float) {
