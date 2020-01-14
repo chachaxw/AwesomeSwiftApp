@@ -40,6 +40,7 @@
 		93DCD02323CC1AF3006DDEFD /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02223CC1AF3006DDEFD /* Array+Utilities.swift */; };
 		93DCD02723CDABA0006DDEFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02623CDABA0006DDEFD /* ContentView.swift */; };
 		93DCD02923CDAE86006DDEFD /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02823CDAE86006DDEFD /* MenuBarView.swift */; };
+		93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02A23CDB87F006DDEFD /* MenuItemView.swift */; };
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
 		93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDCD5223A8D422000CC181 /* HomeViewController.swift */; };
@@ -104,6 +105,7 @@
 		93DCD02223CC1AF3006DDEFD /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
 		93DCD02623CDABA0006DDEFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = /Users/chacha/Develop/AwesomeSwiftApp/AwesomeSwiftApp/Views/GMenuViews/ContentView.swift; sourceTree = "<absolute>"; };
 		93DCD02823CDAE86006DDEFD /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		93DCD02A23CDB87F006DDEFD /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		93FDCD5223A8D422000CC181 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				93DCD01823C8445C006DDEFD /* EmailView.swift */,
 				93DCD01A23C88AC4006DDEFD /* EmailListView.swift */,
 				93DCD02823CDAE86006DDEFD /* MenuBarView.swift */,
+				93DCD02A23CDB87F006DDEFD /* MenuItemView.swift */,
 			);
 			path = GMenuViews;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				9356C1D523B1B3EC00FC9D0C /* UserViewController.swift in Sources */,
+				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
