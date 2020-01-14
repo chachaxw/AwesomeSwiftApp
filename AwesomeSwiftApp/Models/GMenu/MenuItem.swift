@@ -14,7 +14,7 @@ public protocol MenuItem {
     var imageName: String { get }
     var selectedImageName: String { get }
     var isSelected: Bool { get }
-    
+
     func setSelected()
 }
 

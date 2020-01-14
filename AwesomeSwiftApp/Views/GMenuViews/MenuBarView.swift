@@ -62,7 +62,17 @@ struct MenuBarView<Content: View>: View {
                     }
                 }
             }
+            .padding(.horizontal, isOpen ? menuHorizontalGapSize : 19)
+            .onTapGesture {
+                self.onToggle?()
+            }
         }
+        .cornerRadius(8)
+        .shadow(color: Color.black.opacity(0.42), radius: 1, x: 0, y: 1)
+        .frame(height: isOpen ? (CGFloat(self.menuItemsInRows.count) * (Constants.rowHeight)) : Constants.closedBarHeight)
+        .animation(animation)
+        .padding(.horizontal, Constants.horizontalPadding)
+        .padding(.top, 15)
     }
     
     private func getRowYOffset(row: Int) -> CGFloat {
@@ -78,15 +88,23 @@ struct MenuBarView<Content: View>: View {
     
     private func getMenuItemView(row: Int, column: Int) -> MenuItemView {
         let menuItem = menuItemsInRows[row][column]
-        let index = row * menuItemsInRows.first?.count + column
+        let index = row * menuItemsInRows.first!.count + column
         
-        return MenuItemView()
+        return MenuItemView(index: index, item: menuItem, width: Constants.itemWidth, height: Constants.itemHeight) {
+            if self.isOpen, menuItem.id != DefaultMenuItem.empty.id {
+                menuItem.setSelected()
+            }
+            self.onToggle?()
+        }
     }
 }
 
 @available(iOS 13.0.0, *)
 struct MenuBarViewPreview: PreviewProvider {
     static var previews: some View {
-        MenuBarView()
+        MenuBarView<AnyView>(menuItems: .init(
+            repeating: DefaultMenuItem(title: "Inbox", imageName: "inboxIcon", selectedImageName: "inboxIconRed"),
+            count: 9
+        ))
     }
 }
