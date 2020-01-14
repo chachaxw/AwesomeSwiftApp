@@ -14,8 +14,8 @@ struct MenuItemView: View {
     var isExpanded: Bool = true
     var width: CGFloat
     var height: CGFloat
-    var onTap: (() -> Void)? = nil
-    
+    var onTap: (() -> Void)?
+
     @available(iOS 13.0, *)
     private var animationIn: Animation {
         Animation
@@ -28,7 +28,7 @@ struct MenuItemView: View {
     private var animationOut: Animation {
         Animation.spring().speed(1.9)
     }
-    
+
     private var showSelected: Bool {
         item.isSelected && isExpanded
     }
