@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Data {
+struct GMenuData {
 
     struct Constants {
         static let menuItems: [MenuItem] = [
@@ -119,10 +119,10 @@ struct Data {
 
 extension DefaultMenuItem {
     var isSelected: Bool {
-        Data.selectedMenuItemId == id
+        GMenuData.selectedMenuItemId == id
     }
 
     func setSelected() {
-        Data.selectedMenuItemId = id
+        GMenuData.selectedMenuItemId = id
     }
 }

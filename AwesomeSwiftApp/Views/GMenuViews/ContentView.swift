@@ -62,7 +62,7 @@ struct ContentView: View {
 struct ContentViewPreview: PreviewProvider {
     static var previews: some View {
         ContentView(
-            emails: Data.emails,
+            emails: GMenuData.emails,
             menuItems: .init(
                 repeating: DefaultMenuItem(title: "Inbox", imageName: "inboxIcon", selectedImageName: "inboxIconRed"),
                 count: 9

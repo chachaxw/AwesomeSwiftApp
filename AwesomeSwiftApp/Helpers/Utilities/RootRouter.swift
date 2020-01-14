@@ -5,8 +5,8 @@
 //  Copyright © Chacha. All rights reserved.
 //
 
-import FontAwesome
 import UIKit
+import SwiftUI
 
 class RootRouter {
 
@@ -26,8 +26,15 @@ class RootRouter {
     }
 
     func loadMainAppStructure() {
-        // Customize your app structure here
-        let root = RootViewController()
+        var root: UIViewController
+
+        if #available(iOS 13.0, *) {
+            root = UIHostingController(rootView: ContentView(emails: GMenuData.emails, menuItems: GMenuData.Constants.menuItems))
+        } else {
+            // Fallback on earlier versions
+            root = RootViewController()
+        }
+
         root.view.backgroundColor = UIColor.white
         setRootViewController(controller: root, animatedWithOptions: nil)
     }

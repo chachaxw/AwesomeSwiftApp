@@ -22,7 +22,7 @@ struct EmailListView: View {
     }
 
     private var title: String {
-        Data.Constants.menuItems.first {
+        GMenuData.Constants.menuItems.first {
             $0.isSelected
         }?.title.uppercased() ?? ""
     }

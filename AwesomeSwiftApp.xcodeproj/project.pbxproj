@@ -182,7 +182,6 @@
 		2A1E77351F384BFC006C84D4 /* AwesomeSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
-				93DCD01123C83E0F006DDEFD /* Views */,
 				C90395231FC622D2006F1DC0 /* main.swift */,
 				93A1759C23A4B0E800A684D6 /* Main.storyboard */,
 				2A1E77361F384BFC006C84D4 /* AppDelegate.swift */,
@@ -191,6 +190,7 @@
 				2AFB31071F38542E009C4586 /* SupportingFiles */,
 				2AB31D9E1F38740A00B7D1F3 /* Models */,
 				2AB31D9F1F38741400B7D1F3 /* Modules */,
+				93DCD01123C83E0F006DDEFD /* Views */,
 				2AFB310A1F385A20009C4586 /* Helpers */,
 			);
 			path = AwesomeSwiftApp;

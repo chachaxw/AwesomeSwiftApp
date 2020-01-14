@@ -61,6 +61,7 @@ struct MenuBarView<Content: View>: View {
                             self.getMenuItemView(row: row, column: column)
                         }
                     }
+                    .offset(y: self.getRowYOffset(row: row))
                 }
             }
             .padding(.horizontal, isOpen ? menuHorizontalGapSize : 19)
@@ -79,20 +80,25 @@ struct MenuBarView<Content: View>: View {
 
     private func getRowYOffset(row: Int) -> CGFloat {
         let center = CGFloat(self.menuItemsInRows.count + 1) / 2
-        var y: CGFloat = CGFloat(row + 1) < center ? -4 : 4
+        var offsetY: CGFloat = CGFloat(row + 1) < center ? -4 : 4
 
         if isOpen {
-            y = CGFloat((CGFloat(row) + 1) - center) * (Constants.itemWidth + menuVerticalGapSize / 2)
+            offsetY = CGFloat((CGFloat(row) + 1) - center) * (Constants.itemWidth + menuVerticalGapSize / 2)
         }
 
-        return y
+        return offsetY
     }
 
     private func getMenuItemView(row: Int, column: Int) -> MenuItemView {
         let menuItem = menuItemsInRows[row][column]
         let index = row * menuItemsInRows.first!.count + column
 
-        return MenuItemView(index: index, item: menuItem, width: Constants.itemWidth, height: Constants.itemHeight) {
+        return MenuItemView(
+            index: index,
+            item: menuItem,
+            width: Constants.itemWidth,
+            height: Constants.itemHeight
+        ) {
             if self.isOpen, menuItem.id != DefaultMenuItem.empty.id {
                 menuItem.setSelected()
             }

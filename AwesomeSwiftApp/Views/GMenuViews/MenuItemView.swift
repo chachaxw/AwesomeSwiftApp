@@ -23,7 +23,7 @@ struct MenuItemView: View {
             .speed(1.5)
             .delay(0.02 * Double(index))
     }
-    
+
     @available(iOS 13.0, *)
     private var animationOut: Animation {
         Animation.spring().speed(1.9)
