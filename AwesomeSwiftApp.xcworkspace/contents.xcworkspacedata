@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/chacha/Develop/AwesomeSwiftApp/AwesomeSwiftApp/Views/GMenuViews/ContentView.swift">
-   </FileRef>
-   <FileRef
       location = "group:AwesomeSwiftApp.xcodeproj">
    </FileRef>
    <FileRef

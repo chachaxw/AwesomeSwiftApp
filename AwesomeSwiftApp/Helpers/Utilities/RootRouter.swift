@@ -5,8 +5,8 @@
 //  Copyright © Chacha. All rights reserved.
 //
 
-import UIKit
 import SwiftUI
+import UIKit
 
 class RootRouter {
 
@@ -29,7 +29,10 @@ class RootRouter {
         var root: UIViewController
 
         if #available(iOS 13.0, *) {
-            root = UIHostingController(rootView: ContentView(emails: GMenuData.emails, menuItems: GMenuData.Constants.menuItems))
+            root = UIHostingController(rootView: ContentView(
+                emails: GMenuData.emails,
+                menuItems: GMenuData.Constants.menuItems
+            ))
         } else {
             // Fallback on earlier versions
             root = RootViewController()

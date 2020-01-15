@@ -56,24 +56,27 @@ struct EmailListView: View {
                 }
                 .padding(.top, 16)
             }
-            .padding(.top, 7 + (self.isMenuOpen ? 200 : 50))
-            .animation(animation)
         }
+        .padding(.top, 7 + (self.isMenuOpen ? 200 : 50))
+        .animation(animation)
     }
 }
 
 struct EmailListViewPreview: PreviewProvider {
     @available(iOS 13.0.0, *)
     static var previews: some View {
-        EmailListView(emails: .init(
-            repeating: Email(
-                sender: "Chacha",
-                time: "15:59",
-                title: "Chacha",
-                description: "Get an Chacha Store Gift Card of up to $200 on select products during" +
-                    "our four-day shopping event. And more offers now through Monday."
+        EmailListView(
+            emails: .init(
+                repeating: Email(
+                    sender: "Chacha",
+                    time: "15:59",
+                    title: "Chacha",
+                    description: "Get an Chacha Store Gift Card of up to $200 on select products during" +
+                        "our four-day shopping event. And more offers now through Monday."
+                ),
+                count: 20
             ),
-            count: 20
-        ))
+            isMenuOpen: true
+        )
     }
 }

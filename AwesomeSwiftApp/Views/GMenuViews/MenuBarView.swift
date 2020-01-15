@@ -23,7 +23,7 @@ struct MenuBarView<Content: View>: View {
     var menuItems: [MenuItem]
     var onToggle: (() -> Void)?
     var contentProvider: (() -> Content)?
-    
+
     private var menuItemsInRows: [[MenuItem]] {
         menuItems
             .filledWith(DefaultMenuItem.empty, max: 6)
@@ -75,7 +75,7 @@ struct MenuBarView<Content: View>: View {
             Constants.closedBarHeight)
         .animation(animation)
         .padding(.horizontal, Constants.horizontalPadding)
-        .padding(.top, 15)
+            .padding(.top, 15)
     }
 
     private func getRowYOffset(row: Int) -> CGFloat {
@@ -96,6 +96,7 @@ struct MenuBarView<Content: View>: View {
         return MenuItemView(
             index: index,
             item: menuItem,
+            isExpanded: isOpen,
             width: Constants.itemWidth,
             height: Constants.itemHeight
         ) {

@@ -23,15 +23,18 @@ struct ContentView: View {
 
             EmailListView(emails: emails, isMenuOpen: isMenuOpen)
                 .blur(radius: isMenuOpen ? 1 : 0)
-            
+
             Color(UIColor.black.withAlphaComponent(isMenuOpen ? 0.32 : 0))
                 .edgesIgnoringSafeArea(.all)
                 .onTapGesture {
                     self.toggleMenu()
                 }
 
-            MenuBarView(isOpen: isMenuOpen, menuItems: menuItems, onToggle: {
-                self.toggleMenu()
+            MenuBarView(
+                isOpen: isMenuOpen,
+                menuItems: menuItems,
+                onToggle: {
+                    self.toggleMenu()
             }) {
                 HStack {
                     Text("Search email")

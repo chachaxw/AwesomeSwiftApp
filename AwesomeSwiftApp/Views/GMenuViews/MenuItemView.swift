@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MenuItemView: View {
+
     var index: Int
     var item: MenuItem
     var isExpanded: Bool = true
