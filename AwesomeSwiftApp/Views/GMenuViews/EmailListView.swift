@@ -32,9 +32,8 @@ struct EmailListView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text(title)
-                    .padding(.top, 20)
-                    .padding(.bottom, 6)
-                    .padding(.leading, 6)
+                    .padding(.top, 32)
+                    .padding(.horizontal, 16)
                     .font(.caption)
                     .foregroundColor(Color("text"))
 

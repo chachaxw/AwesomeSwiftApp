@@ -64,7 +64,7 @@ struct MenuBarView<Content: View>: View {
                     .offset(y: self.getRowYOffset(row: row))
                 }
             }
-            .padding(.horizontal, isOpen ? menuHorizontalGapSize : 19)
+            .padding(.horizontal, isOpen ? menuHorizontalGapSize : 16)
             .onTapGesture {
                 self.onToggle?()
             }
