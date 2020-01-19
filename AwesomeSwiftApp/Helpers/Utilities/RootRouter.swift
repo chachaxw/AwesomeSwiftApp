@@ -26,18 +26,7 @@ class RootRouter {
     }
 
     func loadMainAppStructure() {
-        var root: UIViewController
-
-        if #available(iOS 13.0, *) {
-            root = UIHostingController(rootView: ContentView(
-                emails: GMenuData.emails,
-                menuItems: GMenuData.Constants.menuItems
-            ))
-        } else {
-            // Fallback on earlier versions
-            root = RootViewController()
-        }
-
+        let root = RootViewController()
         root.view.backgroundColor = UIColor.white
         setRootViewController(controller: root, animatedWithOptions: nil)
     }

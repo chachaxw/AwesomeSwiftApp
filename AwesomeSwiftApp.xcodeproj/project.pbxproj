@@ -19,8 +19,6 @@
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
 		9324074623ACE0E50025013F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324074423ACE0E50025013F /* RootViewController.swift */; };
-		9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */; };
-		9356C1D523B1B3EC00FC9D0C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9356C1D323B1B3EC00FC9D0C /* UserViewController.swift */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
 		937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F0BF323B485C600FD0126 /* UIView+Border.swift */; };
 		93A1759123A3C76100A684D6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 93A1759023A3C76100A684D6 /* FontAwesome */; };
@@ -43,7 +41,6 @@
 		93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD02A23CDB87F006DDEFD /* MenuItemView.swift */; };
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
-		93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDCD5223A8D422000CC181 /* HomeViewController.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
 		C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -84,8 +81,6 @@
 		7C5619126C0D57DADE3E9C71 /* Pods-AwesomeSwiftAppTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftAppTests.staging.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftAppTests/Pods-AwesomeSwiftAppTests.staging.xcconfig"; sourceTree = "<group>"; };
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
-		9356C1D323B1B3EC00FC9D0C /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		937F0BF323B485C600FD0126 /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
@@ -108,7 +103,6 @@
 		93DCD02A23CDB87F006DDEFD /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		93FDCD5223A8D422000CC181 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -319,7 +313,6 @@
 		9342D8BA23AC949F00BD0989 /* Featured */ = {
 			isa = PBXGroup;
 			children = (
-				9342D8BF23ACCFAD00BD0989 /* FeaturedViewController.swift */,
 			);
 			path = Featured;
 			sourceTree = "<group>";
@@ -327,7 +320,6 @@
 		9356C1D223B1B02800FC9D0C /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				9356C1D323B1B3EC00FC9D0C /* UserViewController.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -412,7 +404,6 @@
 		93FDCD5123A8D3F5000CC181 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				93FDCD5223A8D422000CC181 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -645,20 +636,17 @@
 				93DCD02923CDAE86006DDEFD /* MenuBarView.swift in Sources */,
 				93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
-				9356C1D523B1B3EC00FC9D0C /* UserViewController.swift in Sources */,
 				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */,
-				9342D8C123ACCFAD00BD0989 /* FeaturedViewController.swift in Sources */,
 				93DCD01623C83EEF006DDEFD /* Email.swift in Sources */,
 				93DCD02123CC182D006DDEFD /* DefaultMenuItem.swift in Sources */,
 				93DCD02723CDABA0006DDEFD /* ContentView.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
 				9324074623ACE0E50025013F /* RootViewController.swift in Sources */,
 				93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */,
-				93FDCD5323A8D422000CC181 /* HomeViewController.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				93DCD02323CC1AF3006DDEFD /* Array+Utilities.swift in Sources */,
 				93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */,

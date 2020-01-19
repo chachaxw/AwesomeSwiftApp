@@ -16,44 +16,8 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     var maskView: UIView!
     var currentTabIndex: Int = 0
 
-    let homeViewCtrl = HomeViewController()
-    let featuredViewCtrl = FeaturedViewController()
-    let userViewCtrl = UserViewController()
-    let tabbarBackgroundView = UIView()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        homeViewCtrl.tabBarItem.title = "Discover"
-        if #available(iOS 13.0, *) {
-            homeViewCtrl.tabBarItem.image = UIImage(systemName: "safari")
-            homeViewCtrl.tabBarItem.selectedImage = UIImage(systemName: "safari.fill")
-        } else {
-            // Fallback on earlier versions
-        }
-
-        featuredViewCtrl.tabBarItem.title = "Featured"
-        if #available(iOS 13.0, *) {
-            featuredViewCtrl.tabBarItem.image = UIImage(systemName: "star")
-            featuredViewCtrl.tabBarItem.selectedImage = UIImage(systemName: "star.fill")
-        } else {
-            // Fallback on earlier versions
-        }
-
-        userViewCtrl.tabBarItem.title = "Me"
-        if #available(iOS 13.0, *) {
-            userViewCtrl.tabBarItem.image = UIImage(systemName: "person")
-            userViewCtrl.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
-        } else {
-            // Fallback on earlier versions
-        }
-
-        self.viewControllers = [
-            homeViewCtrl,
-            featuredViewCtrl,
-            userViewCtrl
-        ]
-        self.setTabBar()
         self.animiation()
     }
 
@@ -76,7 +40,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         tabBar.tintColor = UIColor.Theme.PrimaryColor
         tabBar.isTranslucent = false
         tabBar.backgroundColor = UIColor.white
-        
+
         if #available(iOS 13, *) {
             let appearance = tabBar.standardAppearance.copy()
 //            appearance.backgroundImage = UIImage(color: UIColor.clear)
