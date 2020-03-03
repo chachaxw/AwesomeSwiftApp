@@ -26,7 +26,10 @@ class RootRouter {
     }
 
     func loadMainAppStructure() {
-        let root = RootViewController()
+        guard let root = R.storyboard.main()
+            .instantiateViewController(withIdentifier: "MainStoryboard") as? RootViewController else {
+                return
+            }
         root.view.backgroundColor = UIColor.white
         setRootViewController(controller: root, animatedWithOptions: nil)
     }
