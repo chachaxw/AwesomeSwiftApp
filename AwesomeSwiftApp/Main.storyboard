@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,6 +16,15 @@
                     <view key="view" contentMode="scaleToFill" id="sRZ-6P-F3g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nme-XL-gql">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Top Rated" id="Ce2-Ld-B9B"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nxW-oZ-GhR"/>
                     </view>
@@ -24,21 +34,111 @@
             </objects>
             <point key="canvasLocation" x="-137" y="-188"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="s5d-PS-Cvt">
+        <!--Me-->
+        <scene sceneID="Pm2-g7-4kc">
             <objects>
-                <viewController storyboardIdentifier="HomeStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3">
+                <viewController id="y8H-xn-LGa" userLabel="Me" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idB-iz-Lvf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iJO-pX-Enz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" selectedImage="person.fill" id="Tfu-ZY-Zs2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zzl-gA-Sht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="471"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="s5d-PS-Cvt">
+            <objects>
+                <viewController storyboardIdentifier="HomeStoryboard" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search something..." translatesAutoresizingMaskIntoConstraints="NO" id="PMh-hL-XmO">
+                                <rect key="frame" x="0.0" y="44" width="0.0" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zSg-OB-DFQ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NtY-Xd-yZ3">
+                                <rect key="frame" x="0.0" y="96" width="414" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7dh-2F-WSS">
+                                    <size key="itemSize" width="398" height="189"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sAL-XW-Ubp">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="189"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ldc-1H-cd2" customClass="UICardView" customModule="Swift_App" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="189"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-dl-xFI">
+                                                    <rect key="frame" x="24" y="82" width="53" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.3006742294520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Best Swift Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdN-bl-EVd">
+                                                    <rect key="frame" x="24" y="113" width="306" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.3006742295" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-5w-RnB">
+                                                    <rect key="frame" x="352" y="14" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <size key="titleShadowOffset" width="0.0" height="-2"/>
+                                                    <state key="normal" image="heart" catalog="system">
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.3006742295" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="398" height="189"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DLv-p6-Ob8" firstAttribute="bottom" secondItem="NtY-Xd-yZ3" secondAttribute="bottom" constant="1" id="87x-bv-AAQ"/>
+                            <constraint firstItem="NtY-Xd-yZ3" firstAttribute="top" secondItem="PMh-hL-XmO" secondAttribute="bottom" constant="8" id="CDT-Ph-EAf"/>
+                            <constraint firstItem="NtY-Xd-yZ3" firstAttribute="leading" secondItem="DLv-p6-Ob8" secondAttribute="leading" id="JHT-42-DOl"/>
+                            <constraint firstItem="PMh-hL-XmO" firstAttribute="leading" secondItem="NtY-Xd-yZ3" secondAttribute="leading" id="Keh-KU-a0C"/>
+                            <constraint firstItem="PMh-hL-XmO" firstAttribute="trailing" secondItem="NtY-Xd-yZ3" secondAttribute="trailing" id="fL4-FN-Cpy"/>
+                            <constraint firstItem="PMh-hL-XmO" firstAttribute="top" secondItem="DLv-p6-Ob8" secondAttribute="top" id="gXe-NA-4Cs"/>
+                            <constraint firstItem="DLv-p6-Ob8" firstAttribute="trailing" secondItem="PMh-hL-XmO" secondAttribute="trailing" id="lLM-Ig-3I8"/>
+                            <constraint firstItem="PMh-hL-XmO" firstAttribute="leading" secondItem="DLv-p6-Ob8" secondAttribute="leading" id="qas-jH-Xrs"/>
+                            <constraint firstItem="NtY-Xd-yZ3" firstAttribute="trailing" secondItem="DLv-p6-Ob8" secondAttribute="trailing" id="ttG-6p-dPn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DLv-p6-Ob8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
+                    <connections>
+                        <outlet property="searchBar" destination="PMh-hL-XmO" id="DZx-PW-MFc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYq-lm-Ga5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-137.68115942028987" y="-836.38392857142856"/>
+            <point key="canvasLocation" x="-139.13043478260872" y="-846.42857142857144"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="uzf-dF-2p4">
@@ -53,14 +153,17 @@
                     <connections>
                         <segue destination="BoG-Bc-nPs" kind="relationship" relationship="viewControllers" id="l3G-ow-QWU"/>
                         <segue destination="oZo-MC-Rja" kind="relationship" relationship="viewControllers" id="kgR-YL-gwX"/>
+                        <segue destination="y8H-xn-LGa" kind="relationship" relationship="viewControllers" id="yjg-sI-DpD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hL2-cp-VHN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1055" y="-512"/>
+            <point key="canvasLocation" x="-1294" y="-309"/>
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="safari.fill" catalog="system" width="64" height="60"/>
     </resources>
     <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>

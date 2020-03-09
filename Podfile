@@ -15,6 +15,8 @@ target 'AwesomeSwiftApp' do
   pod 'Log'
   pod 'FontAwesome.swift'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
   target 'AwesomeSwiftAppTests' do
     inherit! :search_paths
