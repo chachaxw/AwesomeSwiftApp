@@ -22,6 +22,7 @@
 		93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93497EA8240EA66A00A40AE2 /* ContentView.swift */; };
 		934B3B4E240F4777002A524D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B3B4D240F4777002A524D /* HomeViewController.swift */; };
 		9374357024152945002A0A2A /* UIView+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374356F24152945002A0A2A /* UIView+Card.swift */; };
+		937435722416960E002A0A2A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937435712416960E002A0A2A /* CollectionViewCell.swift */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
 		937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F0BF323B485C600FD0126 /* UIView+Border.swift */; };
 		93A1759123A3C76100A684D6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 93A1759023A3C76100A684D6 /* FontAwesome */; };
@@ -84,8 +85,9 @@
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		93497EA8240EA66A00A40AE2 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		934B3B4D240F4777002A524D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = AwesomeSwiftApp/Views/GMenuViews/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		934B3B4D240F4777002A524D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = AwesomeSwiftApp/Modules/Home/Controller/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		9374356F24152945002A0A2A /* UIView+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Card.swift"; sourceTree = "<group>"; };
+		937435712416960E002A0A2A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = AwesomeSwiftApp/Modules/Home/View/CollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		937F0BF323B485C600FD0126 /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
@@ -328,6 +330,22 @@
 			path = Me;
 			sourceTree = "<group>";
 		};
+		937435732417E583002A0A2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				934B3B4D240F4777002A524D /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		937435742417E598002A0A2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				937435712416960E002A0A2A /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		937A1E5D23A26CED0089B60F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,7 +427,8 @@
 		93FDCD5123A8D3F5000CC181 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				934B3B4D240F4777002A524D /* HomeViewController.swift */,
+				937435732417E583002A0A2A /* Controller */,
+				937435742417E598002A0A2A /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -649,6 +668,7 @@
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */,
 				93DCD01623C83EEF006DDEFD /* Email.swift in Sources */,
+				937435722416960E002A0A2A /* CollectionViewCell.swift in Sources */,
 				93DCD02123CC182D006DDEFD /* DefaultMenuItem.swift in Sources */,
 				934B3B4E240F4777002A524D /* HomeViewController.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
