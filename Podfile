@@ -7,7 +7,11 @@ use_frameworks!
 # ignore all warnings from all pods
 inhibit_all_warnings!
 
+#flutter_application_path = 'flutter_lib'
+#load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
 target 'AwesomeSwiftApp' do
+#  install_all_flutter_pods(flutter_application_path)
 
   pod 'R.swift', '5.0.0'
   pod 'SwiftLint', '0.31.0'

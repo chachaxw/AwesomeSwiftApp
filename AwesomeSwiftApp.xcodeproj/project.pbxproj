@@ -319,8 +319,31 @@
 		9342D8BA23AC949F00BD0989 /* Featured */ = {
 			isa = PBXGroup;
 			children = (
+				93454E2D24B8CAC900580553 /* ViewModel */,
+				93454E2E24B8CAD500580553 /* Controller */,
 			);
 			path = Featured;
+			sourceTree = "<group>";
+		};
+		93454E2C24B8C26400580553 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93454E2D24B8CAC900580553 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93454E2E24B8CAD500580553 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		9356C1D223B1B02800FC9D0C /* Me */ = {
@@ -427,6 +450,7 @@
 		93FDCD5123A8D3F5000CC181 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				93454E2C24B8C26400580553 /* ViewModel */,
 				937435732417E583002A0A2A /* Controller */,
 				937435742417E598002A0A2A /* View */,
 			);
