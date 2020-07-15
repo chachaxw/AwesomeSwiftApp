@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class UICardView: UIView {
 
-    @IBInspectable var cornorRadius: CGFloat = 10.0
+    @IBInspectable var cornorRadius: CGFloat = 16.0
     @IBInspectable var shadowOffsetWidth: Int = 0
     @IBInspectable var shadowOffsetHeight: Int = 2
     @IBInspectable var shadowColor: UIColor? = UIColor.black

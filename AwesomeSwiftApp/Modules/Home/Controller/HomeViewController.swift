@@ -8,17 +8,26 @@
 
 import UIKit
 
+let cellIdentifiier = "CardCell"
+
 class HomeViewController: UIViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet weak private var navigationBar: UINavigationBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.backgroundColor = UIColor.Theme.LightGrayColor
+        self.view.backgroundColor = UIColor.Theme.LightGrayColor
+        collectionView.backgroundColor = UIColor.white
 
         if #available(iOS 11, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
+            navigationBar.prefersLargeTitles = true
         }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
@@ -28,9 +37,14 @@ extension HomeViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath)
     -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "CardCell", for: indexPath) as? CollectionViewCell else {
+            withReuseIdentifier: cellIdentifiier, for: indexPath) as? CollectionViewCell else {
                 fatalError("DequeueReusableCell failed while casting")
         }
+
+        cell.setCardView()
+        cell.setLabelText(label: "Hello Chacha")
+        cell.setTitleText(title: "The Best Swift Demo")
+        cell.setCoverImage(imgUrl: "http://00.minipic.eastday.com/20170420/20170420105628_ea6da92abc46098d8e03ad2ee55abeb7_9.jpeg")
 
         return cell
     }
@@ -45,8 +59,17 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item + 1)
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width - 28, height: 188)
     }
 }

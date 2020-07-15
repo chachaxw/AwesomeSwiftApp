@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -98,17 +97,17 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="sAL-XW-Ubp" customClass="CollectionViewCell" customModule="Swift_App" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="0.0" width="386" height="181.5"/>
+                                        <rect key="frame" x="14" y="0.0" width="386" height="189"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ldc-1H-cd2" customClass="UICardView" customModule="Swift_App" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="386" height="181.5"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="11e-f0-SG8">
                                                     <rect key="frame" x="0.0" y="0.0" width="386" height="189"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Best App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-dl-xFI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="Best App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-dl-xFI">
                                                     <rect key="frame" x="24" y="82" width="87" height="28.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="textColor" systemColor="darkTextColor"/>
@@ -116,15 +115,15 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.3006742294520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Best Swift Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdN-bl-EVd">
-                                                    <rect key="frame" x="24" y="114.5" width="306" height="43"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Best Swift Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdN-bl-EVd">
+                                                    <rect key="frame" x="24" y="114.5" width="306" height="50.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="textColor" systemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="0.3006742295" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-5w-RnB">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-5w-RnB">
                                                     <rect key="frame" x="340" y="14" width="32" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="V89-4c-ZJB"/>
@@ -137,37 +136,20 @@
                                                     </state>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="xdN-bl-EVd" secondAttribute="bottom" constant="24" id="9iI-8y-8Rg"/>
-                                                <constraint firstItem="xdN-bl-EVd" firstAttribute="top" secondItem="RuJ-dl-xFI" secondAttribute="bottom" constant="4" id="A4q-1n-6T7"/>
-                                                <constraint firstAttribute="trailing" secondItem="8tR-5w-RnB" secondAttribute="trailing" constant="14" id="COy-Kd-4Lg"/>
-                                                <constraint firstItem="xdN-bl-EVd" firstAttribute="leading" secondItem="ldc-1H-cd2" secondAttribute="leading" constant="24" id="Jij-v8-Wzw"/>
-                                                <constraint firstItem="RuJ-dl-xFI" firstAttribute="top" secondItem="ldc-1H-cd2" secondAttribute="top" constant="82" id="NcK-iY-5Rw"/>
-                                                <constraint firstItem="8tR-5w-RnB" firstAttribute="top" secondItem="ldc-1H-cd2" secondAttribute="top" constant="14" id="PhE-Gd-HfW"/>
-                                                <constraint firstItem="RuJ-dl-xFI" firstAttribute="leading" secondItem="ldc-1H-cd2" secondAttribute="leading" constant="24" id="Sht-QH-aQ6"/>
-                                                <constraint firstItem="xdN-bl-EVd" firstAttribute="top" secondItem="RuJ-dl-xFI" secondAttribute="bottom" constant="4" id="U4C-Nc-yi0"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornorRadius">
-                                                    <real key="value" value="28"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
-                                                    <integer key="value" value="0"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
-                                                    <integer key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                    <real key="value" value="0.080000000000000002"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </collectionViewCellContentView>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xdN-bl-EVd" secondAttribute="bottom" constant="24" id="9iI-8y-8Rg"/>
+                                            <constraint firstItem="xdN-bl-EVd" firstAttribute="top" secondItem="RuJ-dl-xFI" secondAttribute="bottom" constant="4" id="A4q-1n-6T7"/>
+                                            <constraint firstAttribute="trailing" secondItem="8tR-5w-RnB" secondAttribute="trailing" constant="14" id="COy-Kd-4Lg"/>
+                                            <constraint firstItem="xdN-bl-EVd" firstAttribute="leading" secondItem="sAL-XW-Ubp" secondAttribute="leading" constant="24" id="Jij-v8-Wzw"/>
+                                            <constraint firstItem="RuJ-dl-xFI" firstAttribute="top" secondItem="sAL-XW-Ubp" secondAttribute="top" constant="82" id="NcK-iY-5Rw"/>
+                                            <constraint firstItem="8tR-5w-RnB" firstAttribute="top" secondItem="sAL-XW-Ubp" secondAttribute="top" constant="14" id="PhE-Gd-HfW"/>
+                                            <constraint firstItem="RuJ-dl-xFI" firstAttribute="leading" secondItem="sAL-XW-Ubp" secondAttribute="leading" constant="24" id="Sht-QH-aQ6"/>
+                                            <constraint firstItem="xdN-bl-EVd" firstAttribute="top" secondItem="RuJ-dl-xFI" secondAttribute="bottom" constant="4" id="U4C-Nc-yi0"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="coverImgView" destination="11e-f0-SG8" id="PCI-Mn-G3J"/>
+                                            <outlet property="coverImage" destination="11e-f0-SG8" id="tDV-ob-rV6"/>
                                             <outlet property="labelText" destination="RuJ-dl-xFI" id="OxC-AW-CBU"/>
                                             <outlet property="likeButton" destination="8tR-5w-RnB" id="20y-CQ-Ta3"/>
                                             <outlet property="titleText" destination="xdN-bl-EVd" id="zLh-EU-4da"/>
@@ -176,6 +158,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BoG-Bc-nPs" id="RKs-GT-SBi"/>
+                                    <outlet property="delegate" destination="BoG-Bc-nPs" id="aPy-S4-hz1"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -194,6 +177,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
                     <connections>
                         <outlet property="collectionView" destination="NtY-Xd-yZ3" id="3ft-xR-eq4"/>
+                        <outlet property="navigationBar" destination="D4N-fJ-UYq" id="ccB-Ys-d7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYq-lm-Ga5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
