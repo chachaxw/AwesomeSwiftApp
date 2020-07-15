@@ -15,7 +15,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.layoutSubviews()
+        self.contentView.layoutSubviews()
     }
 
     func setLabelText(label: String) {
@@ -35,5 +35,7 @@ class CollectionViewCell: UICollectionViewCell {
         } else {
             self.coverImage.image = UIImage(named: R.image.chacha.name)
         }
+        
+        self.coverImage.sizeToFit()
     }
 }

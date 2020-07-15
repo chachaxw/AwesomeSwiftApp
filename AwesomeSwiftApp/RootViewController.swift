@@ -40,6 +40,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         tabBar.tintColor = UIColor.Theme.PrimaryColor
         tabBar.isTranslucent = false
         tabBar.backgroundColor = UIColor.white
+        tabBar.layoutSubviews()
 
         if #available(iOS 13, *) {
             let appearance = tabBar.standardAppearance.copy()

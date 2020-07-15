@@ -13,12 +13,50 @@ let cellIdentifiier = "CardCell"
 class HomeViewController: UIViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
+    var cardList: [CardItem] = [
+        CardItem(
+            id: UUID().uuidString,
+            label: "Hello World",
+            title: "Hello, awesome swift App",
+            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/1.jpg",
+            isLiked: true
+        ),
+        CardItem(
+            id: UUID().uuidString,
+            label: "Hello Chacha",
+            title: "The Best Swift Demo",
+            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/2.jpg",
+            isLiked: false
+        ),
+        CardItem(
+            id: UUID().uuidString,
+            label: "Hello Swift",
+            title: "The Best Swift Demo",
+            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/3.jpg",
+            isLiked: true
+        ),
+        CardItem(
+            id: UUID().uuidString,
+            label: "Hello Javascript",
+            title: "The Best Swift Demo",
+            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/4.jpg",
+            isLiked: false
+        ),
+        CardItem(
+            id: UUID().uuidString,
+            label: "Hello iOS",
+            title: "The Best Swift Demo",
+            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/5.jpg",
+            isLiked: true
+        )
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.Theme.LightGrayColor
         collectionView.backgroundColor = UIColor.white
+        collectionView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 16.0)
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
@@ -41,10 +79,11 @@ extension HomeViewController: UICollectionViewDataSource {
                 fatalError("DequeueReusableCell failed while casting")
         }
 
+        let cardItem: CardItem = cardList[indexPath[1]]
+        cell.setLabelText(label: cardItem.label)
+        cell.setTitleText(title: cardItem.title)
+        cell.setCoverImage(imgUrl: cardItem.imgUrl)
         cell.setCardView()
-        cell.setLabelText(label: "Hello Chacha")
-        cell.setTitleText(title: "The Best Swift Demo")
-        cell.setCoverImage(imgUrl: "http://00.minipic.eastday.com/20170420/20170420105628_ea6da92abc46098d8e03ad2ee55abeb7_9.jpeg")
 
         return cell
     }
@@ -54,7 +93,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return cardList.count
     }
 }
 
