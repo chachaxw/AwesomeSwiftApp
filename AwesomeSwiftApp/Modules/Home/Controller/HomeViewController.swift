@@ -18,35 +18,35 @@ class HomeViewController: UIViewController {
             id: UUID().uuidString,
             label: "Hello World",
             title: "Hello, awesome swift App",
-            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/1.jpg",
+            imgUrl: "",
             isLiked: true
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello Chacha",
             title: "The Best Swift Demo",
-            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/2.jpg",
+            imgUrl: "",
             isLiked: false
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello Swift",
             title: "The Best Swift Demo",
-            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/3.jpg",
+            imgUrl: "",
             isLiked: true
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello Javascript",
             title: "The Best Swift Demo",
-            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/4.jpg",
+            imgUrl: "",
             isLiked: false
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello iOS",
             title: "The Best Swift Demo",
-            imgUrl: "https://t1.hddhhn.com/uploads/tu/201910/192/5.jpg",
+            imgUrl: "",
             isLiked: true
         )
     ]

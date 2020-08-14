@@ -14,7 +14,7 @@ struct CardItem: Identifiable {
     var title: String
     var imgUrl: String
     var isLiked: Bool
-    
+
     init(id: String, label: String, title: String, imgUrl: String, isLiked: Bool) {
         self.id = id
         self.label = label

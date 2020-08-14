@@ -15,7 +15,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.contentView.layoutSubviews()
+        self.contentView.roundCorners(corners: UIRectCorner.allCorners, with: 16.0)
     }
 
     func setLabelText(label: String) {
