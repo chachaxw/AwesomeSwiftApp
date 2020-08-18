@@ -26,7 +26,12 @@ class CollectionViewCell: UICollectionViewCell {
         self.titleText.text = title
     }
 
-    func setCoverImage(imgUrl: String) {
+    func setCoverImage(image: UIImage) {
+        self.coverImage.image = image
+        self.coverImage.sizeToFit()
+    }
+
+    func setCoverImageFromUrl(imgUrl: String) {
         let url: URL = URL(string: imgUrl)!
         let data: NSData! = NSData(contentsOf: url)
 
@@ -35,7 +40,7 @@ class CollectionViewCell: UICollectionViewCell {
         } else {
             self.coverImage.image = UIImage(named: R.image.chacha.name)
         }
-        
+
         self.coverImage.sizeToFit()
     }
 }

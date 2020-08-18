@@ -11,6 +11,7 @@ import UIKit
 let cellIdentifiier = "CardCell"
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
     var cardList: [CardItem] = [
@@ -18,36 +19,36 @@ class HomeViewController: UIViewController {
             id: UUID().uuidString,
             label: "Hello World",
             title: "Hello, awesome swift App",
-            imgUrl: "",
-            isLiked: true
+            isLiked: true,
+            uiImage: R.image.image1()
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello Chacha",
             title: "The Best Swift Demo",
-            imgUrl: "",
-            isLiked: false
+            isLiked: false,
+            uiImage: R.image.image2()
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello Swift",
             title: "The Best Swift Demo",
-            imgUrl: "",
-            isLiked: true
+            isLiked: true,
+            uiImage: R.image.image3()
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello Javascript",
             title: "The Best Swift Demo",
-            imgUrl: "",
-            isLiked: false
+            isLiked: false,
+            uiImage: R.image.image4()
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Hello iOS",
             title: "The Best Swift Demo",
-            imgUrl: "",
-            isLiked: true
+            isLiked: true,
+            uiImage: R.image.image5()
         )
     ]
 
@@ -55,8 +56,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.Theme.LightGrayColor
-        collectionView.backgroundColor = UIColor.white
-        collectionView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 16.0)
+        contentView.backgroundColor = UIColor.white
+        contentView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 16.0)
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
@@ -82,7 +83,7 @@ extension HomeViewController: UICollectionViewDataSource {
         let cardItem: CardItem = cardList[indexPath[1]]
         cell.setLabelText(label: cardItem.label)
         cell.setTitleText(title: cardItem.title)
-        cell.setCoverImage(imgUrl: cardItem.imgUrl)
+        cell.setCoverImage(image: cardItem.uiImage!)
         cell.setCardView()
 
         return cell
