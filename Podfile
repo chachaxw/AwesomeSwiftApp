@@ -17,6 +17,8 @@ target 'AwesomeSwiftApp' do
   pod 'SwiftLint', '0.31.0'
   pod 'AFNetworking', '~> 3.0'
   pod 'Log'
+  pod 'LookinServer',
+    :configurations => ['Debug']
   pod 'FontAwesome.swift'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'RxSwift', '~> 5'

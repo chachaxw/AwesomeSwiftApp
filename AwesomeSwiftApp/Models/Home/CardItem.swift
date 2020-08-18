@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 struct CardItem: Identifiable {
     var id: String
     var label: String
     var title: String
-    var imgUrl: String
     var isLiked: Bool
+//    var imgUrl: String? = nil
+    var uiImage: UIImage? = nil
 
-    init(id: String, label: String, title: String, imgUrl: String, isLiked: Bool) {
+    init(id: String, label: String, title: String, isLiked: Bool, uiImage: UIImage?) {
         self.id = id
         self.label = label
         self.title = title
-        self.imgUrl = imgUrl
         self.isLiked = isLiked
+        self.uiImage = uiImage
     }
 }
