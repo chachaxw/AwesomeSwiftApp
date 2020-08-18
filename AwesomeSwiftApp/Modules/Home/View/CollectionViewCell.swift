@@ -15,7 +15,14 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.contentView.roundCorners(corners: UIRectCorner.allCorners, with: 16.0)
+        let cornerRadius: CGFloat = 16.0
+        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+
+        self.layer.cornerRadius = cornerRadius
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 0.08
+        self.layer.shadowPath = shadowPath.cgPath
     }
 
     func setLabelText(label: String) {
@@ -28,7 +35,6 @@ class CollectionViewCell: UICollectionViewCell {
 
     func setCoverImage(image: UIImage) {
         self.coverImage.image = image
-        self.coverImage.sizeToFit()
     }
 
     func setCoverImageFromUrl(imgUrl: String) {

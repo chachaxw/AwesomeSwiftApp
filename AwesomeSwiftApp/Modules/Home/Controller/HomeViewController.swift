@@ -56,12 +56,17 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.Theme.LightGrayColor
-        contentView.backgroundColor = UIColor.white
-        contentView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 16.0)
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
         }
+
+        initCollectionView()
+    }
+
+    func initCollectionView() {
+        contentView.backgroundColor = UIColor.white
+        contentView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
     }
 
     override func didReceiveMemoryWarning() {
