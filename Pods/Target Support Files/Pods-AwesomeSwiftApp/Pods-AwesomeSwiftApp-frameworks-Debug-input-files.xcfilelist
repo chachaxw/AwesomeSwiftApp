@@ -1,6 +1,10 @@
 ${PODS_ROOT}/Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework
+${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework
 ${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework
+${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
+${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework
 ${BUILT_PRODUCTS_DIR}/Log/Log.framework
 ${PODS_ROOT}/LookinServer/LookinServer.framework
 ${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework

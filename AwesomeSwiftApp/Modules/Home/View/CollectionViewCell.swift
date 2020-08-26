@@ -6,6 +6,7 @@
 //  Copyright © 2020 Chacha. All rights reserved.
 //
 
+import Log
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
@@ -38,7 +39,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
 
     func setCoverImageFromUrl(imgUrl: String) {
-        let url: URL = URL(string: imgUrl)!
+        let url: URL = URL(string: imgUrl) ?? URL(string: "https://github.com/chachaxw")!
         let data: NSData! = NSData(contentsOf: url)
 
         if data != nil {
@@ -48,5 +49,9 @@ class CollectionViewCell: UICollectionViewCell {
         }
 
         self.coverImage.sizeToFit()
+    }
+
+    @IBAction func handleLike(_ sender: Any) {
+        print("收藏该Demo")
     }
 }

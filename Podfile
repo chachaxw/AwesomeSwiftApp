@@ -17,12 +17,20 @@ target 'AwesomeSwiftApp' do
   pod 'SwiftLint', '0.31.0'
   pod 'AFNetworking', '~> 3.0'
   pod 'Log'
+  pod 'Hero'
+  pod 'Localize-Swift', '~> 2.0'
   pod 'LookinServer',
     :configurations => ['Debug']
   pod 'FontAwesome.swift'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'DoraemonKit/Core', '~> 3.0.2',
+    :configurations => ['Debug'] #Required
+  pod 'DoraemonKit/WithGPS', '~> 3.0.2',
+    :configurations => ['Debug'] #Optional
+  pod 'DoraemonKit/WithLoad', '~> 3.0.2',
+    :configurations => ['Debug'] #Optional
 
   target 'AwesomeSwiftAppTests' do
     inherit! :search_paths

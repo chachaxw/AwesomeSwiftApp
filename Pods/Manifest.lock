@@ -14,7 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - DoraemonKit/Core (3.0.2)
+  - DoraemonKit/WithGPS (3.0.2):
+    - DoraemonKit/Core
+  - DoraemonKit/WithLoad (3.0.2):
+    - DoraemonKit/Core
   - FontAwesome.swift (1.8.2)
+  - Hero (1.5.0)
+  - Localize-Swift (2.0.0)
   - Log (2.0)
   - LookinServer (1.0.0)
   - R.swift (5.0.0):
@@ -31,7 +38,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - DoraemonKit/Core (~> 3.0.2)
+  - DoraemonKit/WithGPS (~> 3.0.2)
+  - DoraemonKit/WithLoad (~> 3.0.2)
   - FontAwesome.swift
+  - Hero
+  - Localize-Swift (~> 2.0)
   - Log
   - LookinServer
   - R.swift (= 5.0.0)
@@ -43,7 +55,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - DoraemonKit
     - FontAwesome.swift
+    - Hero
+    - Localize-Swift
     - Log
     - LookinServer
     - R.swift
@@ -56,7 +71,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  DoraemonKit: 8587e7a9aae0773dfc96707d2369d89d2a21b3d2
   FontAwesome.swift: 7938d6a03113ff3f39001bde7f50be8a0903d605
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
@@ -67,6 +85,6 @@ SPEC CHECKSUMS:
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: a1d07741e491eec49edcbe01de19566c833b0dc6
+PODFILE CHECKSUM: d053a1ab40771005e4c7e31425277cd2d2a750b0
 
 COCOAPODS: 1.9.1

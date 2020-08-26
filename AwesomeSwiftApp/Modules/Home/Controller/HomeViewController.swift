@@ -11,41 +11,42 @@ import UIKit
 let cellIdentifiier = "CardCell"
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak private var contentView: UIView!
+    @IBOutlet weak private var avatarView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
     var cardList: [CardItem] = [
         CardItem(
             id: UUID().uuidString,
-            label: "Hello World",
+            label: "Swift Demo",
             title: "Hello, awesome swift App",
             isLiked: true,
             uiImage: R.image.image1()
         ),
         CardItem(
             id: UUID().uuidString,
-            label: "Hello Chacha",
+            label: "Featured",
             title: "The Best Swift Demo",
             isLiked: false,
             uiImage: R.image.image2()
         ),
         CardItem(
             id: UUID().uuidString,
-            label: "Hello Swift",
+            label: "Featured",
             title: "The Best Swift Demo",
             isLiked: true,
             uiImage: R.image.image3()
         ),
         CardItem(
             id: UUID().uuidString,
-            label: "Hello Javascript",
+            label: "Featured",
             title: "The Best Swift Demo",
             isLiked: false,
             uiImage: R.image.image4()
         ),
         CardItem(
             id: UUID().uuidString,
-            label: "Hello iOS",
+            label: "Featured",
             title: "The Best Swift Demo",
             isLiked: true,
             uiImage: R.image.image5()
@@ -62,11 +63,18 @@ class HomeViewController: UIViewController {
         }
 
         initCollectionView()
+        initAvatarView()
     }
 
     func initCollectionView() {
         contentView.backgroundColor = UIColor.white
         contentView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
+    }
+
+    func initAvatarView() {
+        let bounds = avatarView.bounds
+        avatarView.roundCorners(corners: UIRectCorner.allCorners, with: bounds.width)
+        avatarView.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -115,6 +123,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width - 28, height: 188)
+        let width = UIScreen.main.bounds.width - 14 * 2
+        print("屏幕宽度数据 \(width)")
+
+        return CGSize(width: width, height: 188)
     }
 }
