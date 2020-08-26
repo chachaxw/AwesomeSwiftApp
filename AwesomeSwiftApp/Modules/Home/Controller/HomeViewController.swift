@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 let cellIdentifiier = "CardCell"
 
@@ -18,29 +19,29 @@ class HomeViewController: UIViewController {
     var cardList: [CardItem] = [
         CardItem(
             id: UUID().uuidString,
-            label: "Swift Demo",
-            title: "Hello, awesome swift App",
+            label: "Awesome Demo",
+            title: "你好, awesome demo App",
             isLiked: true,
             uiImage: R.image.image1()
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Featured",
-            title: "The Best Swift Demo",
+            title: "最佳Swift Demo",
             isLiked: false,
             uiImage: R.image.image2()
         ),
         CardItem(
             id: UUID().uuidString,
-            label: "Featured",
-            title: "The Best Swift Demo",
+            label: "Best Practise",
+            title: "Swift最佳实践",
             isLiked: true,
             uiImage: R.image.image3()
         ),
         CardItem(
             id: UUID().uuidString,
             label: "Featured",
-            title: "The Best Swift Demo",
+            title: "Swift动效实战",
             isLiked: false,
             uiImage: R.image.image4()
         ),
@@ -94,10 +95,11 @@ extension HomeViewController: UICollectionViewDataSource {
         }
 
         let cardItem: CardItem = cardList[indexPath[1]]
+
+        cell.setCardView()
         cell.setLabelText(label: cardItem.label)
         cell.setTitleText(title: cardItem.title)
         cell.setCoverImage(image: cardItem.uiImage!)
-        cell.setCardView()
 
         return cell
     }
@@ -113,7 +115,22 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item + 1)
+        let alertCtrl = UIAlertController(
+            title: "点击CollectionViewCell",
+            message: "当前indexPath \(indexPath.item)",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
+
+        alertCtrl.addAction(okAction)
+        self.present(alertCtrl, animated: true, completion: nil)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didHightlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        self.hero.isEnabled = true
+        cell?.hero.modifiers = [.scale(0.8)]
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DoraemonKit
 
 class RootViewController: UITabBarController, CAAnimationDelegate {
 
@@ -18,6 +19,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DoraemonManager.shareInstance().install()
         self.animiation()
     }
 

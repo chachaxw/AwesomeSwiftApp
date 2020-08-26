@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17140" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDI-TC-8DA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDI-TC-8DA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17115"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,7 +20,7 @@
                         <viewLayoutGuide key="safeArea" id="nxW-oZ-GhR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="topRated" id="Yuz-Ha-JNb"/>
+                    <tabBarItem key="tabBarItem" title="排行榜" image="flame.fill" catalog="system" id="Yuz-Ha-JNb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saw-pf-uFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,13 +36,13 @@
                         <viewLayoutGuide key="safeArea" id="iJO-pX-Enz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" selectedImage="person.fill" id="Tfu-ZY-Zs2"/>
+                    <tabBarItem key="tabBarItem" title="我" image="person.fill" catalog="system" selectedImage="person.fill" id="Tfu-ZY-Zs2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzl-gA-Sht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-138" y="471"/>
         </scene>
-        <!--Home-->
+        <!--探索-->
         <scene sceneID="s5d-PS-Cvt">
             <objects>
                 <viewController storyboardIdentifier="HomeStoryboard" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,8 +50,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat Jul 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-hm-fIq">
-                                <rect key="frame" x="20" y="69" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8月26日, 星期三" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-hm-fIq">
+                                <rect key="frame" x="20" y="69" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                             <navigationBar contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4N-fJ-UYq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <items>
-                                    <navigationItem title="Home" id="ff5-lI-w61"/>
+                                    <navigationItem title="首页" id="ff5-lI-w61"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zra-XC-omd">
@@ -75,7 +75,7 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NtY-Xd-yZ3">
                                         <rect key="frame" x="0.0" y="14" width="414" height="659"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7dh-2F-WSS">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="14" minimumInteritemSpacing="10" id="7dh-2F-WSS">
                                             <size key="itemSize" width="386" height="189"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -105,7 +105,7 @@
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="2"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Best Swift Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdN-bl-EVd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最佳Swift Demo演示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdN-bl-EVd">
                                                             <rect key="frame" x="24" y="115" width="330" height="50"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,7 +142,6 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <size key="customSize" width="386" height="189"/>
                                                 <connections>
                                                     <outlet property="coverImage" destination="11e-f0-SG8" id="tDV-ob-rV6"/>
                                                     <outlet property="labelText" destination="RuJ-dl-xFI" id="OxC-AW-CBU"/>
@@ -176,13 +175,14 @@
                             <constraint firstItem="D4N-fJ-UYq" firstAttribute="leading" secondItem="DLv-p6-Ob8" secondAttribute="leading" id="jtl-N7-4Ju"/>
                             <constraint firstItem="D4N-fJ-UYq" firstAttribute="trailing" secondItem="DLv-p6-Ob8" secondAttribute="trailing" id="lLx-Ex-qof"/>
                             <constraint firstItem="zra-XC-omd" firstAttribute="top" secondItem="D4N-fJ-UYq" secondAttribute="bottom" id="mCU-kd-jAc"/>
+                            <constraint firstItem="Zc9-H4-dvo" firstAttribute="leading" secondItem="yoo-hm-fIq" secondAttribute="trailing" constant="125" id="pV6-GR-LJV"/>
                             <constraint firstItem="D4N-fJ-UYq" firstAttribute="top" secondItem="DLv-p6-Ob8" secondAttribute="top" id="t0h-aB-l9o"/>
                             <constraint firstItem="yoo-hm-fIq" firstAttribute="top" secondItem="DLv-p6-Ob8" secondAttribute="top" constant="25" id="ump-yD-heu"/>
                             <constraint firstItem="zra-XC-omd" firstAttribute="trailing" secondItem="DLv-p6-Ob8" secondAttribute="trailing" id="vJB-Hc-QZs"/>
                             <constraint firstItem="Zc9-H4-dvo" firstAttribute="centerY" secondItem="D4N-fJ-UYq" secondAttribute="centerY" id="zcY-4Z-RcR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
+                    <tabBarItem key="tabBarItem" title="探索" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
                     <connections>
                         <outlet property="avatarView" destination="Zc9-H4-dvo" id="ePT-As-Mgw"/>
                         <outlet property="collectionView" destination="NtY-Xd-yZ3" id="3ft-xR-eq4"/>
@@ -217,6 +217,7 @@
     </scenes>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="safari.fill" catalog="system" width="128" height="121"/>
