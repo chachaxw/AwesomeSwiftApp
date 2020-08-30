@@ -6,8 +6,8 @@
 //  Copyright © 2020 Chacha. All rights reserved.
 //
 
-import UIKit
 import Hero
+import UIKit
 
 let cellIdentifiier = "CardCell"
 
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         CardItem(
             id: UUID().uuidString,
             label: "Awesome Demo",
-            title: "你好, awesome demo App",
+            title: "你好, Awesome demo App",
             isLiked: true,
             uiImage: R.image.image1()
         ),
@@ -68,14 +68,12 @@ class HomeViewController: UIViewController {
     }
 
     func initCollectionView() {
-        contentView.backgroundColor = UIColor.white
-        contentView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
+        contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
     }
 
     func initAvatarView() {
         let bounds = avatarView.bounds
-        avatarView.roundCorners(corners: UIRectCorner.allCorners, with: bounds.width)
-        avatarView.backgroundColor = UIColor.white
+        avatarView.setRoundCorners(corners: UIRectCorner.allCorners, with: bounds.width)
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,8 +126,7 @@ extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didHightlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        
-        self.hero.isEnabled = true
+
         cell?.hero.modifiers = [.scale(0.8)]
     }
 }

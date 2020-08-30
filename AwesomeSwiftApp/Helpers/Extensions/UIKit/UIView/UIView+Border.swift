@@ -39,7 +39,7 @@ extension UIView {
     }
 
     // Set round corners
-    func roundCorners(corners: UIRectCorner, with radii: CGFloat) {
+    func setRoundCorners(corners: UIRectCorner, with radii: CGFloat) {
         let bezierPath: UIBezierPath = UIBezierPath(
             roundedRect: self.bounds,
             byRoundingCorners: corners,
@@ -49,13 +49,15 @@ extension UIView {
 
         shape.frame = self.bounds
         shape.path = bezierPath.cgPath
-        shape.fillColor = UIColor.white.cgColor
-        shape.shadowOpacity = 0.1
-        shape.shadowRadius = 5
-        shape.shadowPath = bezierPath.cgPath
-        shape.shadowColor = UIColor.black.cgColor
-        shape.shadowOffset = CGSize(width: 0, height: -5)
+        layer.mask = shape
+    }
 
-        self.layer.mask = shape
+    func setShadow(color: UIColor, offset: CGSize, opacity: Float, radius: CGFloat) {
+        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius)
+
+        layer.shadowColor = color.cgColor
+        layer.shadowOffset = offset
+        layer.shadowOpacity = opacity
+        layer.shadowPath = shadowPath.cgPath
     }
 }
