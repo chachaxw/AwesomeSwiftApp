@@ -68,6 +68,7 @@ class HomeViewController: UIViewController {
     }
 
     func initCollectionView() {
+        print("Content View大小 \(contentView.frame.width)")
         contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
     }
 
@@ -113,18 +114,18 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let alertCtrl = UIAlertController(
-            title: "点击CollectionViewCell",
-            message: "当前indexPath \(indexPath.item)",
-            preferredStyle: .alert
-        )
-        let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
-
-        alertCtrl.addAction(okAction)
-        self.present(alertCtrl, animated: true, completion: nil)
+//        let alertCtrl = UIAlertController(
+//            title: "点击CollectionViewCell",
+//            message: "当前indexPath \(indexPath.item)",
+//            preferredStyle: .alert
+//        )
+//        let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
+//
+//        alertCtrl.addAction(okAction)
+//        self.present(alertCtrl, animated: true, completion: nil)
     }
 
-    func collectionView(_ collectionView: UICollectionView, didHightlightItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
 
         cell?.hero.modifiers = [.scale(0.8)]
@@ -138,8 +139,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         let width = UIScreen.main.bounds.width - 14 * 2
-        print("屏幕宽度数据 \(width)")
-
         return CGSize(width: width, height: 188)
     }
 }
