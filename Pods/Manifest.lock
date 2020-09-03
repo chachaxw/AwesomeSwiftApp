@@ -34,6 +34,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
   - SwiftLint (0.31.0)
+  - SwiftTheme (0.5.2)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SwiftLint (= 0.31.0)
+  - SwiftTheme
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -67,6 +69,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftLint
+    - SwiftTheme
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -83,8 +86,9 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftTheme: 8b02c479bb4441b2b6790ac126e961b1b6fb0932
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: d053a1ab40771005e4c7e31425277cd2d2a750b0
+PODFILE CHECKSUM: e36f55457f1f5f7ae7220c01b00b26f105355218
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

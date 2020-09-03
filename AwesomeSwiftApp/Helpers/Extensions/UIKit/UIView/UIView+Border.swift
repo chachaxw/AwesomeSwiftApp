@@ -52,6 +52,7 @@ extension UIView {
         layer.mask = shape
     }
 
+    // Set view shadow style
     func setShadow(color: UIColor, offset: CGSize, opacity: Float, radius: CGFloat) {
         let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius)
 

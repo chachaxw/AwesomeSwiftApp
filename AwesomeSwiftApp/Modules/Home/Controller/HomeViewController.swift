@@ -8,6 +8,7 @@
 
 import Hero
 import UIKit
+import SwiftTheme
 
 let cellIdentifiier = "CardCell"
 
@@ -16,6 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak private var avatarView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
+
     var cardList: [CardItem] = [
         CardItem(
             id: UUID().uuidString,
@@ -57,7 +59,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.Theme.LightGrayColor
+        self.view.theme_backgroundColor = [lightGrayColor, darkGrayColor]
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
@@ -68,7 +70,7 @@ class HomeViewController: UIViewController {
     }
 
     func initCollectionView() {
-        print("Content View大小 \(contentView.frame.width)")
+        contentView.theme_backgroundColor = [whiteColor, deepBlackColor]
         contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
     }
 
@@ -96,6 +98,7 @@ extension HomeViewController: UICollectionViewDataSource {
         let cardItem: CardItem = cardList[indexPath[1]]
 
         cell.setCardView()
+        cell.setButton()
         cell.setLabelText(label: cardItem.label)
         cell.setTitleText(title: cardItem.title)
         cell.setCoverImage(image: cardItem.uiImage!)

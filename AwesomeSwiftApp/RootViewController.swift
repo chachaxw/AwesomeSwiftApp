@@ -8,6 +8,7 @@
 
 import UIKit
 import DoraemonKit
+import SwiftTheme
 
 class RootViewController: UITabBarController, CAAnimationDelegate {
 
@@ -19,8 +20,10 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         DoraemonManager.shareInstance().install()
-        self.animiation()
+        setTheme()
+        animiation()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +41,19 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         }
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if #available(iOS 13.0, *) {
+            if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+                setTheme()
+            }
+        } else {
+            // Fallback on earlier versions
+            ThemeManager.setTheme(index: ThemeManager.currentThemeIndex)
+        }
+    }
+
     func setTabBar() {
         tabBar.tintColor = UIColor.Theme.PrimaryColor
         tabBar.isTranslucent = false
@@ -52,6 +68,19 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         } else {
 //            tabBar.shadowImage = UIImage(color: UIColor.clear)
 //            tabBar.backgroundImage = UIImage(color: UIColor.clear)
+        }
+    }
+    
+    func setTheme() {
+        if #available(iOS 12.0, *) {
+            if traitCollection.userInterfaceStyle == .dark {
+                ThemeManager.setTheme(index: AppThemes.dark.rawValue)
+            } else {
+                ThemeManager.setTheme(index: AppThemes.light.rawValue)
+            }
+        } else {
+            // Fallback on earlier versions
+            ThemeManager.setTheme(index: ThemeManager.currentThemeIndex)
         }
     }
 

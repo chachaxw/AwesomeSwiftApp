@@ -18,6 +18,7 @@ target 'AwesomeSwiftApp' do
   pod 'AFNetworking', '~> 3.0'
   pod 'Log'
   pod 'Hero'
+  pod 'SwiftTheme'
   pod 'Localize-Swift', '~> 2.0'
   pod 'LookinServer',
     :configurations => ['Debug']
