@@ -8,6 +8,7 @@
 
 import Log
 import UIKit
+import FontAwesome
 
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var labelText: UILabel!
@@ -32,7 +33,20 @@ class CollectionViewCell: UICollectionViewCell {
     }
 
     func setButton() {
-        self.setShadow(color: UIColor.Theme.LightShadowColor, offset: CGSize(width: 0, height: 5), opacity: 1, radius: 16)
+        let heartIcon = UIImage.fontAwesomeIcon(
+            name: .heart,
+            style: .regular,
+            textColor: UIColor.Theme.BasicGrayColor,
+            size: CGSize(width: 24, height: 24)
+        )
+
+        likeButton.setShadow(
+            color: UIColor.Theme.LightShadowColor,
+            offset: CGSize(width: 0, height: 5),
+            opacity: 1,
+            radius: 16
+        )
+        likeButton.setImage(heartIcon, for: .normal)
         likeButton.setRoundCorners(corners: UIRectCorner.allCorners, with: 8.0)
     }
 

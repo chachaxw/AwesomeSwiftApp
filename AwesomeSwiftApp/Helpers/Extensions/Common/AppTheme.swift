@@ -18,7 +18,12 @@ extension UIColor {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha ?? 1.0)
+        self.init(
+            red: CGFloat(red) / 255.0,
+            green: CGFloat(green) / 255.0,
+            blue: CGFloat(blue) / 255.0,
+            alpha: alpha ?? 1.0
+        )
     }
 
     convenience init(netHex: Int, alpha: CGFloat? = 1.0) {
@@ -32,6 +37,7 @@ extension UIColor {
         static let SecondaryColor = UIColor(netHex: 0x1b60c0)
         static let LightGrayColor = UIColor(netHex: 0xf4f6f8)
         static let DarkGrayColor = UIColor(netHex: 0x292A2F)
+        static let BasicGrayColor = UIColor(netHex: 0xB9B9B9)
         static let LightShadowColor = UIColor(netHex: 0x000000, alpha: 0.08)
     }
 

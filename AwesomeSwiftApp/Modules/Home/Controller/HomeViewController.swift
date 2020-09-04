@@ -7,10 +7,10 @@
 //
 
 import Hero
-import UIKit
 import SwiftTheme
+import UIKit
 
-let cellIdentifiier = "CardCell"
+fileprivate let cellIdentifiier = "CardCell"
 
 class HomeViewController: UIViewController {
     @IBOutlet weak private var contentView: UIView!
