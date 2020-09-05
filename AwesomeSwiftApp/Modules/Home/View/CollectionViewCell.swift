@@ -47,7 +47,7 @@ class CollectionViewCell: UICollectionViewCell {
             radius: 16
         )
         likeButton.setImage(heartIcon, for: .normal)
-        likeButton.setRoundCorners(corners: UIRectCorner.allCorners, with: 8.0)
+//        likeButton.setRoundCorners(corners: UIRectCorner.allCorners, with: 8.0)
     }
 
     func setCoverImageFromUrl(imgUrl: String) {
@@ -64,6 +64,6 @@ class CollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func handleLike(_ sender: Any) {
-        print("收藏该Demo")
+        print("收藏该Demo \(sender)")
     }
 }

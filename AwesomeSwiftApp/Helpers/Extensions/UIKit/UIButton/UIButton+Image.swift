@@ -15,8 +15,15 @@ enum ButtonImagePosition: Int {
     case positionRight
 }
 
+@available(iOS 9.0, *)
 extension UIButton {
 
+    /// Set an image and title to a UIButton
+    /// - Parameters:
+    ///     - image: The image that will be added to the button
+    ///     - title: The title that will be added to the button
+    ///     - type: The image position type in button
+    ///     - space: The edge insets in button
     func setImageAndTitle(image: UIImage, title: String, type: ButtonImagePosition, Space space: CGFloat) {
         self.setTitle(title, for: .normal)
         self.setImage(image, for: .normal)
@@ -64,5 +71,16 @@ extension UIButton {
 
         self.titleEdgeInsets = labelEdgeInsets
         self.imageEdgeInsets = imageEdgeInsets
+    }
+    
+    /// Add a right image with custom offset to the button
+    /// - Parameters:
+    ///     - image: The image that will be added to the button.
+    ///     - offset: The trailing margin that will be added between the image and the button's right border.
+    func addRightImage(_ image: UIImage?, offset: CGFloat) {
+        setImage(image, for: .normal)
+        imageView?.translatesAutoresizingMaskIntoConstraints = false
+        imageView?.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0.0).isActive = true
+        imageView?.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -offset).isActive = true
     }
 }
