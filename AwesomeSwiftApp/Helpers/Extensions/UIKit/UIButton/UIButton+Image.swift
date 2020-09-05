@@ -72,7 +72,7 @@ extension UIButton {
         self.titleEdgeInsets = labelEdgeInsets
         self.imageEdgeInsets = imageEdgeInsets
     }
-    
+
     /// Add a right image with custom offset to the button
     /// - Parameters:
     ///     - image: The image that will be added to the button.

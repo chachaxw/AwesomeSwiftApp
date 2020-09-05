@@ -6,8 +6,8 @@
 //  Copyright © 2019 Chacha. All rights reserved.
 //
 
-import UIKit
 import DoraemonKit
+import UIKit
 import SwiftTheme
 
 class RootViewController: UITabBarController, CAAnimationDelegate {
@@ -70,7 +70,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
 //            tabBar.backgroundImage = UIImage(color: UIColor.clear)
         }
     }
-    
+
     func setTheme() {
         if #available(iOS 12.0, *) {
             if traitCollection.userInterfaceStyle == .dark {
