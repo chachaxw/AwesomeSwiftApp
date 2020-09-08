@@ -35,6 +35,7 @@
 		93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759C23A4B0E800A684D6 /* Main.storyboard */; };
 		93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFD72503664E00592072 /* UIScreenExtension.swift */; };
 		93B4BFDB25036DFB00592072 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */; };
+		93C8C9DD2507ACD900EA81D4 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */; };
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
 		93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */; };
 		93DCD01623C83EEF006DDEFD /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01523C83EEF006DDEFD /* Email.swift */; };
@@ -105,6 +106,7 @@
 		93AC8F1C23A39F4900303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B4BFD72503664E00592072 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		93DCD01523C83EEF006DDEFD /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		93DCD01823C8445C006DDEFD /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 		93A1759923A4A15400A684D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				93C8C9DB2507ACA700EA81D4 /* UIAlertController */,
 				93B4BFD925036DD700592072 /* UICollectionViewCell */,
 				93B4BFD6250365E200592072 /* UIScreen */,
 				937F0BF223B4855C00FD0126 /* UIView */,
@@ -490,6 +493,14 @@
 				93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */,
 			);
 			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		93C8C9DB2507ACA700EA81D4 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */,
+			);
+			path = UIAlertController;
 			sourceTree = "<group>";
 		};
 		93DCD01123C83E0F006DDEFD /* Views */ = {
@@ -787,6 +798,7 @@
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
 				9374357024152945002A0A2A /* UIView+Card.swift in Sources */,
+				93C8C9DD2507ACD900EA81D4 /* UIAlertControllerExtension.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */,
 				2A1DD4DF1F389C2200712195 /* DeeplinkHandler.swift in Sources */,
@@ -954,7 +966,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
 				PRODUCT_NAME = "Swift App";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -975,7 +987,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
 				PRODUCT_NAME = "Swift App";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1101,7 +1113,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
 				PRODUCT_NAME = "Swift App";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Staging;
 		};
