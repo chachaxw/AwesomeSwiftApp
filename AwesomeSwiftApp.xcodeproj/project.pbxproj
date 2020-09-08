@@ -36,6 +36,7 @@
 		93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFD72503664E00592072 /* UIScreenExtension.swift */; };
 		93B4BFDB25036DFB00592072 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */; };
 		93C8C9DD2507ACD900EA81D4 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */; };
+		93C8C9E02507B98200EA81D4 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8C9DF2507B98200EA81D4 /* UIApplicationExtension.swift */; };
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
 		93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */; };
 		93DCD01623C83EEF006DDEFD /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01523C83EEF006DDEFD /* Email.swift */; };
@@ -107,6 +108,7 @@
 		93B4BFD72503664E00592072 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		93C8C9DF2507B98200EA81D4 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		93DCD01523C83EEF006DDEFD /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		93DCD01823C8445C006DDEFD /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		93A1759923A4A15400A684D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				93C8C9DE2507B96500EA81D4 /* UIApplication */,
 				93C8C9DB2507ACA700EA81D4 /* UIAlertController */,
 				93B4BFD925036DD700592072 /* UICollectionViewCell */,
 				93B4BFD6250365E200592072 /* UIScreen */,
@@ -501,6 +504,14 @@
 				93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */,
 			);
 			path = UIAlertController;
+			sourceTree = "<group>";
+		};
+		93C8C9DE2507B96500EA81D4 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				93C8C9DF2507B98200EA81D4 /* UIApplicationExtension.swift */,
+			);
+			path = UIApplication;
 			sourceTree = "<group>";
 		};
 		93DCD01123C83E0F006DDEFD /* Views */ = {
@@ -781,6 +792,7 @@
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
+				93C8C9E02507B98200EA81D4 /* UIApplicationExtension.swift in Sources */,
 				93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */,
 				93DCD01623C83EEF006DDEFD /* Email.swift in Sources */,
 				937435722416960E002A0A2A /* CollectionViewCell.swift in Sources */,

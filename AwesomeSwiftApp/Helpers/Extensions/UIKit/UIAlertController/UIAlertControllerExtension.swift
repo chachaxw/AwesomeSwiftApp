@@ -49,7 +49,7 @@ extension UIAlertController {
     ///   - completion: Block called once the alert has been presented.
     @objc
     public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
-//        UIApplication.shared.topViewController()?.present(self, animated: animated, completion: completion)
+        UIApplication.shared.topViewController()?.present(self, animated: animated, completion: completion)
     }
 }
 
