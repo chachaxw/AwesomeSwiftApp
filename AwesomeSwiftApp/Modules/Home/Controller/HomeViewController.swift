@@ -10,9 +10,9 @@ import Hero
 import SwiftTheme
 import UIKit
 
-fileprivate let cellIdentifiier = "CardCell"
-
 class HomeViewController: UIViewController {
+    private let cellIdentifiier = "CardCell"
+
     @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var avatarView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
             id: UUID().uuidString,
             label: "Best Practise",
             title: "Swift最佳实践",
-            isLiked: true,
+            isLiked: false,
             uiImage: R.image.image3()
         ),
         CardItem(
@@ -51,7 +51,7 @@ class HomeViewController: UIViewController {
             id: UUID().uuidString,
             label: "Featured",
             title: "The Best Swift Demo",
-            isLiked: true,
+            isLiked: false,
             uiImage: R.image.image5()
         )
     ]
@@ -98,7 +98,7 @@ extension HomeViewController: UICollectionViewDataSource {
         let cardItem: CardItem = cardList[indexPath[1]]
 
         cell.setCardView()
-        cell.setButton()
+        cell.setButton(isActive: cardItem.isLiked)
         cell.setLabelText(label: cardItem.label)
         cell.setTitleText(title: cardItem.title)
         cell.setCoverImage(image: cardItem.uiImage!)
@@ -130,8 +130,12 @@ extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-
-        cell?.hero.modifiers = [.scale(0.8)]
+        cell?.animate(shouldScale: true) { (completed: Bool) in
+            print("动画是否完成 \(completed)")
+            if completed {
+                self.contentView.transform = .identity
+            }
+        }
     }
 }
 

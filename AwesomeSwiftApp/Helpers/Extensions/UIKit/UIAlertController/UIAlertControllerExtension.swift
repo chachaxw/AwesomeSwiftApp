@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Initializers
 
 extension UIAlertController {
-    
+
     /// Create a new `UIAlertController` with a default button.
     /// - Parameters:
     ///   - title: The alert's title.
@@ -29,10 +29,14 @@ extension UIAlertController {
         tintColor: UIColor? = nil
     ) {
         self.init(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: defaultActionButtonTitle, style: defaultActionButtonStyle, handler: nil)
-        
+        let defaultAction = UIAlertAction(
+            title: defaultActionButtonTitle,
+            style: defaultActionButtonStyle,
+            handler: nil
+        )
+
         addAction(defaultAction)
-        
+
         if let color = tintColor {
             view.tintColor = color
         }

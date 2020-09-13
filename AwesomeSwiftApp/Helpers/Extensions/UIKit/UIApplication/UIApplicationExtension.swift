@@ -8,17 +8,17 @@
 
 import UIKit
 
-
 // MARK: - ViewController
 
 extension UIApplication {
-    
+
     /// Get the top most visible view controller currently shown.
     /// - Parameter baseVC: Optional view controller used to start the research of the top most visible.
     ///                     Default value is `UIApplication.shared.keyWindow?.rootViewController`
     /// - Returns: The top most view controller found, otherwise nil.
 
-    public func topViewController(from baseVC: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    public func topViewController(
+        from baseVC: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         guard let baseVC = baseVC else {
             return nil
         }
@@ -30,7 +30,7 @@ extension UIApplication {
         } else if let presented = baseVC.presentedViewController {
             return topViewController(from: presented)
         }
-        
+
         return baseVC
     }
 }
@@ -39,7 +39,7 @@ extension UIApplication {
 
 @available(iOS 10.0, *)
 extension UIApplication {
-    
+
     /// Open app settings
     public func openAppSettings() {
         guard let url = URL(string: UIApplication.openSettingsURLString) else {
@@ -47,7 +47,7 @@ extension UIApplication {
         }
         open(url, options: [:], completionHandler: nil)
     }
-    
+
     /// Open app review page
     /// - Parameter url: `URL` App page url finishing with `write-review`
     public func openAppStoreReviewPage(_ url: URL) {
@@ -60,7 +60,7 @@ extension UIApplication {
 // MARK: - AppDelegate
 
 extension UIApplication {
-    
+
     /// Get the UIApplication delegate
     /// - Parameter type: The application delegate type.
     /// - Returns: The app delegate found casted in the right type. If none of this type found then returns nil.

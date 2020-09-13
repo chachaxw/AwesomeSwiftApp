@@ -54,7 +54,8 @@ extension UICollectionViewCell {
                 let scaleTransform = CGAffineTransform(scaleX: transformScale, y: transformScale)
                 self.contentView.transform = shouldScale ? scaleTransform : .identity
             },
-            completion: completion)
+            completion: completion
+        )
     }
 
 }

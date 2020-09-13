@@ -30,7 +30,7 @@ class RootRouter {
             .instantiateViewController(withIdentifier: "MainStoryboard") as? RootViewController else {
                 return
             }
-        root.view.backgroundColor = UIColor.white
+        root.view.backgroundColor = UIColor.Theme.LightGrayColor
         setRootViewController(controller: root, animatedWithOptions: nil)
     }
 }

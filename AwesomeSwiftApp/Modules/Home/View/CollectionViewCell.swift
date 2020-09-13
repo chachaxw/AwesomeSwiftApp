@@ -17,7 +17,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.setRoundCorners(corners: UIRectCorner.allCorners, with: 16.0)
+        self.applyCornerRadius(20.0)
     }
 
     func setLabelText(label: String) {
@@ -32,11 +32,17 @@ class CollectionViewCell: UICollectionViewCell {
         self.coverImage.image = image
     }
 
-    func setButton() {
+    func setButton(isActive: Bool) {
         let heartIcon = UIImage.fontAwesomeIcon(
             name: .heart,
             style: .regular,
             textColor: UIColor.Theme.BasicGrayColor,
+            size: CGSize(width: 24, height: 24)
+        )
+        let heartSolidIcon = UIImage.fontAwesomeIcon(
+            name: .heart,
+            style: .solid,
+            textColor: UIColor.Theme.BasicRedColor,
             size: CGSize(width: 24, height: 24)
         )
 
@@ -46,8 +52,8 @@ class CollectionViewCell: UICollectionViewCell {
             opacity: 1,
             radius: 16
         )
-        likeButton.setImage(heartIcon, for: .normal)
-        likeButton.setRoundCorners(corners: UIRectCorner.allCorners, with: 8.0)
+        likeButton.setImage(isActive ? heartSolidIcon : heartIcon, for: .normal)
+        likeButton.setRoundCorners(corners: UIRectCorner.allCorners, with: 10.0)
     }
 
     func setCoverImageFromUrl(imgUrl: String) {

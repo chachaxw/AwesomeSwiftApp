@@ -38,6 +38,7 @@ extension UIColor {
         static let LightGrayColor = UIColor(netHex: 0xf4f6f8)
         static let DarkGrayColor = UIColor(netHex: 0x292A2F)
         static let BasicGrayColor = UIColor(netHex: 0xB9B9B9)
+        static let BasicRedColor = UIColor(netHex: 0xFF5450)
         static let LightShadowColor = UIColor(netHex: 0x000000, alpha: 0.08)
     }
 
