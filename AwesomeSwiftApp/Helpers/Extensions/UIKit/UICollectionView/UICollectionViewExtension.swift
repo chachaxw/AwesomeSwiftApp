@@ -21,7 +21,7 @@ extension UICollectionView {
         register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
     }
 
-    /// Register a nib-based `UICollectionViewCell` conforming to `Reusable`.
+    /// Register a class-based `UICollectionViewCell` conforming to `Reusable`.
     /// - Parameter cellType: the `UICollectionViewCell`  to register.
     public func register<T: UICollectionViewCell>(cellType: T.Type) where T: Reusable {
         register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
@@ -50,7 +50,6 @@ extension UICollectionView {
 // MARK: - Registering and Dequeue UICollectionReusableView
 
 extension UICollectionView {
-
     /// Register a nib-Based `UICollectionReusableView` conforming to `Reusable` & `NibLoadable`
     /// - Parameters:
     ///   - supplementaryViewType: The `UICollectionReusableView` to register
@@ -65,7 +64,7 @@ extension UICollectionView {
             withReuseIdentifier: supplementaryViewType.reuseIdentifier
         )
     }
-    
+
     /// Register a class-Based `UICollectionReusableView` conforming to `Reusable` & `NibLoadable`
     /// - Parameters:
     ///   - supplementaryViewType: The `UIView` subclass to register as `Supplementary View`.
@@ -80,7 +79,7 @@ extension UICollectionView {
             withReuseIdentifier: supplementaryViewType.reuseIdentifier
         )
     }
-    
+
     /// Dequeue a reusable `UICollectionViewCell` instance
     /// - Parameters:
     ///   - elementKind: The kind of supplementary view to retrieve
@@ -92,9 +91,12 @@ extension UICollectionView {
         at indexPath: IndexPath,
         viewType: T.Type = T.self
     ) -> T where T: Reusable {
-        let view = dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier, for: indexPath
+        let view = dequeueReusableSupplementaryView(
+            ofKind: elementKind,
+            withReuseIdentifier: viewType.reuseIdentifier,
+            for: indexPath
         )
-        
+
         guard let typedView = view as? T else {
             fatalError("Failed to dequeue a supplementary view with identifier \(viewType.reuseIdentifier) "
                         + "matching type \(viewType.self)")
