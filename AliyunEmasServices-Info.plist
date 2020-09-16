@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>config</key>
+	<dict>
+            <key>emas.appKey</key>
+            <string>31266910</string>
+            <key>emas.appSecret</key>
+            <string>d168f0484cbe1593b0c718643baee494</string>
+            <key>emas.bundleId</key>
+            <string>com.AwesomeSwiftApp.chachaxw</string>
+            <key>appmonitor.tlog.rsaSecret</key>
+            <string>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCMqXlMBUYH1EZ0ee/Iuva0T4H+XtoKc/h/28OuMIXvO6BSmNdh2hOcoyUnssRPYVV/JepHUgITntsYoDXPRbp1Xvkvl3p/s6z+LKV8kT0HalBV87r/vdaqbPVjPHgl4qq2dswtZWQU8uIyqAWebqJUd0wulCNjrgIHGRv71i34RwIDAQAB</string>
+            <key>appmonitor.rsaSecret</key>
+            <string>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCMqXlMBUYH1EZ0ee/Iuva0T4H+XtoKc/h/28OuMIXvO6BSmNdh2hOcoyUnssRPYVV/JepHUgITntsYoDXPRbp1Xvkvl3p/s6z+LKV8kT0HalBV87r/vdaqbPVjPHgl4qq2dswtZWQU8uIyqAWebqJUd0wulCNjrgIHGRv71i34RwIDAQAB</string>
+    	</dict>
+	<key>services</key>
+	<dict>
+          	<key>tlog_service</key>
+       	<dict>
+			<key>status</key>
+			<integer>1</integer>
+			<key>version</key>
+			<string>1.0.0.2</string>
+		</dict>
+         	<key>apm_service</key>
+       	<dict>
+			<key>status</key>
+			<integer>1</integer>
+			<key>version</key>
+			<string>1.0.0.1</string>
+		</dict>
+         	<key>crashreporter_service</key>
+       	<dict>
+			<key>status</key>
+			<integer>1</integer>
+			<key>version</key>
+			<string>1.1.1</string>
+		</dict>
+    	</dict>
+</dict>
+</plist>
+
