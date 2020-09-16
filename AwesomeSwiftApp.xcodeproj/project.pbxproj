@@ -22,20 +22,23 @@
 		932AA0C224BF5884000C8E94 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AA0C124BF5884000C8E94 /* CardItem.swift */; };
 		93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93497EA8240EA66A00A40AE2 /* ContentView.swift */; };
 		934B3B4E240F4777002A524D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B3B4D240F4777002A524D /* HomeViewController.swift */; };
-		9374357024152945002A0A2A /* UIView+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374356F24152945002A0A2A /* UIView+Card.swift */; };
 		937435722416960E002A0A2A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937435712416960E002A0A2A /* CollectionViewCell.swift */; };
 		9377FCB5250138410027DFD2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377FCB4250138410027DFD2 /* Colors.swift */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
-		937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F0BF323B485C600FD0126 /* UIView+Border.swift */; };
+		937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F0BF323B485C600FD0126 /* UIViewExtension.swift */; };
 		93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93860AE7250E447000F72BA0 /* LoginViewController.swift */; };
 		939268DB250E58E30074D7C4 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268DA250E58E30074D7C4 /* UIStoryboardExtension.swift */; };
 		939268DE250E64CC0074D7C4 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268DD250E64CC0074D7C4 /* UICollectionViewExtension.swift */; };
 		939268E1250E70920074D7C4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268E0250E70920074D7C4 /* UIViewControllerExtension.swift */; };
+		939268E4250E74EF0074D7C4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268E3250E74EF0074D7C4 /* Reusable.swift */; };
+		939268E6250F03250074D7C4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268E5250F03250074D7C4 /* NibLoadable.swift */; };
+		939268E8251061AC0074D7C4 /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 939268E7251061AB0074D7C4 /* AliyunEmasServices-Info.plist */; };
+		939268EB251082A70074D7C4 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268EA251082A70074D7C4 /* UIImageExtension.swift */; };
 		93A1759123A3C76100A684D6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 93A1759023A3C76100A684D6 /* FontAwesome */; };
 		93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */; };
 		93A1759723A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */; };
 		93A1759823A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759523A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf */; };
-		93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A1759A23A4A1C200A684D6 /* UIButton+Image.swift */; };
+		93A1759B23A4A1C200A684D6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A1759A23A4A1C200A684D6 /* UIButtonExtension.swift */; };
 		93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759C23A4B0E800A684D6 /* Main.storyboard */; };
 		93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFD72503664E00592072 /* UIScreenExtension.swift */; };
 		93B4BFDB25036DFB00592072 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */; };
@@ -97,19 +100,22 @@
 		932AA0C124BF5884000C8E94 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		93497EA8240EA66A00A40AE2 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		934B3B4D240F4777002A524D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = AwesomeSwiftApp/Modules/Home/Controller/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		9374356F24152945002A0A2A /* UIView+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Card.swift"; sourceTree = "<group>"; };
 		937435712416960E002A0A2A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = AwesomeSwiftApp/Modules/Home/View/CollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		9377FCB4250138410027DFD2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		937F0BF323B485C600FD0126 /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
+		937F0BF323B485C600FD0126 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		93860AE7250E447000F72BA0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		939268DA250E58E30074D7C4 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		939268DD250E64CC0074D7C4 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		939268E0250E70920074D7C4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		939268E3250E74EF0074D7C4 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		939268E5250F03250074D7C4 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		939268E7251061AB0074D7C4 /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
+		939268EA251082A70074D7C4 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		93A1759323A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		93A1759423A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
 		93A1759523A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
-		93A1759A23A4A1C200A684D6 /* UIButton+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Image.swift"; sourceTree = "<group>"; };
+		93A1759A23A4A1C200A684D6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		93A1759C23A4B0E800A684D6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		93AC8F1823A39C6000303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AC8F1C23A39F4900303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				55F50BE321404BDD00FAC039 /* Readme.md */,
+				939268E7251061AB0074D7C4 /* AliyunEmasServices-Info.plist */,
 				2A1E77351F384BFC006C84D4 /* AwesomeSwiftApp */,
 				2A1E774A1F384BFD006C84D4 /* AwesomeSwiftAppTests */,
 				0E08FF9F96844540D9BD1466 /* Pods */,
@@ -267,6 +274,7 @@
 		2AB31DA21F38744600B7D1F3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				939268E2250E74C50074D7C4 /* UIKit */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -453,7 +461,7 @@
 		937F0BF123B4854800FD0126 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				93A1759A23A4A1C200A684D6 /* UIButton+Image.swift */,
+				93A1759A23A4A1C200A684D6 /* UIButtonExtension.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -461,9 +469,8 @@
 		937F0BF223B4855C00FD0126 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				937F0BF323B485C600FD0126 /* UIView+Border.swift */,
+				937F0BF323B485C600FD0126 /* UIViewExtension.swift */,
 				93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */,
-				9374356F24152945002A0A2A /* UIView+Card.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -516,6 +523,23 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		939268E2250E74C50074D7C4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				939268E3250E74EF0074D7C4 /* Reusable.swift */,
+				939268E5250F03250074D7C4 /* NibLoadable.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		939268E92510828F0074D7C4 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				939268EA251082A70074D7C4 /* UIImageExtension.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		93A1759223A3CE4500A684D6 /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +553,7 @@
 		93A1759923A4A15400A684D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				939268E92510828F0074D7C4 /* UIImage */,
 				939268DF250E706F0074D7C4 /* UIViewController */,
 				939268DC250E64B10074D7C4 /* UICollectionView */,
 				939268D9250E58C00074D7C4 /* UIStoryboard */,
@@ -727,6 +752,7 @@
 				93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */,
 				FCB2C7CB1F57127800481080 /* Localizable.strings in Resources */,
 				2A1E77411F384BFD006C84D4 /* LaunchScreen.storyboard in Resources */,
+				939268E8251061AC0074D7C4 /* AliyunEmasServices-Info.plist in Resources */,
 				2A1E773E1F384BFD006C84D4 /* Assets.xcassets in Resources */,
 				93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
@@ -846,11 +872,12 @@
 				93DCD02923CDAE86006DDEFD /* MenuBarView.swift in Sources */,
 				93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */,
 				93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */,
+				939268E4250E74EF0074D7C4 /* Reusable.swift in Sources */,
 				93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
-				937F0BF423B485C600FD0126 /* UIView+Border.swift in Sources */,
+				937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93C8C9E02507B98200EA81D4 /* UIApplicationExtension.swift in Sources */,
 				93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */,
@@ -859,9 +886,10 @@
 				939268E1250E70920074D7C4 /* UIViewControllerExtension.swift in Sources */,
 				93DCD02123CC182D006DDEFD /* DefaultMenuItem.swift in Sources */,
 				934B3B4E240F4777002A524D /* HomeViewController.swift in Sources */,
-				93A1759B23A4A1C200A684D6 /* UIButton+Image.swift in Sources */,
+				93A1759B23A4A1C200A684D6 /* UIButtonExtension.swift in Sources */,
 				9324074623ACE0E50025013F /* RootViewController.swift in Sources */,
 				93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */,
+				939268EB251082A70074D7C4 /* UIImageExtension.swift in Sources */,
 				939268DE250E64CC0074D7C4 /* UICollectionViewExtension.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				939268DB250E58E30074D7C4 /* UIStoryboardExtension.swift in Sources */,
@@ -872,8 +900,8 @@
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */,
+				939268E6250F03250074D7C4 /* NibLoadable.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
-				9374357024152945002A0A2A /* UIView+Card.swift in Sources */,
 				93C8C9DD2507ACD900EA81D4 /* UIAlertControllerExtension.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */,

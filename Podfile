@@ -1,4 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
+source "https://github.com/aliyun/aliyun-specs.git"
 
 platform :ios, '10.0'
 
@@ -26,6 +27,9 @@ target 'AwesomeSwiftApp' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'AlicloudAPM', '~> 1.0.0'
+  pod 'AlicloudTLog', '~> 1.0.0'
+  pod 'AlicloudCrash' , '~> 1.1.0'
   pod 'DoraemonKit/Core', '~> 3.0.2',
     :configurations => ['Debug'] #Required
   pod 'DoraemonKit/WithGPS', '~> 3.0.2',

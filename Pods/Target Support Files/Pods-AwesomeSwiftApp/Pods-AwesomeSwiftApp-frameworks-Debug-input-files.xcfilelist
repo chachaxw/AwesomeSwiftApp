@@ -1,7 +1,11 @@
 ${PODS_ROOT}/Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework
 ${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework
 ${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework
+${BUILT_PRODUCTS_DIR}/FBAllocationTracker/FBAllocationTracker.framework
+${BUILT_PRODUCTS_DIR}/FBMemoryProfiler/FBMemoryProfiler.framework
+${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
 ${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework
 ${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
 ${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework
@@ -13,3 +17,4 @@ ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework

@@ -36,6 +36,7 @@ extension UIColor {
         static let PrimaryColor = UIColor(netHex: 0x274396)
         static let SecondaryColor = UIColor(netHex: 0x1b60c0)
         static let LightGrayColor = UIColor(netHex: 0xf4f6f8)
+        static let SecondaryGrayColor = UIColor(netHex: 0xf2f2f2)
         static let DarkGrayColor = UIColor(netHex: 0x292A2F)
         static let BasicGrayColor = UIColor(netHex: 0xB9B9B9)
         static let BasicRedColor = UIColor(netHex: 0xFF5450)

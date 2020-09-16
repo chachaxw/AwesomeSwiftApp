@@ -14,19 +14,97 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AliAPMInterface (1.0.1.12)
+  - AlicloudAPM (1.0.0.1):
+    - AlicloudHAUtil
+    - AlicloudUtils
+    - AliHACore (~> 10.0.3)
+    - AliHADataHubAssembler (= 1.0.1.46-downgrade)
+    - AliHAMemoryMonitor (= 10.0.3)
+    - AliHAPerformanceMonitor (= 10.0.3.2-NO-UT)
+    - AliHASecurity (~> 10.0.3)
+  - AlicloudCrash (1.1.1):
+    - AlicloudHAUtil
+    - AlicloudUtils
+    - AliHACore (~> 10.0.3)
+    - TBCrashReporter (~> 10.0.3)
+  - AlicloudHAUtil (1.0.1):
+    - AliHACore
+    - TBRest
+    - ZipArchive
+  - AlicloudTLog (1.0.0.2):
+    - AlicloudHAUtil
+    - AlicloudUtils
+    - AliHACore (~> 10.0.3)
+    - AliHAProtocol (~> 10.0.3)
+    - AliHASecurity (~> 10.0.4)
+    - RemoteDebugChannel (~> 10.0.4)
+    - TBRest (~> 10.1.1)
+    - TRemoteDebugger (~> 10.0.4)
+  - AlicloudUTDID (1.5.0.94)
+  - AlicloudUtils (1.3.9):
+    - AlicloudUTDID
+  - AliHACore (10.0.3.6):
+    - AliHALogEngine (>= 10.0.2)
+    - AliHAProtocol (>= 10.0.2.1)
+    - TBJSONModel
+    - TBRest (>= 1.0.0.18)
+  - AliHADataHub4iOS (1.0.1.24)
+  - AliHADataHubAssembler (1.0.1.46-downgrade):
+    - AliAPMInterface (>= 1.0.1.10)
+    - AliHADataHub4iOS (>= 1.0.1.24)
+    - AliHAProtocol
+    - AliRemoteDebugInterface (>= 0.0.1.4)
+    - TBRest (>= 10.0.4.5)
+  - AliHADeviceEvaluation (10.0.3.8)
+  - AliHALogEngine (10.0.5)
+  - AliHAMemoryMonitor (10.0.3):
+    - AliHAMethodTrace (>= 10.0.2)
+    - AliHAProtocol (>= 10.0.2)
+    - BizErrorReporter4iOS (>= 10.0.2)
+    - FBAllocationTracker
+    - FBMemoryProfiler
+    - FBRetainCycleDetector
+  - AliHAMethodTrace (10.0.4)
+  - AliHAPerformanceMonitor (10.0.3.2-NO-UT):
+    - AliAPMInterface (>= 1.0.1.10)
+    - AliHADeviceEvaluation (>= 10.0.3.8)
+    - AliHAProtocol
+  - AliHAProtocol (10.0.3):
+    - TBJSONModel
+  - AliHASecurity (10.0.4)
+  - AliRemoteDebugInterface (0.0.1.4)
+  - AliyunOSSiOS (2.10.8)
+  - BizErrorReporter4iOS (10.0.3):
+    - JDYThreadTrace (>= 1.0.0.12)
+    - TBRest
+  - CrashReporter (10.0.3)
   - DoraemonKit/Core (3.0.2)
   - DoraemonKit/WithGPS (3.0.2):
     - DoraemonKit/Core
   - DoraemonKit/WithLoad (3.0.2):
     - DoraemonKit/Core
+  - FBAllocationTracker (0.1.5)
+  - FBMemoryProfiler (0.1.3):
+    - FBAllocationTracker (~> 0.1)
+    - FBRetainCycleDetector (~> 0.1)
+  - FBRetainCycleDetector (0.1.4)
   - FontAwesome.swift (1.8.2)
   - Hero (1.5.0)
+  - JDYThreadTrace (10.0.0)
   - Localize-Swift (2.0.0)
   - Log (2.0)
   - LookinServer (1.0.0)
   - R.swift (5.0.0):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - RemoteDebugChannel (10.0.4.5):
+    - AliHAProtocol (>= 10.0.0.3)
+    - AliHASecurity
+    - AliyunOSSiOS
+    - TBJSONModel
+    - TBRest (>= 1.0.0.18)
+    - ZipArchive
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -36,9 +114,28 @@ PODS:
   - SwiftLint (0.31.0)
   - SwiftTheme (0.5.2)
   - SwiftyJSON (4.3.0)
+  - TBCrashReporter (10.0.3.1):
+    - AliHAProtocol (>= 1.0.5.3)
+    - CrashReporter (>= 1.3.6.18)
+    - JDYThreadTrace (>= 1.0.0.12)
+    - TBRest (>= 10.0.4.2)
+  - TBJSONModel (0.1.15.1)
+  - TBRest (10.1.1.0)
+  - TRemoteDebugger (10.0.6.3):
+    - AliHALogEngine (>= 10.0.5)
+    - AliHAMethodTrace (>= 1.0.1.2)
+    - AliHAProtocol (>= 10.0.0.5)
+    - AliHASecurity (>= 10.0.4)
+    - AliRemoteDebugInterface (>= 0.0.1.2)
+    - TBJSONModel
+    - TBRest (>= 1.0.0.18)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - AlicloudAPM (~> 1.0.0)
+  - AlicloudCrash (~> 1.1.0)
+  - AlicloudTLog (~> 1.0.0)
   - DoraemonKit/Core (~> 3.0.2)
   - DoraemonKit/WithGPS (~> 3.0.2)
   - DoraemonKit/WithLoad (~> 3.0.2)
@@ -55,9 +152,40 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
+  https://github.com/aliyun/aliyun-specs.git:
+    - AliAPMInterface
+    - AlicloudAPM
+    - AlicloudCrash
+    - AlicloudHAUtil
+    - AlicloudTLog
+    - AlicloudUTDID
+    - AlicloudUtils
+    - AliHACore
+    - AliHADataHub4iOS
+    - AliHADataHubAssembler
+    - AliHADeviceEvaluation
+    - AliHALogEngine
+    - AliHAMemoryMonitor
+    - AliHAMethodTrace
+    - AliHAPerformanceMonitor
+    - AliHAProtocol
+    - AliHASecurity
+    - AliRemoteDebugInterface
+    - BizErrorReporter4iOS
+    - CrashReporter
+    - JDYThreadTrace
+    - RemoteDebugChannel
+    - TBCrashReporter
+    - TBJSONModel
+    - TBRest
+    - TRemoteDebugger
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - AliyunOSSiOS
     - DoraemonKit
+    - FBAllocationTracker
+    - FBMemoryProfiler
+    - FBRetainCycleDetector
     - FontAwesome.swift
     - Hero
     - Localize-Swift
@@ -71,24 +199,56 @@ SPEC REPOS:
     - SwiftLint
     - SwiftTheme
     - SwiftyJSON
+    - ZipArchive
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AliAPMInterface: feea5214ffece4ed52a4a75765f4dd24664b588d
+  AlicloudAPM: a785a194564441870824d23a41219ba9f889f9ba
+  AlicloudCrash: 2b08f6fbbf8a7e14596414256c2ee5ee34d0816c
+  AlicloudHAUtil: 99e5929118fdd73f8ac27807c13e2cded5d4b048
+  AlicloudTLog: 462a53a958f7e57a189d7d234f41bca1dbef9fcd
+  AlicloudUTDID: 7323c443dcdf9a73e2224dc6ce51703671d7a765
+  AlicloudUtils: 66e0ba6ece62d7dd05e9dd95674b2c7811624c2f
+  AliHACore: 631974dc2ab61ffed5ba743e339defb5c9e028c0
+  AliHADataHub4iOS: 4847f2cf512af4371a4137c7283b6126eb707f9f
+  AliHADataHubAssembler: 3105c6bfe8a62c0bbd10f7d70d5c891d48347a40
+  AliHADeviceEvaluation: aa603195a7a621fa6b9fde70f8a5c5f792feb422
+  AliHALogEngine: 22b83d8cfb4fbc2c22a2238574bc295b2dbba48d
+  AliHAMemoryMonitor: c3a3d2eaa7a54c292622c0ea6ef5ba81f9c349e8
+  AliHAMethodTrace: 31ebea278dfc3dfead7c47a75fc995c79d14ac36
+  AliHAPerformanceMonitor: 346c290c709a19405e6cfb4f84086dac368184cb
+  AliHAProtocol: fd6ba550c1888b51cc1cd55a21f220fccadd7a26
+  AliHASecurity: feacfe93b806c1c1a03e2d03c4968d7021df6851
+  AliRemoteDebugInterface: acc89a6becba06e3c009465cbc377b297d745fcb
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  BizErrorReporter4iOS: 0f8d8f52ca95e89e7c60fc15dc162bc6f32c3d86
+  CrashReporter: f8374b53ef73d1ae23e76331fd648bfc1cd7ff78
   DoraemonKit: 8587e7a9aae0773dfc96707d2369d89d2a21b3d2
+  FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
+  FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FontAwesome.swift: 7938d6a03113ff3f39001bde7f50be8a0903d605
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  JDYThreadTrace: 912a762430ed98ce4ccdc85004366dd5bb5ce72e
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  RemoteDebugChannel: 6cf6628a167a1c6c530d32f21d16cf38a5a24bd4
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftTheme: 8b02c479bb4441b2b6790ac126e961b1b6fb0932
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TBCrashReporter: 126d48189fd8138c9c1233950a1b3203369f46f4
+  TBJSONModel: 2c95a8789bc3d98a2a773dd09c41ddeb902a200b
+  TBRest: 36fcaf59c76692eae5acf4c8fd469748d453a327
+  TRemoteDebugger: af82010a22063d31b8509497a8bfabfb3f7028c3
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: e36f55457f1f5f7ae7220c01b00b26f105355218
+PODFILE CHECKSUM: 2e54905618288047a7528b510d9b0a4e804af16c
 
 COCOAPODS: 1.9.3
