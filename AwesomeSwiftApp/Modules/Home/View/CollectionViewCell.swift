@@ -6,9 +6,9 @@
 //  Copyright © 2020 Chacha. All rights reserved.
 //
 
+import FontAwesome
 import Log
 import UIKit
-import FontAwesome
 
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var labelText: UILabel!
@@ -17,7 +17,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.applyCornerRadius(20.0)
+        self.setRoundCorners(corners: UIRectCorner.allCorners, with: 20.0)
     }
 
     func setLabelText(label: String) {

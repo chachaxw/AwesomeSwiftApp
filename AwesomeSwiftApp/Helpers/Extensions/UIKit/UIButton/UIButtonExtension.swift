@@ -83,13 +83,4 @@ extension UIButton {
         imageView?.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0.0).isActive = true
         imageView?.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -offset).isActive = true
     }
-
-    func setGradient(startColor: UIColor, endColor: UIColor, frame: CGRect) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
-        gradientLayer.frame = frame
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
-        self.layer.addSublayer(gradientLayer)
-    }
 }

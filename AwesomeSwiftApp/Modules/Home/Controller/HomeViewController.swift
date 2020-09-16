@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.theme_backgroundColor = [lightGrayColor, darkGrayColor]
+        self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
     }
 
     func initCollectionView() {
-        contentView.theme_backgroundColor = [whiteColor, deepBlackColor]
+        contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.deepBlackColor]
         contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
     }
 
@@ -130,12 +130,12 @@ extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.animate(shouldScale: true) { (completed: Bool) in
-            print("动画是否完成 \(completed)")
-            if completed {
-                self.contentView.transform = .identity
-            }
-        }
+//        cell?.animate(shouldScale: true) { (completed: Bool) in
+//            print("动画是否完成 \(completed)")
+//            if completed {
+//                self.contentView.transform = .identity
+//            }
+//        }
     }
 }
 

@@ -5,10 +5,11 @@
 //  Copyright © Chacha. All rights reserved.
 //
 
-import SwiftUI
 import UIKit
 
 class RootRouter {
+    private var loginId: String = "LoginStoryboard"
+    private var mainId: String = "MainStoryboard"
 
     /** Replaces root view controller. You can specify the replacment animation type.
      If no animation type is specified, there is no animation */
@@ -26,11 +27,15 @@ class RootRouter {
     }
 
     func loadMainAppStructure() {
+        guard let login = R.storyboard.main()
+                .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {
+                return
+            }
         guard let root = R.storyboard.main()
-            .instantiateViewController(withIdentifier: "MainStoryboard") as? RootViewController else {
+            .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
                 return
             }
         root.view.backgroundColor = UIColor.Theme.LightGrayColor
-        setRootViewController(controller: root, animatedWithOptions: nil)
+        setRootViewController(controller: login, animatedWithOptions: nil)
     }
 }
