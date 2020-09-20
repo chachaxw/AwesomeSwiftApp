@@ -7,8 +7,8 @@
 //
 
 import DoraemonKit
-import UIKit
 import SwiftTheme
+import UIKit
 
 class RootViewController: UITabBarController, CAAnimationDelegate {
 

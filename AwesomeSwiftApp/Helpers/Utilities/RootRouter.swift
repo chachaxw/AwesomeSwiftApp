@@ -36,6 +36,6 @@ class RootRouter {
                 return
             }
         root.view.backgroundColor = UIColor.Theme.LightGrayColor
-        setRootViewController(controller: login, animatedWithOptions: nil)
+        setRootViewController(controller: root, animatedWithOptions: nil)
     }
 }

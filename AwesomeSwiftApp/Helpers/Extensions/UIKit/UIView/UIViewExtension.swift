@@ -52,7 +52,7 @@ extension UIView {
 
         cornersLayer.frame = self.bounds
         cornersLayer.path = bezierPath.cgPath
-        self.layer.addSublayer(cornersLayer)
+        self.layer.mask = cornersLayer
     }
 
     /// Set gradient color round corners
@@ -88,12 +88,18 @@ extension UIView {
 
     // Set view shadow style
     func setShadow(color: UIColor, offset: CGSize, opacity: Float, radius: CGFloat) {
+        layer.masksToBounds = false
+
         let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius)
 
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset
         layer.shadowOpacity = opacity
         layer.shadowPath = shadowPath.cgPath
+
+        let backgroundCGColor = backgroundColor?.cgColor
+        backgroundColor = nil
+        layer.backgroundColor = backgroundCGColor
     }
 }
 
