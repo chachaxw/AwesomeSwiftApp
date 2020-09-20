@@ -20,6 +20,7 @@ target 'AwesomeSwiftApp' do
   pod 'Log'
   pod 'Hero'
   pod 'SwiftTheme'
+  pod 'SwiftDate', '~> 5.0'
   pod 'Localize-Swift', '~> 2.0'
   pod 'LookinServer',
     :configurations => ['Debug']

@@ -17,7 +17,16 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.setRoundCorners(corners: UIRectCorner.allCorners, with: 20.0)
+        self.backgroundColor = UIColor.Theme.BasicGrayColor
+        self.layer.cornerRadius = 20
+        self.setShadow(
+            color: UIColor.Theme.LightShadowColor,
+            offset: CGSize(width: 0, height: 5),
+            opacity: 1,
+            radius: 16
+        )
+        self.coverImage.layer.cornerRadius = 20
+        self.coverImage.clipsToBounds = true
     }
 
     func setLabelText(label: String) {
@@ -46,14 +55,14 @@ class CollectionViewCell: UICollectionViewCell {
             size: CGSize(width: 24, height: 24)
         )
 
+        likeButton.radius = 10.0
+        likeButton.setImage(isActive ? heartSolidIcon : heartIcon, for: .normal)
         likeButton.setShadow(
             color: UIColor.Theme.LightShadowColor,
-            offset: CGSize(width: 0, height: 5),
-            opacity: 1,
-            radius: 16
+            offset: CGSize(width: 0, height: 3),
+            opacity: 0.8,
+            radius: 8
         )
-        likeButton.setImage(isActive ? heartSolidIcon : heartIcon, for: .normal)
-        likeButton.setRoundCorners(corners: UIRectCorner.allCorners, with: 10.0)
     }
 
     func setCoverImageFromUrl(imgUrl: String) {

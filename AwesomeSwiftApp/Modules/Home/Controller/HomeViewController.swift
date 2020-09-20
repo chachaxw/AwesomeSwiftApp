@@ -7,6 +7,7 @@
 //
 
 import Hero
+import SwiftDate
 import SwiftTheme
 import UIKit
 
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak private var avatarView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
+    @IBOutlet weak var dateLabel: UILabel!
 
     var cardList: [CardItem] = [
         CardItem(
@@ -59,6 +61,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        dateLabel.text = Date().toFormat("MMMdd日", locale: Locales.chinese)
         self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
 
         if #available(iOS 11, *) {
@@ -71,7 +74,7 @@ class HomeViewController: UIViewController {
 
     func initCollectionView() {
         contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.deepBlackColor]
-        contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 20.0)
+        contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 24.0)
     }
 
     func initAvatarView() {

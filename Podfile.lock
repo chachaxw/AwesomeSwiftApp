@@ -111,6 +111,7 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - SwiftDate (5.1.0)
   - SwiftLint (0.31.0)
   - SwiftTheme (0.5.2)
   - SwiftyJSON (4.3.0)
@@ -147,6 +148,7 @@ DEPENDENCIES:
   - R.swift (= 5.0.0)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - SwiftDate (~> 5.0)
   - SwiftLint (= 0.31.0)
   - SwiftTheme
   - SwiftyJSON (~> 4.0)
@@ -196,6 +198,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftDate
     - SwiftLint
     - SwiftTheme
     - SwiftyJSON
@@ -240,6 +243,7 @@ SPEC CHECKSUMS:
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftTheme: 8b02c479bb4441b2b6790ac126e961b1b6fb0932
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
@@ -249,6 +253,6 @@ SPEC CHECKSUMS:
   TRemoteDebugger: af82010a22063d31b8509497a8bfabfb3f7028c3
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 2e54905618288047a7528b510d9b0a4e804af16c
+PODFILE CHECKSUM: 66022ff0d8d206eef0eae165bc9b9b567735f278
 
 COCOAPODS: 1.9.3

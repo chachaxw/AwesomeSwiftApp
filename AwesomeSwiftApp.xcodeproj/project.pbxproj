@@ -21,6 +21,8 @@
 		9324074623ACE0E50025013F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324074423ACE0E50025013F /* RootViewController.swift */; };
 		932AA0C224BF5884000C8E94 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AA0C124BF5884000C8E94 /* CardItem.swift */; };
 		93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93497EA8240EA66A00A40AE2 /* ContentView.swift */; };
+		934AF4C12511DD8E00AD0A9E /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934AF4C02511DD8E00AD0A9E /* UITextFieldExtension.swift */; };
+		934AF4C4251223A900AD0A9E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934AF4C3251223A900AD0A9E /* UIFont.swift */; };
 		934B3B4E240F4777002A524D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B3B4D240F4777002A524D /* HomeViewController.swift */; };
 		937435722416960E002A0A2A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937435712416960E002A0A2A /* CollectionViewCell.swift */; };
 		9377FCB5250138410027DFD2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377FCB4250138410027DFD2 /* Colors.swift */; };
@@ -99,6 +101,8 @@
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		932AA0C124BF5884000C8E94 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		93497EA8240EA66A00A40AE2 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		934AF4C02511DD8E00AD0A9E /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		934AF4C3251223A900AD0A9E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		934B3B4D240F4777002A524D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = AwesomeSwiftApp/Modules/Home/Controller/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		937435712416960E002A0A2A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = AwesomeSwiftApp/Modules/Home/View/CollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		9377FCB4250138410027DFD2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 		2AB31DA41F38745300B7D1F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				934AF4C52512577F00AD0A9E /* Swift */,
 				93A1759923A4A15400A684D6 /* UIKit */,
 				937A1E5D23A26CED0089B60F /* Common */,
 			);
@@ -412,6 +417,29 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		934AF4BF2511DD7100AD0A9E /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				934AF4C02511DD8E00AD0A9E /* UITextFieldExtension.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		934AF4C22512239500AD0A9E /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				934AF4C3251223A900AD0A9E /* UIFont.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		934AF4C52512577F00AD0A9E /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		9356C1D223B1B02800FC9D0C /* Me */ = {
@@ -553,6 +581,8 @@
 		93A1759923A4A15400A684D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				934AF4C22512239500AD0A9E /* UIFont */,
+				934AF4BF2511DD7100AD0A9E /* UITextField */,
 				939268E92510828F0074D7C4 /* UIImage */,
 				939268DF250E706F0074D7C4 /* UIViewController */,
 				939268DC250E64B10074D7C4 /* UICollectionView */,
@@ -875,6 +905,7 @@
 				939268E4250E74EF0074D7C4 /* Reusable.swift in Sources */,
 				93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
+				934AF4C12511DD8E00AD0A9E /* UITextFieldExtension.swift in Sources */,
 				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */,
@@ -903,6 +934,7 @@
 				939268E6250F03250074D7C4 /* NibLoadable.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,
 				93C8C9DD2507ACD900EA81D4 /* UIAlertControllerExtension.swift in Sources */,
+				934AF4C4251223A900AD0A9E /* UIFont.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */,
 				2A1DD4DF1F389C2200712195 /* DeeplinkHandler.swift in Sources */,
