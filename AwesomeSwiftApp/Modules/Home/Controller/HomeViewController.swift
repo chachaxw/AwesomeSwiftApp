@@ -12,7 +12,8 @@ import SwiftTheme
 import UIKit
 
 class HomeViewController: UIViewController {
-    private let cellIdentifiier = "CardCell"
+    private let cellIdentifier = "CardCell"
+    private let detailIdentifier = "DemoDetailStoryboard"
 
     @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var avatarView: UIImageView!
@@ -94,7 +95,7 @@ extension HomeViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath)
     -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: cellIdentifiier, for: indexPath) as? CollectionViewCell else {
+            withReuseIdentifier: cellIdentifier, for: indexPath) as? CollectionViewCell else {
                 fatalError("DequeueReusableCell failed while casting")
         }
 
@@ -120,15 +121,12 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let alertCtrl = UIAlertController(
-//            title: "点击CollectionViewCell",
-//            message: "当前indexPath \(indexPath.item)",
-//            preferredStyle: .alert
-//        )
-//        let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
-//
-//        alertCtrl.addAction(okAction)
-//        self.present(alertCtrl, animated: true, completion: nil)
+        guard let detailViewCtrl = UIStoryboard.main?.instantiateViewController(
+                withIdentifier: detailIdentifier) as? DemoDetailViewController else {
+            return
+        }
+
+        print("当前indexPath \(indexPath.item)")
     }
 
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {

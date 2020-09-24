@@ -20,6 +20,8 @@
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
 		9324074623ACE0E50025013F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324074423ACE0E50025013F /* RootViewController.swift */; };
 		932AA0C224BF5884000C8E94 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AA0C124BF5884000C8E94 /* CardItem.swift */; };
+		932EB03A25175F3200E55BB3 /* DemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */; };
+		932EB03D251761A600E55BB3 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EB03C251761A600E55BB3 /* ShadowView.swift */; };
 		93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93497EA8240EA66A00A40AE2 /* ContentView.swift */; };
 		934AF4C12511DD8E00AD0A9E /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934AF4C02511DD8E00AD0A9E /* UITextFieldExtension.swift */; };
 		934AF4C4251223A900AD0A9E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934AF4C3251223A900AD0A9E /* UIFont.swift */; };
@@ -100,6 +102,8 @@
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		932AA0C124BF5884000C8E94 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
+		932EB03C251761A600E55BB3 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		93497EA8240EA66A00A40AE2 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		934AF4C02511DD8E00AD0A9E /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		934AF4C3251223A900AD0A9E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -388,6 +392,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		932EB03B2517614200E55BB3 /* ShadowView */ = {
+			isa = PBXGroup;
+			children = (
+				932EB03C251761A600E55BB3 /* ShadowView.swift */,
+			);
+			path = ShadowView;
+			sourceTree = "<group>";
+		};
 		9342D8BA23AC949F00BD0989 /* Featured */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				934B3B4D240F4777002A524D /* HomeViewController.swift */,
+				932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -632,6 +645,7 @@
 		93DCD01123C83E0F006DDEFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				932EB03B2517614200E55BB3 /* ShadowView */,
 				93DCD01723C8409A006DDEFD /* GMenuViews */,
 			);
 			path = Views;
@@ -908,6 +922,7 @@
 				934AF4C12511DD8E00AD0A9E /* UITextFieldExtension.swift in Sources */,
 				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
+				932EB03D251761A600E55BB3 /* ShadowView.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93C8C9E02507B98200EA81D4 /* UIApplicationExtension.swift in Sources */,
@@ -921,6 +936,7 @@
 				9324074623ACE0E50025013F /* RootViewController.swift in Sources */,
 				93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */,
 				939268EB251082A70074D7C4 /* UIImageExtension.swift in Sources */,
+				932EB03A25175F3200E55BB3 /* DemoDetailViewController.swift in Sources */,
 				939268DE250E64CC0074D7C4 /* UICollectionViewExtension.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
 				939268DB250E58E30074D7C4 /* UIStoryboardExtension.swift in Sources */,

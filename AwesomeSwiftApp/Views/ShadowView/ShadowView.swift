@@ -16,7 +16,7 @@ class ShadowView: UIView {
             self.updateProperties()
         }
     }
-    
+
     /// The shadow color of the `ShadowView`, inspectable in Interface Builder
     @IBInspectable var shadowColor: UIColor = UIColor.black {
         didSet {
@@ -37,7 +37,7 @@ class ShadowView: UIView {
             self.updateProperties()
         }
     }
-    
+
     /// The shadow opacity of the `ShadowView`, inspectable in Interface Builder
     @IBInspectable var shadowOpacity: Float = 0.5 {
         didSet {
@@ -74,7 +74,7 @@ class ShadowView: UIView {
     fileprivate func updateShadowPath() {
         self.layer.shadowPath = UIBezierPath(roundedRect: layer.bounds, cornerRadius: layer.cornerRadius).cgPath
     }
-    
+
     /**
      * Updates the shadow path everytime the views frame changes.
      */
