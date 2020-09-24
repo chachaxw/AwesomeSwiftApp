@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Featured" id="feb-I6-LHi"/>
+                                    <navigationItem title="Featured" largeTitleDisplayMode="never" id="feb-I6-LHi"/>
                                 </items>
                             </navigationBar>
                         </subviews>

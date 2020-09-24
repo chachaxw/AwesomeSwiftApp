@@ -26,8 +26,10 @@ target 'AwesomeSwiftApp' do
     :configurations => ['Debug']
   pod 'FontAwesome.swift'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'RxFlow'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'SkeletonView'
   pod 'AlicloudAPM', '~> 1.0.0'
   pod 'AlicloudTLog', '~> 1.0.0'
   pod 'AlicloudCrash' , '~> 1.1.0'

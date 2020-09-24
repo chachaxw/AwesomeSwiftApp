@@ -226,6 +226,7 @@
 				2AB31D9E1F38740A00B7D1F3 /* Models */,
 				2AB31D9F1F38741400B7D1F3 /* Modules */,
 				93DCD01123C83E0F006DDEFD /* Views */,
+				936E9866251CDB9400CF04D9 /* Services */,
 				2AFB310A1F385A20009C4586 /* Helpers */,
 			);
 			path = AwesomeSwiftApp;
@@ -462,6 +463,13 @@
 				932AA0BD24BF5495000C8E94 /* View */,
 			);
 			path = Me;
+			sourceTree = "<group>";
+		};
+		936E9866251CDB9400CF04D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		937435732417E583002A0A2A /* Controller */ = {
