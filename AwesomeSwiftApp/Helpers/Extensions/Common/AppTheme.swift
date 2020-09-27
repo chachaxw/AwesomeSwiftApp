@@ -33,7 +33,7 @@ extension UIColor {
 
 extension UIColor {
     struct Theme {
-        static let PrimaryColor = UIColor(netHex: 0x274396)
+        static let PrimaryColor = UIColor(netHex: 0x0459FD)
         static let SecondaryColor = UIColor(netHex: 0x1b60c0)
         static let LightGrayColor = UIColor(netHex: 0xf4f6f8)
         static let SecondaryGrayColor = UIColor(netHex: 0xf2f2f2)

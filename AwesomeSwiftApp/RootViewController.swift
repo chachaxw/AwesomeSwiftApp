@@ -23,7 +23,6 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
 
         DoraemonManager.shareInstance().install()
         setTheme()
-        animiation()
     }
 
     override func viewWillAppear(_ animated: Bool) {

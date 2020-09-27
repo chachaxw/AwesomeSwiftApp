@@ -1,5 +1,5 @@
 //
-//  CardItem.swift
+//  DemoModel.swift
 //  AwesomeSwiftApp
 //
 //  Created by chacha on 2020/7/15.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct CardItem: Identifiable {
+struct DemoModel: Identifiable {
     var id: String
     var label: String
     var title: String

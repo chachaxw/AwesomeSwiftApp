@@ -21,36 +21,36 @@ class HomeViewController: UIViewController {
     @IBOutlet weak private var navigationBar: UINavigationBar!
     @IBOutlet weak var dateLabel: UILabel!
 
-    var cardList: [CardItem] = [
-        CardItem(
+    var cardList: [DemoModel] = [
+        DemoModel(
             id: UUID().uuidString,
             label: "Awesome Demo",
             title: "你好, Awesome demo App",
             isLiked: true,
             uiImage: R.image.image1()
         ),
-        CardItem(
+        DemoModel(
             id: UUID().uuidString,
             label: "Featured",
             title: "最佳Swift Demo",
             isLiked: false,
             uiImage: R.image.image2()
         ),
-        CardItem(
+        DemoModel(
             id: UUID().uuidString,
             label: "Best Practise",
             title: "Swift最佳实践",
             isLiked: false,
             uiImage: R.image.image3()
         ),
-        CardItem(
+        DemoModel(
             id: UUID().uuidString,
             label: "Featured",
             title: "Swift动效实战",
             isLiked: false,
             uiImage: R.image.image4()
         ),
-        CardItem(
+        DemoModel(
             id: UUID().uuidString,
             label: "Featured",
             title: "The Best Swift Demo",
@@ -99,7 +99,7 @@ extension HomeViewController: UICollectionViewDataSource {
                 fatalError("DequeueReusableCell failed while casting")
         }
 
-        let cardItem: CardItem = cardList[indexPath[1]]
+        let cardItem: DemoModel = cardList[indexPath[1]]
 
         cell.setCardView()
         cell.setButton(isActive: cardItem.isLiked)
