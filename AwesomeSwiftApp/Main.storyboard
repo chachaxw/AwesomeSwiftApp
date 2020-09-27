@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8J4-df-gm6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDI-TC-8DA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,22 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JLO-Js-oDA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JLO-Js-oDA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <items>
-                                    <navigationItem title="Featured" largeTitleDisplayMode="never" id="feb-I6-LHi"/>
+                                    <navigationItem title="Featured" id="feb-I6-LHi"/>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wup-8X-p6s">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nxW-oZ-GhR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wup-8X-p6s" firstAttribute="top" secondItem="JLO-Js-oDA" secondAttribute="bottom" id="5vL-Dc-009"/>
+                            <constraint firstItem="Wup-8X-p6s" firstAttribute="trailing" secondItem="nxW-oZ-GhR" secondAttribute="trailing" id="8lo-qr-73d"/>
+                            <constraint firstItem="JLO-Js-oDA" firstAttribute="trailing" secondItem="Wup-8X-p6s" secondAttribute="trailing" id="9If-oF-lKE"/>
+                            <constraint firstItem="Wup-8X-p6s" firstAttribute="leading" secondItem="nxW-oZ-GhR" secondAttribute="leading" id="LsK-vo-2nf"/>
+                            <constraint firstItem="Wup-8X-p6s" firstAttribute="bottom" secondItem="nxW-oZ-GhR" secondAttribute="bottom" id="fsb-zi-7hh"/>
+                            <constraint firstItem="JLO-Js-oDA" firstAttribute="top" secondItem="nxW-oZ-GhR" secondAttribute="top" id="k61-DY-T1R"/>
+                            <constraint firstItem="JLO-Js-oDA" firstAttribute="leading" secondItem="Wup-8X-p6s" secondAttribute="leading" id="rCS-E6-h6d"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="排行榜" image="flame.fill" catalog="system" id="Yuz-Ha-JNb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saw-pf-uFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138.40000000000001" y="-188.42364532019704"/>
+            <point key="canvasLocation" x="-139.13043478260872" y="-188.83928571428569"/>
         </scene>
         <!--Me-->
         <scene sceneID="Pm2-g7-4kc">
@@ -55,7 +66,7 @@
         <scene sceneID="s5d-PS-Cvt">
             <objects>
                 <viewController storyboardIdentifier="HomeStoryboard" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3">
+                    <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
