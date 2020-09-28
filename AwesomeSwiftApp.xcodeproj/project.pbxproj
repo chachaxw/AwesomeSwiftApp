@@ -50,6 +50,8 @@
 		93C8C9E02507B98200EA81D4 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8C9DF2507B98200EA81D4 /* UIApplicationExtension.swift */; };
 		93D09C62251F2D6B006C89B9 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09C61251F2D6B006C89B9 /* AppFlow.swift */; };
 		93D09C66251F342D006C89B9 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09C65251F342D006C89B9 /* AppServices.swift */; };
+		93D09CA425209F50006C89B9 /* FetchableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09CA325209F50006C89B9 /* FetchableImage.swift */; };
+		93D09CA82520BAA5006C89B9 /* FetchableImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09CA72520BAA4006C89B9 /* FetchableImageHelper.swift */; };
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
 		93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */; };
 		93DCD01623C83EEF006DDEFD /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01523C83EEF006DDEFD /* Email.swift */; };
@@ -135,6 +137,8 @@
 		93C8C9DF2507B98200EA81D4 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		93D09C61251F2D6B006C89B9 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		93D09C65251F342D006C89B9 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		93D09CA325209F50006C89B9 /* FetchableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableImage.swift; sourceTree = "<group>"; };
+		93D09CA72520BAA4006C89B9 /* FetchableImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableImageHelper.swift; sourceTree = "<group>"; };
 		93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		93DCD01523C83EEF006DDEFD /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		93DCD01823C8445C006DDEFD /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		2AB31DA21F38744600B7D1F3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				93D09CA225209B0C006C89B9 /* FetchableImage */,
 				939268E2250E74C50074D7C4 /* UIKit */,
 			);
 			path = Protocols;
@@ -664,6 +669,15 @@
 			path = UIApplication;
 			sourceTree = "<group>";
 		};
+		93D09CA225209B0C006C89B9 /* FetchableImage */ = {
+			isa = PBXGroup;
+			children = (
+				93D09CA325209F50006C89B9 /* FetchableImage.swift */,
+				93D09CA72520BAA4006C89B9 /* FetchableImageHelper.swift */,
+			);
+			path = FetchableImage;
+			sourceTree = "<group>";
+		};
 		93DCD01123C83E0F006DDEFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -955,6 +969,7 @@
 				93DCD02123CC182D006DDEFD /* DefaultMenuItem.swift in Sources */,
 				934B3B4E240F4777002A524D /* HomeViewController.swift in Sources */,
 				93A1759B23A4A1C200A684D6 /* UIButtonExtension.swift in Sources */,
+				93D09CA425209F50006C89B9 /* FetchableImage.swift in Sources */,
 				9324074623ACE0E50025013F /* RootViewController.swift in Sources */,
 				93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */,
 				939268EB251082A70074D7C4 /* UIImageExtension.swift in Sources */,
@@ -969,6 +984,7 @@
 				93DCD01D23C898C7006DDEFD /* Data.swift in Sources */,
 				93D09C66251F342D006C89B9 /* AppServices.swift in Sources */,
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
+				93D09CA82520BAA5006C89B9 /* FetchableImageHelper.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */,
 				939268E6250F03250074D7C4 /* NibLoadable.swift in Sources */,

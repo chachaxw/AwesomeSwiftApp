@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import RxFlow
 import RxCocoa
+import RxFlow
 import RxSwift
 import UIKit
 
@@ -16,7 +16,7 @@ class AppFlow: Flow {
     var root: Presentable {
         self.rootViewController
     }
-    
+
     private lazy var rootViewController: UINavigationController = {
         let viewCtrl = UINavigationController()
         return viewCtrl
@@ -30,11 +30,11 @@ class AppFlow: Flow {
     }
 
     private let services: AppServices
-    
+
     init(services: AppServices) {
         self.services = services
     }
-    
+
     deinit {
         print("\(type(of: self)): \(#function)")
     }
