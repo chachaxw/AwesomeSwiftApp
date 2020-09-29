@@ -1,5 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp-frameworks.sh
-${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework
 ${BUILT_PRODUCTS_DIR}/FBAllocationTracker/FBAllocationTracker.framework
 ${BUILT_PRODUCTS_DIR}/FBMemoryProfiler/FBMemoryProfiler.framework

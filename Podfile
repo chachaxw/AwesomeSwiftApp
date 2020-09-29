@@ -14,12 +14,12 @@ inhibit_all_warnings!
 target 'AwesomeSwiftApp' do
 #  install_all_flutter_pods(flutter_application_path)
 
-  pod 'R.swift', '5.0.0'
-  pod 'SwiftLint', '0.31.0'
-  pod 'AFNetworking', '~> 3.0'
   pod 'Log'
   pod 'Hero'
   pod 'SwiftTheme'
+  pod 'R.swift', '5.0.0'
+  pod 'SwiftLint', '0.31.0'
+  pod 'Alamofire', '~> 5.2'
   pod 'SwiftDate', '~> 5.0'
   pod 'Localize-Swift', '~> 2.0'
   pod 'LookinServer',

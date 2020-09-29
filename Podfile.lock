@@ -1,19 +1,5 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
+  - Alamofire (5.2.2)
   - AliAPMInterface (1.0.1.12)
   - AlicloudAPM (1.0.0.1):
     - AlicloudHAUtil
@@ -137,7 +123,7 @@ PODS:
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.0)
+  - Alamofire (~> 5.2)
   - AlicloudAPM (~> 1.0.0)
   - AlicloudCrash (~> 1.1.0)
   - AlicloudTLog (~> 1.0.0)
@@ -188,7 +174,7 @@ SPEC REPOS:
     - TBRest
     - TRemoteDebugger
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
+    - Alamofire
     - AliyunOSSiOS
     - DoraemonKit
     - FBAllocationTracker
@@ -213,7 +199,7 @@ SPEC REPOS:
     - ZipArchive
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AliAPMInterface: feea5214ffece4ed52a4a75765f4dd24664b588d
   AlicloudAPM: a785a194564441870824d23a41219ba9f889f9ba
   AlicloudCrash: 2b08f6fbbf8a7e14596414256c2ee5ee34d0816c
@@ -263,6 +249,6 @@ SPEC CHECKSUMS:
   TRemoteDebugger: af82010a22063d31b8509497a8bfabfb3f7028c3
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: ec9f8169179618fc9719586843590d3918d02a76
+PODFILE CHECKSUM: e5705b9a9913f91b0445a452145495d4ed8c2c6c
 
 COCOAPODS: 1.9.3
