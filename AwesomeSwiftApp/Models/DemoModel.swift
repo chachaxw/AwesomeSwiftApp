@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct DemoModel: Identifiable {
+class DemoModel: Identifiable {
     var id: String
     var label: String
     var title: String

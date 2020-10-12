@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RootRouter {
     private var loginId: String = "LoginStoryboard"
@@ -35,6 +36,7 @@ class RootRouter {
             .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
                 return
             }
+
         root.view.backgroundColor = UIColor.Theme.LightGrayColor
         setRootViewController(controller: root, animatedWithOptions: nil)
     }

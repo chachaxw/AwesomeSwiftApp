@@ -95,7 +95,7 @@ extension FetchableImage {
         }
     }
     
-    /// Fetch batch iimages from url string array
+    /// Fetch batch images from url string array
     /// - Parameters:
     ///     - urlStrings: The url string array
     ///     - options: The fetchable image options
@@ -114,6 +114,13 @@ extension FetchableImage {
         }
     }
     
+    /// Perform batch images
+    /// - Parameters:
+    ///     - urlStrings: The url string array
+    ///     - currentImageIndex: The current image index
+    ///     - options: The fetchable image options
+    ///     - partialFetchHandler: An handle block function
+    ///     - completion: An block called once the batch fetching did finish.
     private func performBatchImageFetching(
         using urlStrings: [String?],
         currentImageIndex: Int,

@@ -52,6 +52,9 @@
 		93D09C66251F342D006C89B9 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09C65251F342D006C89B9 /* AppServices.swift */; };
 		93D09CA425209F50006C89B9 /* FetchableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09CA325209F50006C89B9 /* FetchableImage.swift */; };
 		93D09CA82520BAA5006C89B9 /* FetchableImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09CA72520BAA4006C89B9 /* FetchableImageHelper.swift */; };
+		93D09CAC2521A899006C89B9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09CAB2521A898006C89B9 /* UserModel.swift */; };
+		93D09D1C252229F5006C89B9 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09D1B252229F5006C89B9 /* FeaturedViewController.swift */; };
+		93D09D3525237619006C89B9 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09D3425237618006C89B9 /* AppStep.swift */; };
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
 		93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */; };
 		93DCD01623C83EEF006DDEFD /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01523C83EEF006DDEFD /* Email.swift */; };
@@ -139,6 +142,9 @@
 		93D09C65251F342D006C89B9 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
 		93D09CA325209F50006C89B9 /* FetchableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableImage.swift; sourceTree = "<group>"; };
 		93D09CA72520BAA4006C89B9 /* FetchableImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableImageHelper.swift; sourceTree = "<group>"; };
+		93D09CAB2521A898006C89B9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		93D09D1B252229F5006C89B9 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		93D09D3425237618006C89B9 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
 		93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		93DCD01523C83EEF006DDEFD /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		93DCD01823C8445C006DDEFD /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
@@ -255,8 +261,9 @@
 		2AB31D9E1F38740A00B7D1F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				932AA0C024BF5852000C8E94 /* Home */,
+				932AA0C124BF5884000C8E94 /* DemoModel.swift */,
 				93DCD01423C83EDE006DDEFD /* GMenu */,
+				93D09CAB2521A898006C89B9 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,14 +402,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		932AA0C024BF5852000C8E94 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				932AA0C124BF5884000C8E94 /* DemoModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		932EB03B2517614200E55BB3 /* ShadowView */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +437,7 @@
 		93454E2E24B8CAD500580553 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				93D09D1B252229F5006C89B9 /* FeaturedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -487,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				93D09C61251F2D6B006C89B9 /* AppFlow.swift */,
+				93D09D3425237618006C89B9 /* AppStep.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -947,8 +948,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B4BFDB25036DFB00592072 /* UICollectionViewCellExtension.swift in Sources */,
+				93D09CAC2521A899006C89B9 /* UserModel.swift in Sources */,
 				932AA0C224BF5884000C8E94 /* DemoModel.swift in Sources */,
 				9377FCB5250138410027DFD2 /* Colors.swift in Sources */,
+				93D09D1C252229F5006C89B9 /* FeaturedViewController.swift in Sources */,
 				93DCD02923CDAE86006DDEFD /* MenuBarView.swift in Sources */,
 				93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */,
 				93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */,
@@ -957,6 +960,7 @@
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				934AF4C12511DD8E00AD0A9E /* UITextFieldExtension.swift in Sources */,
 				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
+				93D09D3525237619006C89B9 /* AppStep.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				932EB03D251761A600E55BB3 /* ShadowView.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */,
