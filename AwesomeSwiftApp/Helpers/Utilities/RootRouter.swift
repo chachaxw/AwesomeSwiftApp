@@ -6,9 +6,14 @@
 //
 
 import UIKit
-import SwiftUI
+import RxFlow
+import RxSwift
+import RxCocoa
 
 class RootRouter {
+    private let appServices = AppServices(demoService: Any)
+    private let disposeBag = DisposeBag()
+    private let coordinator = FlowCoordinator()
     private var loginId: String = "LoginStoryboard"
     private var mainId: String = "MainStoryboard"
 
@@ -28,10 +33,19 @@ class RootRouter {
     }
 
     func loadMainAppStructure() {
-        guard let login = R.storyboard.main()
-                .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {
-                return
-            }
+        self.coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
+            print("will navigate to flow=\(flow) and step=\(step)")
+        }).disposed(by: self.disposeBag)
+        
+        self.coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
+            print("will navigate to flow=\(flow) and step=\(step)")
+        }).disposed(by: self.disposeBag)
+        
+        let appFlow = AppFlow(services: AppServices)
+//        guard let login = R.storyboard.main()
+//                .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {
+//                return
+//            }
         guard let root = R.storyboard.main()
             .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
                 return
