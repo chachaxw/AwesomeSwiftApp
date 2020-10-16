@@ -13,13 +13,13 @@ class UserModel: FetchableImage {
     var id: String
     var username: String
     var avatarUrl: String
-    
+
     init(id: String, username: String, avatarUrl: String) {
         self.id = id
         self.username = username
         self.avatarUrl = avatarUrl
     }
-    
+
     func fetchAvatar(avatarUrl: String, completion: @escaping (_ avatar: CGImage?) -> Void) {
         fetchImage(from: avatarUrl) { (imageData) in
             DispatchQueue.main.async {
