@@ -9,41 +9,41 @@
 import Foundation
 
 protocol UserDefaultsSettable {
-    associatedtype defaultKeys: RawRepresentable
+    associatedtype DefaultKeys: RawRepresentable
 }
 
-extension UserDefaultsSettable where defaultKeys.RawValue == String {
-    static func set(value: String, forKey key: defaultKeys) {
+extension UserDefaultsSettable where DefaultKeys.RawValue == String {
+    static func set(value: Any?, forKey key: DefaultKeys) {
         let aKey = key.rawValue
         UserDefaults.standard.setValue(value, forKey: aKey)
     }
     
-    static func string(forKey key: defaultKeys) -> String? {
+    static func string(forKey key: DefaultKeys) -> String? {
         let aKey = key.rawValue
         return UserDefaults.standard.string(forKey: aKey)
     }
-    
-    static func integer(forKey key: defaultKeys) -> Int? {
+
+    static func integer(forKey key: DefaultKeys) -> Int? {
         let aKey = key.rawValue
         return UserDefaults.standard.integer(forKey: aKey)
     }
     
-    static func bool(forKey key: defaultKeys) -> Bool? {
+    static func bool(forKey key: DefaultKeys) -> Bool? {
         let aKey = key.rawValue
         return UserDefaults.standard.bool(forKey: aKey)
     }
-    
-    static func array(forKey key: defaultKeys) -> Array<Any>? {
+
+    static func array(forKey key: DefaultKeys) -> [Any]? {
         let aKey = key.rawValue
         return UserDefaults.standard.array(forKey: aKey)
     }
-    
-    static func data(forKey key: defaultKeys) -> Data? {
+
+    static func data(forKey key: DefaultKeys) -> Data? {
         let aKey = key.rawValue
         return UserDefaults.standard.data(forKey: aKey)
     }
-    
-    static func dictionary(forKey key: defaultKeys) -> Dictionary<String, Any>? {
+
+    static func dictionary(forKey key: DefaultKeys) -> [String: Any]? {
         let aKey = key.rawValue
         return UserDefaults.standard.dictionary(forKey: aKey)
     }
