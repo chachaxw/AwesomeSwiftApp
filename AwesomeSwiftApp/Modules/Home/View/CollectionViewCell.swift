@@ -38,7 +38,7 @@ class CollectionViewCell: UICollectionViewCell {
     func setCoverImage(image: UIImage) {
         self.coverImage.image = image
         self.coverImage.layer.cornerRadius = 20
-        self.coverImage.clipsToBounds = true
+        self.coverImage.layer.masksToBounds = true
     }
 
     func setButton(isActive: Bool) {
