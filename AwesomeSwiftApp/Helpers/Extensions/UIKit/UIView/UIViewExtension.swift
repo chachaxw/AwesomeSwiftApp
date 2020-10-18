@@ -82,8 +82,8 @@ extension UIView {
         gradientLayer.cornerRadius = radii
         gradientLayer.mask = cornersLayer
 
-        self.layer.cornerRadius = radii
-        self.layer.addSublayer(gradientLayer)
+        layer.cornerRadius = radii
+        layer.addSublayer(gradientLayer)
     }
 
     // Set view shadow style
@@ -98,6 +98,7 @@ extension UIView {
         layer.shadowPath = shadowPath.cgPath
 
         let backgroundCGColor = backgroundColor?.cgColor
+
         backgroundColor = nil
         layer.backgroundColor = backgroundCGColor
     }
@@ -119,8 +120,8 @@ extension UIView {
             .layerMinXMinYCorner
         ]
     ) {
-        self.layer.cornerRadius = radius
-        self.layer.maskedCorners = maskedCorners
-        self.layer.masksToBounds = true
+        layer.cornerRadius = radius
+        layer.maskedCorners = maskedCorners
+        layer.masksToBounds = true
     }
 }
