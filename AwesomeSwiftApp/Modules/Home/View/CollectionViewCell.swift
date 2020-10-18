@@ -25,8 +25,6 @@ class CollectionViewCell: UICollectionViewCell {
             opacity: 1,
             radius: 16
         )
-        self.coverImage.layer.cornerRadius = 20
-        self.coverImage.clipsToBounds = true
     }
 
     func setLabelText(label: String) {
@@ -39,6 +37,8 @@ class CollectionViewCell: UICollectionViewCell {
 
     func setCoverImage(image: UIImage) {
         self.coverImage.image = image
+        self.coverImage.layer.cornerRadius = 20
+        self.coverImage.clipsToBounds = true
     }
 
     func setButton(isActive: Bool) {

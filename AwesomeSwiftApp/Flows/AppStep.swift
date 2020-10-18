@@ -13,7 +13,7 @@ enum AppStep: Step {
     // Global
     case logoutIsRequired
     case unauthorized
-    
+
     // Api Key
     case apiKeyIsRequired
     case apiKeyIsFilledIn
@@ -21,11 +21,14 @@ enum AppStep: Step {
     // Login
     case loginIsRequired
     case userIsLoggedIn
-    
+
+    // Home
+    case homeIsRequired
+
     // Settings
     case settingsAreRequired
     case settingsAreComplete
-    
+
     // About
     case aboutIsRequired
     case aboutIsComplete

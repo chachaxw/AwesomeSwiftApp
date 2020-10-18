@@ -8,4 +8,5 @@
 
 struct AppServices {
     let demoService: Any
+    let preferencesService: Any
 }
