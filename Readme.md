@@ -3,10 +3,10 @@
 Supports: iOS 10.x and above
 
 ## ScreenShots
-<img src="AwesomeSwiftApp/Resources/images/Login Screen.png" width="100%" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/images/Home Screen.png" width="100%" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/images/Featured Screen.png" width="100%" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/images/Demo Detail Screen.png" width="100%" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Login Screen.png" width="100%" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Home Screen.png" width="100%" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Featured Screen.png" width="100%" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Demo Detail Screen.png" width="100%" alt="Home Screen">
 
 ## Branches:
 
@@ -38,12 +38,12 @@ bundle exec pod install
 ### Core Dependencies
 
 * Swiftlint - A tool to enforce Swift style and conventions.
-* SwiftyJSON - 
+* SwiftyJSON - The better way to deal with JSON data in Swift.
 * R.swift - Get strong typed, autocompleted resources like images, fonts and segues in Swift projects.
 * RxSwift - Reactive Programming in Swift.
 * RxFlow - RxFlow is a navigation framework for iOS applications based on a Reactive Flow Coordinator pattern.
 * Alamofire - An elegant HTTP Networking in Swift
-* Hero - An elegant transition library for iOS & tvOS
+* Hero - An elegant transition library for iOS & tvOS.
 
 ## Project structure:
 
