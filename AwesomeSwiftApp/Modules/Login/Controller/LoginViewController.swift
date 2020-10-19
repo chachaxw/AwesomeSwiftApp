@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var emailWrapper: UIView!
     @IBOutlet private weak var pwdWrapper: UIView!
     @IBOutlet private weak var rightArrow: UIImageView!
-
+    
     private var toggled: Bool = false
     private let eyeIcon = UIImage.fontAwesomeIcon(
         name: .eye,
