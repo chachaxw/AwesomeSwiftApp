@@ -8,26 +8,48 @@
 
 import UIKit
 
-class FeaturedViewController: UINavigationController {
+class FeaturedViewController: UIViewController {
+    var tableData: [DemoModel] = DemoMockData.list
+    private let cellIdentifier = "FeaturedTableCell"
+
+    @IBOutlet weak private var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.dataSource = self
+        tableView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.deepBlackColor]
+        self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.deepBlackColor]
+    }
+}
+
+extension FeaturedViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: cellIdentifier, for: indexPath) as? FeaturedTableViewCell else {
+                fatalError("DequeueReusableCell failed while casting")
         }
+
+        let demoData: DemoModel = tableData[indexPath.row]
+
+        cell.setTitleText(title: demoData.title)
+        cell.setDescText(desc: demoData.description)
+        cell.setCoverImage(image: demoData.uiImage!)
+
+        return cell
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
+extension FeaturedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+
+    }
 }
