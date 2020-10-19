@@ -37,21 +37,23 @@ extension UIImage {
     /// - Returns: The image colorized.
     @objc
     public func filled(with color: UIColor?) -> UIImage {
-        guard let color = color else { return self }
+        guard let color = color else {
+            return self
+        }
 
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         guard let context = UIGraphicsGetCurrentContext(), let cgImage = self.cgImage else { return self }
-        
+
         color.setFill()
         context.translateBy(x: 00, y: size.height)
         context.scaleBy(x: 1.0, y: -1.0)
         context.setBlendMode(.normal)
-        
+
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        
+
         context.clip(to: rect, mask: cgImage)
         context.fill(rect)
-        
+
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage ?? self
@@ -61,14 +63,14 @@ extension UIImage {
 // MARK: - Transform
 
 extension UIImage {
-    
+
     /// Combine this image with another one.
     /// - Parameter image: The image that will be combined with another one
     /// - Returns: The image resulting from the both image combined together.
     public func combined(with image: UIImage) -> UIImage? {
         let finalSize = CGSize(width: max(size.width, image.size.width), height: max(size.height, image.size.height))
         var finalImage: UIImage?
-        
+
         UIGraphicsBeginImageContextWithOptions(finalSize, false, UIScreen.main.scale)
         draw(at: CGPoint(x: (finalSize.width - size.width) / 2, y: (finalSize.height - size.height) / 2))
         image.draw(at: CGPoint(x: (finalSize.width - image.size.width) / 2,
@@ -82,12 +84,12 @@ extension UIImage {
 // MARK: - RenderingMode
 
 extension UIImage {
-    
+
     /// Returns the image with a rendering mode set to `original`
     public var original: UIImage {
         withRenderingMode(.alwaysOriginal)
     }
-    
+
     /// Returns the image with a rendering mode set to `template`
     public var template: UIImage {
         withRenderingMode(.alwaysTemplate)

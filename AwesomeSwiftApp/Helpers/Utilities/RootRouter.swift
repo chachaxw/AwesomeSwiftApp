@@ -8,10 +8,13 @@
 import UIKit
 import RxFlow
 import RxSwift
-import RxCocoa
 
 class RootRouter {
-    private let appServices = AppServices(demoService: Any)
+    private let appServices = AppServices(
+        demoService: DemoService(),
+        preferencesService: PreferencesService()
+    )
+
     private let disposeBag = DisposeBag()
     private let coordinator = FlowCoordinator()
     private var loginId: String = "LoginStoryboard"
@@ -36,12 +39,15 @@ class RootRouter {
         self.coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
             print("will navigate to flow=\(flow) and step=\(step)")
         }).disposed(by: self.disposeBag)
-        
+
         self.coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
             print("will navigate to flow=\(flow) and step=\(step)")
         }).disposed(by: self.disposeBag)
-        
-        let appFlow = AppFlow(services: AppServices)
+
+        let appFlow = AppFlow(services: self.appServices)
+
+        self.coordinator.coordinate(flow: appFlow, with: AppStepper(withServices: self.appServices))
+
 //        guard let login = R.storyboard.main()
 //                .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {
 //                return

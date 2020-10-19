@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct FetchableImageOptions {
+public struct FetchableImageOptions {
     var storeInCachesDirectory: Bool = true
     var allowLocalStorage: Bool = true
     var customFileName: String?
 }
 
-protocol FetchableImage {
-    func localFileURL(for imageURL: String?, options: FetchableImageOptions) -> URL?
+public protocol FetchableImage {
+    func localFileURL(for imageURL: String?, options: FetchableImageOptions?) -> URL?
 
     func fetchImage(
         from urlString: String?,
@@ -26,7 +26,7 @@ protocol FetchableImage {
     func fetchBatchImages(
         using urlStrings: [String?],
         options: FetchableImageOptions?,
-        partialFetchHandler: @escaping (_ imageData: Data, _ index: Int) -> Void,
+        partialFetchHandler: @escaping (_ imageData: Data?, _ index: Int) -> Void,
         completion: @escaping () -> Void
     )
 
@@ -39,7 +39,8 @@ protocol FetchableImage {
     func save(image data: Data, options: FetchableImageOptions) -> Bool
 }
 
-extension FetchableImage {
+// MARK: - default implementation
+public extension FetchableImage {
     /// Get local file URL for imageURL
     /// - Parameters:
     ///     - imageURL: The image url string
@@ -50,26 +51,34 @@ extension FetchableImage {
         let targetDir = opt.storeInCachesDirectory ?
             FetchableImageHelper.cachesDirectoryURL :
             FetchableImageHelper.documentsDirectoryURL
-        
+
         guard let urlString = imageURL else {
-            guard let customFileName = opt.customFileName else { return nil }
+            guard let customFileName = opt.customFileName else {
+                return nil
+            }
             return targetDir.appendingPathComponent(customFileName)
         }
-        
-        guard let imageName = FetchableImageHelper.getImageName(from: urlString) else { return nil }
+
+        guard let imageName = FetchableImageHelper.getImageName(from: urlString) else {
+            return nil
+        }
         return targetDir.appendingPathExtension(imageName)
     }
-    
+
     /// Fetch image from url string
     /// - Parameters:
     ///     - urlString: The url string
     ///     - options: The fetchable image options
     ///     - completion: An block called once the fetching did finish.
-    func fetchImage(from urlString: String?, options: FetchableImageOptions? = nil, completion: @escaping (_ imageData: Data?) -> Void) {
+    func fetchImage(
+        from urlString: String?,
+        options: FetchableImageOptions? = nil,
+        completion: @escaping (_ imageData: Data?) -> Void
+    ) {
         DispatchQueue.global(qos: .background).async {
             let opt = FetchableImageHelper.getOptions(options)
             let localURL = self.localFileURL(for: urlString, options: options)
-            
+
             // Determine if image exists locally first.
             if opt.allowLocalStorage, let localURL = localURL, FileManager.default.fileExists(atPath: localURL.path) {
                 // Image exists locally!
@@ -83,18 +92,18 @@ extension FetchableImage {
                     completion(nil)
                     return
                 }
-                
-                FetchableImageHelper.downloadImage(from: url) { (imageData) in
+
+                FetchableImageHelper.downloadImage(from: url) { imageData in
                     if opt.allowLocalStorage, let localURL = localURL {
                         try? imageData?.write(to: localURL)
                     }
-                    
+
                     completion(imageData)
                 }
             }
         }
     }
-    
+
     /// Fetch batch images from url string array
     /// - Parameters:
     ///     - urlStrings: The url string array
@@ -102,18 +111,22 @@ extension FetchableImage {
     ///     - partialFetchHandler: An handle block function
     ///     - completion: An block called once the batch fetching did finish.
     func fetchBatchImages(
-        using urlStrings: [String],
+        using urlStrings: [String?],
         options: FetchableImageOptions? = nil,
         partialFetchHandler: @escaping (_ imageData: Data?, _ index: Int) -> Void,
         completion: @escaping () -> Void
     ) {
-        performBatchImageFetching(using: urlStrings, currentImageIndex: 0, options: options, partialFetchHandler: { (imageData, index) in
-            partialFetchHandler(imageData, index)
-        }) {
-            completion()
-        }
+        performBatchImageFetching(
+            using: urlStrings,
+            currentImageIndex: 0,
+            options: options,
+            partialFetchHandler: { imageData, index in
+                partialFetchHandler(imageData, index)
+            },
+            completion: completion
+        )
     }
-    
+
     /// Perform batch images
     /// - Parameters:
     ///     - urlStrings: The url string array
@@ -127,15 +140,15 @@ extension FetchableImage {
         options: FetchableImageOptions?,
         partialFetchHandler: @escaping (_ imageData: Data?, _ index: Int) -> Void,
         completion: @escaping () -> Void
-    ) -> Void {
+    ) {
         guard currentImageIndex < urlStrings.count else {
             completion()
             return
         }
-        
-        fetchImage(from: urlStrings[currentImageIndex], options: options) { (imageData) in
+
+        fetchImage(from: urlStrings[currentImageIndex], options: options) { imageData in
             partialFetchHandler(imageData, currentImageIndex)
-            
+
             self.performBatchImageFetching(
                 using: urlStrings,
                 currentImageIndex: currentImageIndex + 1,
@@ -146,15 +159,17 @@ extension FetchableImage {
             }
         }
     }
-    
+
     /// Remove image from local
     /// - Parameters:
     ///     - imageURL: The image url string
     ///     - options: The fetchable image options
     /// - Returns: if the image is deleted
     func deleteImage(using imageURL: String?, options: FetchableImageOptions? = nil) -> Bool {
-        guard let localURL = localFileURL(for: imageURL, options: options) else { return false }
-        
+        guard let localURL = localFileURL(for: imageURL, options: options) else {
+            return false
+        }
+
         do {
             try FileManager.default.removeItem(at: localURL)
             return true
@@ -163,7 +178,7 @@ extension FetchableImage {
             return false
         }
     }
-    
+
     /// Remove batch images from local
     /// - Parameters:
     ///     - imageURsL: The image url string array
@@ -173,7 +188,7 @@ extension FetchableImage {
             imageURLs.forEach { _ = self.deleteImage(using: $0, options: options) }
         }
     }
-    
+
     /// Remove batch images from local
     /// - Parameters:
     ///     - multipleOptions: The fetchable image options
@@ -189,8 +204,10 @@ extension FetchableImage {
     ///     - options: The fetchable image options
     /// - Returns: if the data is saved
     func save(image data: Data, options: FetchableImageOptions) -> Bool {
-        guard let url = localFileURL(for: nil, options: options) else { return false }
-        
+        guard let url = localFileURL(for: nil, options: options) else {
+            return false
+        }
+
         do {
             try data.write(to: url)
             return true

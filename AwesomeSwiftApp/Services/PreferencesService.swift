@@ -18,22 +18,19 @@ class PreferencesService {
 
     /// sets the onBoarded preference to true
     func setOnboarded() {
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: UserDefaultKeys.Preferences.onBoarded)
+        UserDefaults.Preferences.set(value: true, forKey: .onBoarded)
     }
 
     /// removes the onBoarded preference
     func setNotOnboarded() {
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: UserDefaultKeys.Preferences.onBoarded)
+        UserDefaults.standard.removeObject(forKey: UserDefaults.Preferences.DefaultKeys.onBoarded.rawValue)
     }
 
     /// Returns true if the user has already onboarded, false otherwise
     ///
     /// - Returns: true if the user has already onboarded, false otherwise
     func isOnboarded () -> Bool {
-        let defaults = UserDefaults.standard
-        return defaults.bool(forKey: UserDefaultKeys.Preferences.onBoarded)
+        return UserDefaults.Preferences.bool(forKey: .onBoarded) ?? false
     }
 }
 
@@ -43,7 +40,7 @@ extension Reactive where Base: PreferencesService {
     var isOnboarded: Observable<Bool> {
         return UserDefaults.standard
             .rx
-            .observe(Bool.self, UserDefaultKeys.Preferences.onBoarded)
+            .observe(Bool.self, UserDefaults.Preferences.DefaultKeys.onBoarded.rawValue)
             .map { $0 ?? false }
     }
 }

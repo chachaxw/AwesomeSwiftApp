@@ -65,14 +65,6 @@ extension UICollectionView {
         )
     }
 
-    fileprivate func extractedFunc(_ supplementaryViewType: T.Type, _ elementKind: String) {
-        register(
-            supplementaryViewType.self,
-            forSupplementaryViewOfKind: elementKind,
-            withReuseIdentifier: supplementaryViewType.reuseIdentifier
-        )
-    }
-    
     /// Register a class-Based `UICollectionReusableView` conforming to `Reusable` & `NibLoadable`
     /// - Parameters:
     ///   - supplementaryViewType: The `UIView` subclass to register as `Supplementary View`.
@@ -81,7 +73,11 @@ extension UICollectionView {
         supplementaryViewType: T.Type,
         ofKind elementKind: String
     ) where T: Reusable {
-        extractedFunc(supplementaryViewType, elementKind)
+        register(
+            supplementaryViewType.self,
+            forSupplementaryViewOfKind: elementKind,
+            withReuseIdentifier: supplementaryViewType.reuseIdentifier
+        )
     }
 
     /// Dequeue a reusable `UICollectionViewCell` instance
