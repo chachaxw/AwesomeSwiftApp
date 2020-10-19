@@ -16,53 +16,16 @@ class HomeViewController: UIViewController {
     private let detailIdentifier = "DemoDetailStoryboard"
 
     @IBOutlet weak private var contentView: UIView!
-    @IBOutlet weak private var avatarView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak private var dateLabel: UILabel!
 
-    var cardList: [DemoModel] = [
-        DemoModel(
-            id: UUID().uuidString,
-            label: "Awesome Demo",
-            title: "你好, Awesome demo App",
-            isLiked: true,
-            uiImage: R.image.image1()
-        ),
-        DemoModel(
-            id: UUID().uuidString,
-            label: "Featured",
-            title: "最佳Swift Demo",
-            isLiked: false,
-            uiImage: R.image.image2()
-        ),
-        DemoModel(
-            id: UUID().uuidString,
-            label: "Best Practise",
-            title: "Swift最佳实践",
-            isLiked: false,
-            uiImage: R.image.image3()
-        ),
-        DemoModel(
-            id: UUID().uuidString,
-            label: "Featured",
-            title: "Swift动效实战",
-            isLiked: false,
-            uiImage: R.image.image4()
-        ),
-        DemoModel(
-            id: UUID().uuidString,
-            label: "Featured",
-            title: "The Best Swift Demo",
-            isLiked: false,
-            uiImage: R.image.image5()
-        )
-    ]
+    var cardList: [DemoModel] = DemoMockData.list
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dateLabel.text = Date().toFormat("MMMdd日", locale: Locales.chinese)
+        dateLabel.text = Date().toFormat("EEE, d MMM")
         self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
 
         if #available(iOS 11, *) {
@@ -70,17 +33,11 @@ class HomeViewController: UIViewController {
         }
 
         initCollectionView()
-        initAvatarView()
     }
 
     func initCollectionView() {
         contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.deepBlackColor]
         contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 24.0)
-    }
-
-    func initAvatarView() {
-        let bounds = avatarView.bounds
-        avatarView.setRoundCorners(corners: UIRectCorner.allCorners, with: bounds.width)
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,7 +56,7 @@ extension HomeViewController: UICollectionViewDataSource {
                 fatalError("DequeueReusableCell failed while casting")
         }
 
-        let cardItem: DemoModel = cardList[indexPath[1]]
+        let cardItem: DemoModel = cardList[indexPath.row]
 
         cell.setCardView()
         cell.setButton(isActive: cardItem.isLiked)
@@ -131,12 +88,12 @@ extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-//        cell?.animate(shouldScale: true) { (completed: Bool) in
-//            print("动画是否完成 \(completed)")
-//            if completed {
-//                self.contentView.transform = .identity
-//            }
-//        }
+//        cell?.animate(shouldScale: true)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+//        cell?.animate(shouldScale: false)
     }
 }
 

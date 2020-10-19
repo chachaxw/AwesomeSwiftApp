@@ -17,7 +17,6 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var coverImage: UIImageView!
 
     func setCardView() {
-        self.backgroundColor = UIColor.Theme.BasicGrayColor
         self.layer.cornerRadius = 20
         self.setShadow(
             color: UIColor.Theme.LightShadowColor,

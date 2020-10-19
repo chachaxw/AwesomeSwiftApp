@@ -17,24 +17,26 @@ struct FetchableImageHelper {
     }
     
     static func getImageName(from urlString: String) -> String? {
-        guard var base64String = urlString.data(using: .utf8)?.base64EncodedString() else { return nil }
-        
+        guard var base64String = urlString.data(using: .utf8)?.base64EncodedString() else {
+            return nil
+        }
+
         base64String = base64String.components(separatedBy: CharacterSet.alphanumerics.inverted).joined()
-        
+
         guard base64String.count < 50 else {
             return String(base64String.dropFirst(base64String.count - 50))
         }
-        
+
         return base64String
     }
     
     static func downloadImage(from url: URL, completion: @escaping (_ imageData: Data?) -> Void) {
         let sessionConfiguration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: sessionConfiguration)
-        let task = session.dataTask(with: url) {(data, response, error) in
+        let task = session.dataTask(with: url) { data, response, error in
             completion(data)
         }
-        
+
         task.resume()
     }
 
@@ -47,5 +49,5 @@ struct FetchableImageHelper {
             return nil
         }
     }
-    
+
 }
