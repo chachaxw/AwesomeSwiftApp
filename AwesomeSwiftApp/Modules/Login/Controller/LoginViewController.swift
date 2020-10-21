@@ -7,8 +7,8 @@
 //
 
 import FontAwesome
-import RxFlow
 import RxCocoa
+import RxFlow
 import RxSwift
 import UIKit
 

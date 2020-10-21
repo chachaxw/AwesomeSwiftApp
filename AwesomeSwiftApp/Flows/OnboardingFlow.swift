@@ -26,7 +26,7 @@ class OnboardingFlow: Flow {
     init(withServices services: AppServices) {
         self.appServices = services
     }
-    
+
     deinit {
         print("\(type(of: self)): \(#function)")
     }
@@ -45,7 +45,7 @@ class OnboardingFlow: Flow {
             return .none
         }
     }
-    
+
     func navigateToLoginScreen() -> FlowContributors {
         guard let loginViewCtrl = R.storyboard.main()
             .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {

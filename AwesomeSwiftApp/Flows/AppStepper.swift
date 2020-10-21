@@ -10,10 +10,10 @@ import Foundation
 import RxCocoa
 import RxFlow
 import RxSwift
-import UIKit
 
 class AppStepper: Stepper {
-    var steps = PublishRelay<Step>()
+    let steps = PublishRelay<Step>()
+
     private let appServices: AppServices
     private let disposeBag = DisposeBag()
 
@@ -27,6 +27,11 @@ class AppStepper: Stepper {
 
     /// callback used to emit steps once the FlowCoordinator is ready to listen to them to contribute to the Flow
     func readyToEmitSteps() {
-
+        self.appServices
+            .preferencesService.rx
+            .isOnboarded
+            .map { $0 ? AppStep.onboardingIsComplete : AppStep.onboardingIsRequired }
+            .bind(to: self.steps)
+            .disposed(by: self.disposeBag)
     }
 }

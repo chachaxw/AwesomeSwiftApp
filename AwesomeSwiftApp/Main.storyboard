@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-138" y="471"/>
         </scene>
-        <!--Discovery-->
+        <!--Discover-->
         <scene sceneID="s5d-PS-Cvt">
             <objects>
-                <viewController storyboardIdentifier="HomeStoryboard" title="Discovery" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeStoryboard" title="Discover" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <navigationItem title="Discovery" id="ff5-lI-w61"/>
+                                    <navigationItem title="Discover" id="ff5-lI-w61"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8月26日, 星期三" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-hm-fIq">
@@ -252,7 +252,7 @@
                             <constraint firstItem="yoo-hm-fIq" firstAttribute="top" secondItem="DLv-p6-Ob8" secondAttribute="top" constant="25" id="ump-yD-heu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discovery" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
                     <connections>
                         <outlet property="collectionView" destination="NtY-Xd-yZ3" id="3ft-xR-eq4"/>
                         <outlet property="contentView" destination="Rss-sZ-8Xf" id="V8K-tR-hxc"/>

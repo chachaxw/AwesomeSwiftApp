@@ -7,6 +7,6 @@
 //
 
 struct AppServices {
-    let demoService: Any
-    let preferencesService: Any
+    let demoService: DemoService
+    let preferencesService: PreferencesService
 }

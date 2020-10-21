@@ -14,25 +14,14 @@ import UIKit
 
 class AppFlow: Flow {
     var root: Presentable {
-        self.rootViewController
+        self.rootViewCtrl
     }
 
-    private lazy var rootViewController: UINavigationController = {
+    private lazy var rootViewCtrl: UINavigationController = {
         let viewCtrl = UINavigationController()
         return viewCtrl
     }()
-
-    func navigate(to step: Step) -> FlowContributors {
-        switch step {
-        default:
-            return .none
-        }
-    }
     
-//    func navigateToHomeScreen() -> FlowContributors {
-//        
-//    }
-
     private let services: AppServices
 
     init(services: AppServices) {
@@ -41,5 +30,30 @@ class AppFlow: Flow {
 
     deinit {
         print("\(type(of: self)): \(#function)")
+    }
+
+    func navigate(to step: Step) -> FlowContributors {
+        guard let step = step as? AppStep else {
+            return .none
+        }
+        
+        switch step {
+        case .onboardingIsComplete:
+            return navigateToOnboardingScreen()
+        default:
+            return .none
+        }
+    }
+
+    func navigateToOnboardingScreen() -> FlowContributors {
+        let onboardingFlow = OnboardingFlow(withServices: self.services)
+        
+        Flows.whenReady(flow1: onboardingFlow) { [unowned self] root in
+            DispatchQueue.main.async {
+                self.rootViewCtrl.present(root, animated: true)
+            }
+        }
+        
+        return .one(flowContributor: .contribute(withNextPresentable: onboardingFlow, withNextStepper: OneStepper(withSingleStep: AppStep.loginIsRequired)))
     }
 }
