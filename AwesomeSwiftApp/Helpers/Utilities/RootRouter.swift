@@ -5,9 +5,10 @@
 //  Copyright © Chacha. All rights reserved.
 //
 
-import UIKit
+import RxCocoa
 import RxFlow
 import RxSwift
+import UIKit
 
 class RootRouter {
     private let appServices = AppServices(
@@ -36,22 +37,18 @@ class RootRouter {
     }
 
     func loadMainAppStructure() {
-        self.coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
+        self.coordinator.rx.willNavigate.subscribe { flow, step in
             print("will navigate to flow=\(flow) and step=\(step)")
-        }).disposed(by: self.disposeBag)
+        }.disposed(by: self.disposeBag)
 
-        self.coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
+        self.coordinator.rx.didNavigate.subscribe { flow, step in
             print("will navigate to flow=\(flow) and step=\(step)")
-        }).disposed(by: self.disposeBag)
+        }.disposed(by: self.disposeBag)
 
         let appFlow = AppFlow(services: self.appServices)
 
         self.coordinator.coordinate(flow: appFlow, with: AppStepper(withServices: self.appServices))
 
-//        guard let login = R.storyboard.main()
-//                .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {
-//                return
-//            }
         guard let root = R.storyboard.main()
             .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
                 return

@@ -51,6 +51,7 @@
 		93A3B561253C1FC700196044 /* Login Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B560253C1FC700196044 /* Login Screen.png */; };
 		93A3B565253C1FD900196044 /* Demo Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B564253C1FD900196044 /* Demo Detail Screen.png */; };
 		93A3B569253C1FED00196044 /* Featured Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B568253C1FED00196044 /* Featured Screen.png */; };
+		93A3B56D253EAA5B00196044 /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A3B56C253EAA5B00196044 /* OnboardingFlow.swift */; };
 		93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFD72503664E00592072 /* UIScreenExtension.swift */; };
 		93B4BFDB25036DFB00592072 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */; };
 		93C8C9DD2507ACD900EA81D4 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8C9DC2507ACD900EA81D4 /* UIAlertControllerExtension.swift */; };
@@ -151,6 +152,7 @@
 		93A3B560253C1FC700196044 /* Login Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Screen.png"; sourceTree = "<group>"; };
 		93A3B564253C1FD900196044 /* Demo Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Demo Detail Screen.png"; sourceTree = "<group>"; };
 		93A3B568253C1FED00196044 /* Featured Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Featured Screen.png"; sourceTree = "<group>"; };
+		93A3B56C253EAA5B00196044 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		93AC8F1823A39C6000303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AC8F1C23A39F4900303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B4BFD72503664E00592072 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 				93D09C61251F2D6B006C89B9 /* AppFlow.swift */,
 				93D09D3425237618006C89B9 /* AppStep.swift */,
 				93DF24552538147700FA15AF /* AppStepper.swift */,
+				93A3B56C253EAA5B00196044 /* OnboardingFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -1037,6 +1040,7 @@
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				932EB03D251761A600E55BB3 /* ShadowView.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */,
+				93A3B56D253EAA5B00196044 /* OnboardingFlow.swift in Sources */,
 				937A1E5F23A26D4A0089B60F /* Log.swift in Sources */,
 				93C8C9E02507B98200EA81D4 /* UIApplicationExtension.swift in Sources */,
 				93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */,

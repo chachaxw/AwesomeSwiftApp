@@ -16,20 +16,19 @@ class FeaturedTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        self.layer.cornerRadius = 10.0
-//        self.layer.masksToBounds = true
-//        self.setShadow(
-//            color: UIColor.Theme.LightShadowColor,
-//            offset: CGSize(width: 0, height: 5),
-//            opacity: 1,
-//            radius: 16
-//        )
+        self.layer.cornerRadius = 10.0
+        self.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+//        if selected {
+//            contentView.backgroundColor = UIColor.Theme.LightGrayColor
+//        } else {
+//            contentView.backgroundColor = UIColor.white
+//        }
     }
 
     func setDescText(desc: String) {

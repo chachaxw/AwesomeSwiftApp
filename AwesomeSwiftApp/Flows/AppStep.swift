@@ -22,6 +22,10 @@ enum AppStep: Step {
     case loginIsRequired
     case userIsLoggedIn
 
+    // Onboarding
+    case onboardingIsRequired
+    case onboardingIsComplete
+
     // Home
     case homeIsRequired
 

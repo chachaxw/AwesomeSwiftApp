@@ -45,11 +45,8 @@ extension FeaturedViewController: UITableViewDataSource {
 }
 
 extension FeaturedViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-
-    }
-
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
-
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.backgroundColor = UIColor.Theme.LightGrayColor
+        print("点击cell \(String(describing: cell))")
     }
 }

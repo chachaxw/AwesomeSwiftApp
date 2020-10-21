@@ -7,9 +7,14 @@
 //
 
 import FontAwesome
+import RxFlow
+import RxCocoa
+import RxSwift
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, Stepper {
+    let steps = PublishRelay<Step>()
+
     @IBOutlet private var containerView: UIView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var pwdTextField: UITextField!
@@ -18,7 +23,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var emailWrapper: UIView!
     @IBOutlet private weak var pwdWrapper: UIView!
     @IBOutlet private weak var rightArrow: UIImageView!
-    
+
     private var toggled: Bool = false
     private let eyeIcon = UIImage.fontAwesomeIcon(
         name: .eye,
@@ -41,6 +46,9 @@ class LoginViewController: UIViewController {
         initLoginButton()
         initTextField()
         initToggleButton()
+
+        // Do any additional setup after loading the view.
+        _ = loginButton.rx.tap.takeUntil(self.rx.deallocating).map { AppStep.userIsLoggedIn }.bind(to: self.steps)
     }
 
     func initLoginButton() {
