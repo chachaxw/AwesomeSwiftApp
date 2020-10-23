@@ -16,8 +16,14 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var likeButton: UIButton!
     @IBOutlet weak private var coverImage: UIImageView!
 
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        print(self.contentView.frame.width)
+    }
+
     func setCardView() {
         self.layer.cornerRadius = 20
+//        self.contentView.backgroundColor = UIColor.blue
         self.setShadow(
             color: UIColor.Theme.LightShadowColor,
             offset: CGSize(width: 0, height: 5),
