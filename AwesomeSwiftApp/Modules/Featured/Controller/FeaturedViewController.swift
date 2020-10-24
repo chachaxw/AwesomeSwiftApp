@@ -18,6 +18,7 @@ class FeaturedViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.deepBlackColor]
         self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.deepBlackColor]
     }
@@ -45,8 +46,19 @@ extension FeaturedViewController: UITableViewDataSource {
 }
 
 extension FeaturedViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.contentView.backgroundColor = UIColor.Theme.LightGrayColor
-        print("点击cell \(String(describing: cell))")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("点击cell \(indexPath)")
+        let detailViewCtrl = DemoDetailViewController()
+        self.navigationController?.pushViewController(detailViewCtrl, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.theme_backgroundColor = [AppColors.darkGrayColor, AppColors.lightGrayColor]
+    }
+
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.white
     }
 }

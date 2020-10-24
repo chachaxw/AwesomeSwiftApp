@@ -15,15 +15,22 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var titleText: UILabel!
     @IBOutlet weak private var likeButton: UIButton!
     @IBOutlet weak private var coverImage: UIImageView!
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
-        print(self.contentView.frame.width)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
     func setCardView() {
         self.layer.cornerRadius = 20
-//        self.contentView.backgroundColor = UIColor.blue
+        self.contentView.layer.cornerRadius = 20
         self.setShadow(
             color: UIColor.Theme.LightShadowColor,
             offset: CGSize(width: 0, height: 5),

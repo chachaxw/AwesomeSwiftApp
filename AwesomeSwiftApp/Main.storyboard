@@ -82,8 +82,9 @@
                                 <sections/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
@@ -162,7 +163,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="386" height="189"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="11e-f0-SG8">
+                                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="11e-f0-SG8">
                                                             <rect key="frame" x="0.0" y="0.0" width="386" height="188"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         </imageView>
@@ -263,35 +264,31 @@
         <!--Demo Detail View Controller-->
         <scene sceneID="gsC-mc-j7c">
             <objects>
-                <viewController storyboardIdentifier="DemoDetailStoryboard" id="avd-M2-C9G" customClass="DemoDetailViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IHP-gM-DzE" customClass="UIScrollView">
+                <viewController storyboardIdentifier="DemoDetailStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="avd-M2-C9G" customClass="DemoDetailViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHP-gM-DzE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="详情页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-lB-Pox">
-                                <rect key="frame" x="142" y="429" width="130" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详情页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-lB-Pox">
+                                <rect key="frame" x="122.66666666666669" y="386.66666666666669" width="130" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DetailStoryboard" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acb-aJ-pAF">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="详情页面" id="Zap-rZ-BFC"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DMs-4B-O2a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dwK-lB-Pox" firstAttribute="centerX" secondItem="IHP-gM-DzE" secondAttribute="centerX" id="g9q-GV-Pvf"/>
+                            <constraint firstItem="dwK-lB-Pox" firstAttribute="centerY" secondItem="IHP-gM-DzE" secondAttribute="centerY" id="uQW-9U-G5l"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4K8-qc-3A6"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faY-VN-bCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="-1177.2321428571429"/>
+            <point key="canvasLocation" x="914.39999999999998" y="-1177.8325123152711"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="yeV-je-SxT">
