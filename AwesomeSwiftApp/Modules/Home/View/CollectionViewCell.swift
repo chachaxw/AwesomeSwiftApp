@@ -20,10 +20,6 @@ class CollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-    }
-
     override func layoutSubviews() {
         super.layoutSubviews()
     }

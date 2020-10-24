@@ -11,6 +11,7 @@ import UIKit
 class FeaturedViewController: UIViewController {
     var tableData: [DemoModel] = DemoMockData.list
     private let cellIdentifier = "FeaturedTableCell"
+    private let demoDetailIdentifier = "DemoDetailStoryboard"
 
     @IBOutlet weak private var tableView: UITableView!
 
@@ -48,8 +49,17 @@ extension FeaturedViewController: UITableViewDataSource {
 extension FeaturedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("点击cell \(indexPath)")
-        let detailViewCtrl = DemoDetailViewController()
-        self.navigationController?.pushViewController(detailViewCtrl, animated: true)
+
+        if #available(iOS 13.0, *) {
+            guard let detailViewCtrl = R.storyboard.main().instantiateViewController(
+                    identifier: demoDetailIdentifier) as? DemoDetailViewController else {
+                return
+            }
+
+            self.navigationController?.pushViewController(detailViewCtrl, animated: true)
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {

@@ -12,7 +12,7 @@ class DemoDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Demo Detail"
+
         // Do any additional setup after loading the view.
     }
 

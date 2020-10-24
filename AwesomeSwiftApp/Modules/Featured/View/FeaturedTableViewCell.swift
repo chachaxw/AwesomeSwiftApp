@@ -13,11 +13,31 @@ class FeaturedTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
 
+    override open var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame = newFrame
+            frame.origin.y += 10
+            frame.origin.x += 10
+            frame.size.height -= 10
+            frame.size.width -= 2 * 10
+            super.frame = frame
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.layer.cornerRadius = 10.0
-        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 14.0
+        self.layer.masksToBounds = false
+        self.setShadow(
+            color: UIColor.Theme.LightShadowColor,
+            offset: CGSize(width: 0, height: 5),
+            opacity: 1,
+            radius: 16
+        )
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,6 +61,6 @@ class FeaturedTableViewCell: UITableViewCell {
 
     func setCoverImage(image: UIImage) {
         self.coverImage.image = image
-        self.coverImage.setRoundCorners(corners: UIRectCorner.allCorners, with: 16.0)
+        self.coverImage.setRoundCorners(corners: UIRectCorner.allCorners, with: 14.0)
     }
 }
