@@ -20,8 +20,8 @@ class FeaturedViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.deepBlackColor]
-        self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.deepBlackColor]
+        tableView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
+        view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
     }
 }
 
@@ -48,27 +48,22 @@ extension FeaturedViewController: UITableViewDataSource {
 
 extension FeaturedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("点击cell \(indexPath)")
-
-        if #available(iOS 13.0, *) {
-            guard let detailViewCtrl = R.storyboard.main().instantiateViewController(
-                    identifier: demoDetailIdentifier) as? DemoDetailViewController else {
-                return
-            }
-
-            self.navigationController?.pushViewController(detailViewCtrl, animated: true)
-        } else {
-            // Fallback on earlier versions
+        guard let detailViewCtrl = R.storyboard.main().instantiateViewController(
+                withIdentifier: demoDetailIdentifier) as? DemoDetailViewController else {
+            return
         }
+
+        self.navigationController?.pushViewController(detailViewCtrl, animated: true)
     }
 
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.theme_backgroundColor = [AppColors.darkGrayColor, AppColors.lightGrayColor]
+        cell?.contentView.theme_backgroundColor = [AppColors.secondaryGrayColor, AppColors.deepBlackColor]
+        print("点击高亮 \(String(describing: cell))")
     }
 
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.backgroundColor = UIColor.white
+        cell?.contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.blackColor]
     }
 }

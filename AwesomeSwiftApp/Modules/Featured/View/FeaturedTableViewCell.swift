@@ -29,15 +29,10 @@ class FeaturedTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
         // Initialization code
         self.layer.cornerRadius = 14.0
         self.layer.masksToBounds = false
-        self.setShadow(
-            color: UIColor.Theme.LightShadowColor,
-            offset: CGSize(width: 0, height: 5),
-            opacity: 1,
-            radius: 16
-        )
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
