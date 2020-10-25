@@ -17,11 +17,11 @@ class AppFlow: Flow {
         self.rootViewCtrl
     }
 
-    private lazy var rootViewCtrl: UINavigationController = {
-        let viewCtrl = UINavigationController()
+    private lazy var rootViewCtrl: RootViewController = {
+        let viewCtrl = RootViewController()
         return viewCtrl
     }()
-    
+
     private let services: AppServices
 
     init(services: AppServices) {
@@ -36,8 +36,10 @@ class AppFlow: Flow {
         guard let step = step as? AppStep else {
             return .none
         }
-        
+
         switch step {
+        case .homeIsRequired:
+            return navigateToHomeScreen()
         case .onboardingIsComplete:
             return navigateToOnboardingScreen()
         default:
@@ -45,15 +47,37 @@ class AppFlow: Flow {
         }
     }
 
+    func navigateToHomeScreen() -> FlowContributors {
+        let homeFlow = HomeFlow(withServices: self.services)
+
+        Flows.whenReady(flow1: homeFlow) { [unowned self] root in
+            DispatchQueue.main.async {
+                self.rootViewCtrl.present(root, animated: true)
+            }
+        }
+
+        return .one(
+            flowContributor: .contribute(
+                withNextPresentable: homeFlow,
+                withNextStepper: OneStepper(withSingleStep: AppStep.loginIsRequired)
+            )
+        )
+    }
+
     func navigateToOnboardingScreen() -> FlowContributors {
         let onboardingFlow = OnboardingFlow(withServices: self.services)
-        
+
         Flows.whenReady(flow1: onboardingFlow) { [unowned self] root in
             DispatchQueue.main.async {
                 self.rootViewCtrl.present(root, animated: true)
             }
         }
-        
-        return .one(flowContributor: .contribute(withNextPresentable: onboardingFlow, withNextStepper: OneStepper(withSingleStep: AppStep.loginIsRequired)))
+
+        return .one(
+            flowContributor: .contribute(
+                withNextPresentable: onboardingFlow,
+                withNextStepper: OneStepper(withSingleStep: AppStep.loginIsRequired)
+            )
+        )
     }
 }

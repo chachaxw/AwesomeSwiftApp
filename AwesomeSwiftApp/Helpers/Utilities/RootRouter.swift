@@ -49,6 +49,12 @@ class RootRouter {
 
         self.coordinator.coordinate(flow: appFlow, with: AppStepper(withServices: self.appServices))
 
+//        Flows.whenReady(flow1: appFlow) { root in
+//            print("root view controller \(root)")
+//            root.view.backgroundColor = UIColor.Theme.LightGrayColor
+//            self.setRootViewController(controller: root, animatedWithOptions: nil)
+//        }
+
         guard let root = R.storyboard.main()
             .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
                 return

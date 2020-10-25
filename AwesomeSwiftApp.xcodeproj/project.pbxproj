@@ -81,6 +81,7 @@
 		93DF24D22539987800FA15AF /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DF24D12539987800FA15AF /* FeaturedTableViewCell.swift */; };
 		93E77F3623A351C000A89123 /* PermissionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3523A351BF00A89123 /* PermissionsUtils.swift */; };
 		93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E77F3723A37CEE00A89123 /* AppTheme.swift */; };
+		93F9260925459BA500E7C6C6 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9260825459BA500E7C6C6 /* HomeFlow.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
 		C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -183,6 +184,7 @@
 		93DF24D12539987800FA15AF /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		93F9260825459BA500E7C6C6 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 				93D09D3425237618006C89B9 /* AppStep.swift */,
 				93DF24552538147700FA15AF /* AppStepper.swift */,
 				93A3B56C253EAA5B00196044 /* OnboardingFlow.swift */,
+				93F9260825459BA500E7C6C6 /* HomeFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -1072,6 +1075,7 @@
 				2A1E77371F384BFC006C84D4 /* AppDelegate.swift in Sources */,
 				93D09CA82520BAA5006C89B9 /* FetchableImageHelper.swift in Sources */,
 				93DF24562538147700FA15AF /* AppStepper.swift in Sources */,
+				93F9260925459BA500E7C6C6 /* HomeFlow.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */,
 				93DF245A2538227000FA15AF /* PreferencesService.swift in Sources */,

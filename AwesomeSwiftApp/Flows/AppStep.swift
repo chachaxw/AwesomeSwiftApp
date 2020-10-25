@@ -28,6 +28,7 @@ enum AppStep: Step {
 
     // Home
     case homeIsRequired
+    case homeIsComplete
 
     // Settings
     case settingsAreRequired
