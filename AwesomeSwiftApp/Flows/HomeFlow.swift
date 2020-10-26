@@ -25,16 +25,21 @@ class HomeFlow: Flow {
         guard let step = step as? AppStep else {
             return .none
         }
-        
+
         switch step {
-//        case .homeIsRequired:
-//            return navigateToHome()
+        case .homeIsRequired:
+            return navigateToHome()
         default:
             return .none
         }
     }
 
-//    func navigateToHome() -> FlowContributors {
-//
-//    }
+    func navigateToHome() -> FlowContributors {
+        guard let homeViewCtrl = R.storyboard.main().instantiateViewController(withIdentifier: "HomeStoryboard")
+                as? HomeViewController else {
+            return .none
+        }
+        self.rootViewController.tabBarController?.selectedViewController = homeViewCtrl
+        return .none
+    }
 }

@@ -38,8 +38,8 @@
                                                         <constraint firstAttribute="width" constant="64" id="OPo-Pp-Fhk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-Qm-f8h">
-                                                    <rect key="frame" x="82" y="8" width="283" height="46"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-Qm-f8h">
+                                                    <rect key="frame" x="82" y="8" width="283" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="tmb-Gz-2Ib"/>
                                                     </constraints>
@@ -49,7 +49,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Create an App using Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fq2-Kf-bLe">
-                                                    <rect key="frame" x="82" y="54" width="269" height="20"/>
+                                                    <rect key="frame" x="82" y="50" width="269" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="8Vn-Uf-sNV"/>
                                                     </constraints>
@@ -64,7 +64,7 @@
                                                 <constraint firstItem="jCG-We-yve" firstAttribute="top" secondItem="UFj-rV-M4V" secondAttribute="top" constant="10" id="Ak8-hB-F7M"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Fq2-Kf-bLe" secondAttribute="trailing" constant="8" id="DTt-9k-6jx"/>
                                                 <constraint firstItem="Fq2-Kf-bLe" firstAttribute="top" secondItem="ylY-Qm-f8h" secondAttribute="bottom" id="JHc-g6-VDw"/>
-                                                <constraint firstItem="jCG-We-yve" firstAttribute="bottom" secondItem="Fq2-Kf-bLe" secondAttribute="bottom" id="KwT-7h-BoC"/>
+                                                <constraint firstItem="jCG-We-yve" firstAttribute="bottom" secondItem="Fq2-Kf-bLe" secondAttribute="bottom" constant="4" id="KwT-7h-BoC"/>
                                                 <constraint firstAttribute="trailing" secondItem="ylY-Qm-f8h" secondAttribute="trailing" constant="10" id="Np5-w6-EMc"/>
                                                 <constraint firstItem="ylY-Qm-f8h" firstAttribute="top" secondItem="UFj-rV-M4V" secondAttribute="top" constant="8" id="Q20-9f-Oyd"/>
                                                 <constraint firstItem="ylY-Qm-f8h" firstAttribute="leading" secondItem="jCG-We-yve" secondAttribute="trailing" constant="8" symbolic="YES" id="Rsc-ib-kvB"/>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saw-pf-uFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771.01449275362324" y="-188.83928571428569"/>
+            <point key="canvasLocation" x="770.39999999999998" y="-189.16256157635468"/>
         </scene>
         <!--Me-->
         <scene sceneID="Pm2-g7-4kc">
@@ -445,8 +445,8 @@
                         <outlet property="loginButton" destination="7QS-r3-Qf3" id="xse-q0-oBm"/>
                         <outlet property="pwdTextField" destination="ebe-Ax-a3D" id="Gsu-4k-CSq"/>
                         <outlet property="pwdWrapper" destination="PeH-Af-S23" id="DRg-x8-KIL"/>
+                        <outlet property="rightArrow" destination="ubO-ta-q3l" id="4vk-bh-Lka"/>
                         <outlet property="toggleEyeButton" destination="Ida-kH-zLL" id="un1-U3-XFh"/>
-                        <outletCollection property="appLogo" destination="qoc-fV-7JE" collectionClass="NSMutableArray" id="DDw-51-drl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdn-sq-QFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

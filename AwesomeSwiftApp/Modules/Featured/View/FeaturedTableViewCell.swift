@@ -32,7 +32,6 @@ class FeaturedTableViewCell: UITableViewCell {
 
         // Initialization code
         self.layer.cornerRadius = 14.0
-        self.layer.masksToBounds = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -42,18 +42,18 @@ class RootRouter {
         }.disposed(by: self.disposeBag)
 
         self.coordinator.rx.didNavigate.subscribe { flow, step in
-            print("will navigate to flow=\(flow) and step=\(step)")
+            print("did navigate to flow=\(flow) and step=\(step)")
         }.disposed(by: self.disposeBag)
 
         let appFlow = AppFlow(services: self.appServices)
 
-        self.coordinator.coordinate(flow: appFlow, with: AppStepper(withServices: self.appServices))
-
-//        Flows.whenReady(flow1: appFlow) { root in
-//            print("root view controller \(root)")
+        Flows.whenReady(flow1: appFlow) { root in
+            print("根视图控制器 \(String(describing: root))")
 //            root.view.backgroundColor = UIColor.Theme.LightGrayColor
 //            self.setRootViewController(controller: root, animatedWithOptions: nil)
-//        }
+        }
+
+        self.coordinator.coordinate(flow: appFlow, with: AppStepper(withServices: self.appServices))
 
         guard let root = R.storyboard.main()
             .instantiateViewController(withIdentifier: mainId) as? RootViewController else {

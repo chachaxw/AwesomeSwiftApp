@@ -13,12 +13,15 @@ import RxSwift
 import UIKit
 
 class AppFlow: Flow {
+    private var loginId: String = "LoginStoryboard"
+
     var root: Presentable {
         self.rootViewCtrl
     }
 
-    private lazy var rootViewCtrl: RootViewController = {
-        let viewCtrl = RootViewController()
+    private lazy var rootViewCtrl: UINavigationController = {
+        let viewCtrl = UINavigationController()
+        viewCtrl.setNavigationBarHidden(true, animated: false)
         return viewCtrl
     }()
 
@@ -40,8 +43,8 @@ class AppFlow: Flow {
         switch step {
         case .homeIsRequired:
             return navigateToHomeScreen()
-        case .onboardingIsComplete:
-            return navigateToOnboardingScreen()
+        case .loginIsRequired:
+            return navigateToLoginScreen()
         default:
             return .none
         }
@@ -62,6 +65,16 @@ class AppFlow: Flow {
                 withNextStepper: OneStepper(withSingleStep: AppStep.loginIsRequired)
             )
         )
+    }
+
+    func navigateToLoginScreen() -> FlowContributors {
+        guard let loginViewCtrl = R.storyboard.main()
+            .instantiateViewController(withIdentifier: loginId) as? LoginViewController else {
+            return .none
+        }
+
+        self.rootViewCtrl.present(loginViewCtrl, animated: false)
+        return .one(flowContributor: .contribute(withNext: loginViewCtrl))
     }
 
     func navigateToOnboardingScreen() -> FlowContributors {

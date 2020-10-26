@@ -40,7 +40,7 @@ class OnboardingFlow: Flow {
         case .loginIsRequired:
             return navigateToLoginScreen()
         case .userIsLoggedIn:
-            return .end(forwardToParentFlowWithStep: AppStep.onboardingIsComplete)
+            return .end(forwardToParentFlowWithStep: AppStep.homeIsComplete)
         default:
             return .none
         }
@@ -52,7 +52,7 @@ class OnboardingFlow: Flow {
             return .none
         }
 
-        self.rootViewCtrl.pushViewController(loginViewCtrl, animated: false)
+        self.rootViewCtrl.pushViewController(loginViewCtrl, animated: true)
         return .one(flowContributor: .contribute(withNext: loginViewCtrl))
     }
 

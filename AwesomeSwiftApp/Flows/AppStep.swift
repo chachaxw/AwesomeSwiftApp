@@ -14,10 +14,6 @@ enum AppStep: Step {
     case logoutIsRequired
     case unauthorized
 
-    // Api Key
-    case apiKeyIsRequired
-    case apiKeyIsFilledIn
-
     // Login
     case loginIsRequired
     case userIsLoggedIn

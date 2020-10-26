@@ -30,7 +30,7 @@ class AppStepper: Stepper {
         self.appServices
             .preferencesService.rx
             .isOnboarded
-            .map { $0 ? AppStep.onboardingIsComplete : AppStep.onboardingIsRequired }
+            .map { $0 ? AppStep.userIsLoggedIn : AppStep.loginIsRequired }
             .bind(to: self.steps)
             .disposed(by: self.disposeBag)
     }
