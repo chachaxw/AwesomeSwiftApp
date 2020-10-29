@@ -32,6 +32,7 @@
 		937435722416960E002A0A2A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937435712416960E002A0A2A /* CollectionViewCell.swift */; };
 		9377FCB5250138410027DFD2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377FCB4250138410027DFD2 /* Colors.swift */; };
 		937A1E5F23A26D4A0089B60F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A1E5E23A26D4A0089B60F /* Log.swift */; };
+		937BD2552547E500008E92B9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BD2542547E500008E92B9 /* UserViewController.swift */; };
 		937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F0BF323B485C600FD0126 /* UIViewExtension.swift */; };
 		93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93860AE7250E447000F72BA0 /* LoginViewController.swift */; };
 		939268DB250E58E30074D7C4 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268DA250E58E30074D7C4 /* UIStoryboardExtension.swift */; };
@@ -135,6 +136,7 @@
 		937435712416960E002A0A2A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = AwesomeSwiftApp/Modules/Home/View/CollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		9377FCB4250138410027DFD2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		937A1E5E23A26D4A0089B60F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		937BD2542547E500008E92B9 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		937F0BF323B485C600FD0126 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		93860AE7250E447000F72BA0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		939268DA250E58E30074D7C4 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 		932AA0BE24BF54A3000C8E94 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				937BD2542547E500008E92B9 /* UserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1040,6 +1043,7 @@
 				93DCD02B23CDB87F006DDEFD /* MenuItemView.swift in Sources */,
 				9372F6682539EDC5008543C4 /* UserDefaultsExtension.swift in Sources */,
 				93D09D3525237619006C89B9 /* AppStep.swift in Sources */,
+				937BD2552547E500008E92B9 /* UserViewController.swift in Sources */,
 				2ABEE6D61F3886D700531205 /* RootRouter.swift in Sources */,
 				932EB03D251761A600E55BB3 /* ShadowView.swift in Sources */,
 				937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */,
