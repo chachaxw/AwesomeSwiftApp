@@ -244,20 +244,14 @@
                             <constraint firstItem="I3d-Kt-9Rq" firstAttribute="leading" secondItem="y9U-yR-iOZ" secondAttribute="leading" id="znR-U4-lAX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fJ5-hU-xRg">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="QGT-oz-crA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cJa-RL-oC5">
-                                <rect key="frame" x="327" y="6" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="fJ5-hU-xRg"/>
                     <connections>
                         <outlet property="avatarView" destination="q6r-3I-sQo" id="jSM-LW-kmf"/>
+                        <outlet property="collectionView" destination="TkI-6j-wcY" id="K89-bl-nYW"/>
                         <outlet property="contentView" destination="LMY-iH-nOP" id="t6h-HW-3OD"/>
                         <outlet property="coverImageView" destination="I3d-Kt-9Rq" id="Mta-OK-VeJ"/>
                         <outlet property="scrollView" destination="idB-iz-Lvf" id="Jvu-8F-HbA"/>
-                        <outlet property="settingButtton" destination="cJa-RL-oC5" id="mcN-4e-Ko8"/>
+                        <outlet property="settingButton" destination="j2M-2D-v9x" id="NI5-pc-Wg6"/>
                         <outlet property="userProfileView" destination="RL7-Am-Ppo" id="HAT-ig-DEh"/>
                         <outlet property="usernameView" destination="MJy-Ra-5jp" id="HwX-ny-beU"/>
                     </connections>

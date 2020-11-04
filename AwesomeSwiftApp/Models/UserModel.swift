@@ -21,9 +21,11 @@ class UserModel: FetchableImage {
     }
 
     func fetchAvatar(avatarUrl: String, completion: @escaping (_ avatar: CGImage?) -> Void) {
-        fetchImage(from: avatarUrl) { (imageData) in
+        fetchImage(from: avatarUrl) { imageData in
             DispatchQueue.main.async {
-                guard let data = imageData else { return }
+                guard let data = imageData else {
+                    return
+                }
                 let cgImage = UIImage(data: data)?.cgImage
                 completion(cgImage)
             }
