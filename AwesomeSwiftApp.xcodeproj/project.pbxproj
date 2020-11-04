@@ -187,6 +187,7 @@
 		93E77F3523A351BF00A89123 /* PermissionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsUtils.swift; sourceTree = "<group>"; };
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		93F9260825459BA500E7C6C6 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		93FF425725530699004F982B /* ThreadPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreadPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +274,7 @@
 				93DCD01123C83E0F006DDEFD /* Views */,
 				936E9866251CDB9400CF04D9 /* Services */,
 				2AFB310A1F385A20009C4586 /* Helpers */,
+				93FF425625530656004F982B /* Playground */,
 			);
 			path = AwesomeSwiftApp;
 			sourceTree = "<group>";
@@ -796,6 +798,14 @@
 				937435742417E598002A0A2A /* View */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		93FF425625530656004F982B /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				93FF425725530699004F982B /* ThreadPlayground.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 		B112C7DFF94DFDA6D7C8C8CB /* Frameworks */ = {
