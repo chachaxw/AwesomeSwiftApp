@@ -26,7 +26,28 @@ let item2 = DispatchWorkItem.init(qos: .userInteractive, flags: .barrier) {
 ///     2. Global queue
 ///     3. Custom queue
 
+/// 异步执行
+/// 主队列追加异步任务，按顺序打印
 let mainQueue = DispatchQueue.main
-
 mainQueue.async(execute: item1)
 mainQueue.async(execute: item2)
+
+/// 全局队列追加异步任务，随机打印
+let globalQueue = DispatchQueue.global()
+globalQueue.async(execute: item1)
+globalQueue.async(execute: item2)
+
+/// 自定义串行队列追加异步任务，按顺序打印
+let serialQueue = DispatchQueue(label: "serial")
+serialQueue.async(execute: item1)
+serialQueue.async(execute: item2)
+
+/// 自定义并行队列追加异步任务，随机打印
+let concurrentQueue = DispatchQueue(label: "concurrent", attributes: .concurrent)
+concurrentQueue.async(execute: item1)
+concurrentQueue.async(execute: item2)
+
+/// 同步执行
+/// 主队列追加同步任务，会引起死锁
+//mainQueue.sync(execute: item1)
+//mainQueue.sync(execute: item2)
