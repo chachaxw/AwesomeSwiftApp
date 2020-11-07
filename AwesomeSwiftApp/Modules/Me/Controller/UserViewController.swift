@@ -62,9 +62,9 @@ class UserViewController: UIViewController {
     func adjustCoverImageView() {
         let contentOffsetY = scrollView.contentOffset.y
 
-        if contentOffsetY < 0  {
+        if contentOffsetY < 0 {
             let imageHeight = coverImageView.frame.height - contentOffsetY
-            
+
             print("图片高度 \(imageHeight)")
             coverImageView.frame = CGRect(x: 0, y: 0, width: coverImageView.frame.width, height: imageHeight)
         }

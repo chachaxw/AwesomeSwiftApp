@@ -15,7 +15,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var titleText: UILabel!
     @IBOutlet weak private var likeButton: UIButton!
     @IBOutlet weak private var coverImage: UIImageView!
-    
+
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -52,7 +52,7 @@ class CollectionViewCell: UICollectionViewCell {
     func setButton(isActive: Bool) {
         let heartIcon = UIImage.fontAwesomeIcon(
             name: .heart,
-            style: .regular,
+            style: .solid,
             textColor: UIColor.Theme.BasicGrayColor,
             size: CGSize(width: 24, height: 24)
         )
