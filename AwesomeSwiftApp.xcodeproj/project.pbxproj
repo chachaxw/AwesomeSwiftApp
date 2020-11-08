@@ -122,6 +122,7 @@
 		7047358B3341C2E87C7BE318 /* Pods-AwesomeSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.release.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		7C5619126C0D57DADE3E9C71 /* Pods-AwesomeSwiftAppTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftAppTests.staging.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftAppTests/Pods-AwesomeSwiftAppTests.staging.xcconfig"; sourceTree = "<group>"; };
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9304D93F2557D70600E8AEDE /* DispatchGroupPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DispatchGroupPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		932AA0C124BF5884000C8E94 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
@@ -275,7 +276,7 @@
 				93DCD01123C83E0F006DDEFD /* Views */,
 				936E9866251CDB9400CF04D9 /* Services */,
 				2AFB310A1F385A20009C4586 /* Helpers */,
-				93FF425625530656004F982B /* Playground */,
+				93FF425625530656004F982B /* Playgrounds */,
 			);
 			path = AwesomeSwiftApp;
 			sourceTree = "<group>";
@@ -801,13 +802,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		93FF425625530656004F982B /* Playground */ = {
+		93FF425625530656004F982B /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
 				93FF425725530699004F982B /* ThreadPlayground.playground */,
 				93FF42A62557AB3C004F982B /* NetworkRequestPlayground.playground */,
+				9304D93F2557D70600E8AEDE /* DispatchGroupPlayground.playground */,
 			);
-			path = Playground;
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		B112C7DFF94DFDA6D7C8C8CB /* Frameworks */ = {
