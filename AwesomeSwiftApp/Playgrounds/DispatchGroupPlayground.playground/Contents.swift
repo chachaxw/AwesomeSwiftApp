@@ -1,8 +1,8 @@
-import UIKit
+import Foundation
 
 var str = "Hello, DispatchGroup playground"
 
-/// 用队列挂起、恢复重写，解决嵌套问题
+/// 用队列挂起、恢复重写，解决嵌套问题（https://juejin.im/post/6858126631760986126#heading-24）
 ///
 
 let group = DispatchGroup()
