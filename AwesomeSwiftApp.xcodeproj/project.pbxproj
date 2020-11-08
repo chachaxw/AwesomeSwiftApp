@@ -188,6 +188,7 @@
 		93E77F3723A37CEE00A89123 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		93F9260825459BA500E7C6C6 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		93FF425725530699004F982B /* ThreadPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreadPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		93FF42A62557AB3C004F982B /* NetworkRequestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NetworkRequestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -804,6 +805,7 @@
 			isa = PBXGroup;
 			children = (
 				93FF425725530699004F982B /* ThreadPlayground.playground */,
+				93FF42A62557AB3C004F982B /* NetworkRequestPlayground.playground */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
