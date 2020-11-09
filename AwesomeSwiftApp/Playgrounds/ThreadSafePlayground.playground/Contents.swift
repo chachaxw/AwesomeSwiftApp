@@ -43,11 +43,11 @@ let item5 = DispatchWorkItem {
 }
 
 let queue = DispatchQueue(label: "queue", attributes: .concurrent)
-queue.async(execute: item1)
-queue.async(execute: item2)
-queue.async(execute: item3)
-queue.async(execute: item4)
-queue.async(execute: item5)
+//queue.async(execute: item1)
+//queue.async(execute: item2)
+//queue.async(execute: item3)
+//queue.async(execute: item4)
+//queue.async(execute: item5)
 
 /// 2. 使用DispatchSemaphore（翻译成信号量📶或红绿灯🚥）给线程上锁
 /// DispatchSemaphore初始化时只有一个参数value（通行数量），表示还可以通行几辆车（还可以执行几个异步任务）
@@ -64,15 +64,15 @@ for item1 in 1...9 {
     queue1.async {
         semaphore.wait() // 绿灯时间减1，此处变为0，为红灯，全都得等着
         var str = ""
-        
+
         for item2 in 1...9 {
             //格式化一下字符串，后面加两个空格。如果只有个位数的，前面补个空格
             let value = item1 * item2
             let tempStr = value <= 9 ? "\(value)  " : "\(value) "
             str += tempStr
         }
-        
-        print(str)
+
+//        print(str)
         semaphore.signal() // 绿灯时间加1，后面可继续通行
     }
 }
@@ -89,5 +89,28 @@ for item1 in 1...9 {
 /// 9  18 27 36 45 54 63 72 81
 
 /// 3. 使用串行队列+计算属性，修改变量
+let serialQueue = DispatchQueue(label: "serial") // 自定义串行队列
+var a: Int = 10
+var b: Int {
+    get {
+        serialQueue.sync {
+            print("同步读取 thread = \(Thread.current)")
+            return a
+        }
+    }
+    set {
+        queue.sync {
+            print("同步写入 thread = \(Thread.current)")
+            a = newValue
+        }
+    }
+}
 
+b = 30 // 赋值
 
+print("a = \(a) b = \(b) thread = \(Thread.current)")
+
+/// 上面代码运行结果:
+/// 同步写入 thread = <NSThread: 0x600002854a00>{number = 1, name = main}
+/// 同步读取 thread = <NSThread: 0x600002854a00>{number = 1, name = main}
+/// a = 30 b = 30 thread = <NSThread: 0x600002854a00>{number = 1, name = main}

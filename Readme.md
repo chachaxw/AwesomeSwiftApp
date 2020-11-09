@@ -58,3 +58,5 @@ bundle exec pod install
 * [All Swift Answers](https://www.codegrepper.com/code-examples/swift)
 * [The Coordinator](https://khanlou.com/2015/01/the-coordinator/)
 * [Large Titles For Navigation Bars In iOS 11](https://chariotsolutions.com/blog/post/large-titles-ios-11/)
+* [一天精通iOS Swift多线程（GCD）](https://juejin.im/post/6858126631760986126)
+* [iOS多线程:GCD](https://juejin.im/post/6844903783110017031)

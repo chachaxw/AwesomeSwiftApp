@@ -3,7 +3,7 @@ import UIKit
 
 var str = "Hello, thread playground"
 
-/// Swift 多线程学习(https://juejin.im/post/6858126631760986126)
+/// Swift 多线程GCD学习(https://juejin.im/post/6858126631760986126)
 /// 基础
 ///
 /// 调度工作项：其实就是一项任务，可以把你想要执行的代码写成闭包，

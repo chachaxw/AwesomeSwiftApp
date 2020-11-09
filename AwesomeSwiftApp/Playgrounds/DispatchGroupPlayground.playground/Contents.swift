@@ -2,6 +2,7 @@ import Foundation
 
 var str = "Hello, DispatchGroup playground"
 
+/// DispatchGroup，调度组，一个小组，可以把多任务放到一个组里，方便进行统一管理
 /// 用队列挂起、恢复重写，解决嵌套问题（https://juejin.im/post/6858126631760986126#heading-24）
 ///
 
