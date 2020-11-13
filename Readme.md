@@ -2,11 +2,16 @@
 
 Supports: iOS 10.x and above
 
+## Application Architecture
+
+<img src="AwesomeSwiftApp/Resources/Images/MVVMPattern.png" alt="Home Screen">
+
 ## ScreenShots
-<img src="AwesomeSwiftApp/Resources/Images/Login Screen.png" width="375px" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/Images/Home Screen.png" width="375px" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/Images/Featured Screen.png" width="375px" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/Images/Demo Detail Screen.png" width="375px" alt="Home Screen">
+
+<img src="AwesomeSwiftApp/Resources/Images/Login Screen.png" width="180px" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Home Screen.png" width="180px" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Featured Screen.png" width="180px" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Demo Detail Screen.png" width="180px" alt="Home Screen">
 
 ## Branches:
 
@@ -47,15 +52,17 @@ bundle exec pod install
 
 ## Project structure:
 
-* Flows - app flow, step and stpper
+* Flows - app flows, steps and steppers
 * Resources - fonts, strings, images, generated files etc.
 * SupportingFiles - configuration plist files
 * Models - model objects
 * Modules - contains app modules (UI + Code)
-* Helpers - protocols, extension and utility classes
+* Helpers - protocols, extensions and utility classes
 
 ## References
+
 * [All Swift Answers](https://www.codegrepper.com/code-examples/swift)
+* [RxSwift](https://github.com/ReactiveX/RxSwift)
 * [The Coordinator](https://khanlou.com/2015/01/the-coordinator/)
 * [Large Titles For Navigation Bars In iOS 11](https://chariotsolutions.com/blog/post/large-titles-ios-11/)
 * [一天精通iOS Swift多线程（GCD）](https://juejin.im/post/6858126631760986126)

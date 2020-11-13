@@ -35,6 +35,7 @@
 		937BD2552547E500008E92B9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BD2542547E500008E92B9 /* UserViewController.swift */; };
 		937F0BF423B485C600FD0126 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F0BF323B485C600FD0126 /* UIViewExtension.swift */; };
 		93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93860AE7250E447000F72BA0 /* LoginViewController.swift */; };
+		938854C2255D7FF200B53CA8 /* ReportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938854C1255D7FF200B53CA8 /* ReportCollectionViewCell.swift */; };
 		939268DB250E58E30074D7C4 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268DA250E58E30074D7C4 /* UIStoryboardExtension.swift */; };
 		939268DE250E64CC0074D7C4 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268DD250E64CC0074D7C4 /* UICollectionViewExtension.swift */; };
 		939268E1250E70920074D7C4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939268E0250E70920074D7C4 /* UIViewControllerExtension.swift */; };
@@ -142,6 +143,7 @@
 		937BD2542547E500008E92B9 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		937F0BF323B485C600FD0126 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		93860AE7250E447000F72BA0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		938854C1255D7FF200B53CA8 /* ReportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCollectionViewCell.swift; sourceTree = "<group>"; };
 		939268DA250E58E30074D7C4 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		939268DD250E64CC0074D7C4 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		939268E0250E70920074D7C4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 		932AA0BD24BF5495000C8E94 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				938854C1255D7FF200B53CA8 /* ReportCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1052,6 +1055,7 @@
 				9377FCB5250138410027DFD2 /* Colors.swift in Sources */,
 				93D09D1C252229F5006C89B9 /* FeaturedViewController.swift in Sources */,
 				93DCD02923CDAE86006DDEFD /* MenuBarView.swift in Sources */,
+				938854C2255D7FF200B53CA8 /* ReportCollectionViewCell.swift in Sources */,
 				93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */,
 				93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */,
 				939268E4250E74EF0074D7C4 /* Reusable.swift in Sources */,
