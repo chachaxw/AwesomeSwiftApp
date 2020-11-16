@@ -15,24 +15,16 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var titleText: UILabel!
     @IBOutlet weak private var likeButton: UIButton!
     @IBOutlet weak private var coverImage: UIImageView!
+    let log = Logger()
 
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
+        self.layer.cornerRadius = 20
+        self.contentView.layer.cornerRadius = 20
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-    }
-
-    func setCardView() {
-        self.layer.cornerRadius = 20
-        self.contentView.layer.cornerRadius = 20
-        self.setShadow(
-            color: UIColor.Theme.LightShadowColor,
-            offset: CGSize(width: 0, height: 5),
-            opacity: 1,
-            radius: 16
-        )
     }
 
     func setLabelText(label: String) {
@@ -87,6 +79,6 @@ class CollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func handleLike(_ sender: Any) {
-        print("收藏该Demo \(sender)")
+        log.info("收藏该Demo \(sender)")
     }
 }

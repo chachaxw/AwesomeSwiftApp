@@ -29,11 +29,11 @@ struct FetchableImageHelper {
 
         return base64String
     }
-    
+
     static func downloadImage(from url: URL, completion: @escaping (_ imageData: Data?) -> Void) {
         let sessionConfiguration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: sessionConfiguration)
-        let task = session.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: url) { data, _, _ in
             completion(data)
         }
 

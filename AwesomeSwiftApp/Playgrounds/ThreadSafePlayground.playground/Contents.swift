@@ -90,27 +90,27 @@ for item1 in 1...9 {
 
 /// 3. 使用串行队列+计算属性，修改变量
 let serialQueue = DispatchQueue(label: "serial") // 自定义串行队列
-var a: Int = 10
-var b: Int {
+var value1: Int = 10
+var value2: Int {
     get {
         serialQueue.sync {
             print("同步读取 thread = \(Thread.current)")
-            return a
+            return value1
         }
     }
     set {
         queue.sync {
             print("同步写入 thread = \(Thread.current)")
-            a = newValue
+            value1 = newValue
         }
     }
 }
 
-b = 30 // 赋值
+value2 = 30 // 赋值
 
-print("a = \(a) b = \(b) thread = \(Thread.current)")
+print("value1 = \(value1) value2 = \(value2) thread = \(Thread.current)")
 
 /// 上面代码运行结果:
 /// 同步写入 thread = <NSThread: 0x600002854a00>{number = 1, name = main}
 /// 同步读取 thread = <NSThread: 0x600002854a00>{number = 1, name = main}
-/// a = 30 b = 30 thread = <NSThread: 0x600002854a00>{number = 1, name = main}
+/// value1 = 30  value2 = 30 thread = <NSThread: 0x600002854a00>{number = 1, name = main}

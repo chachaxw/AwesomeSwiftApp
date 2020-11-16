@@ -19,7 +19,7 @@ extension UserDefaults {
         get {
             object(forKey: key)
         }
-        
+
         set {
             set(newValue, forKey: key)
         }
@@ -29,7 +29,7 @@ extension UserDefaults {
 // MARK: - Misc
 
 extension UserDefaults {
-    
+
     /// Check if a key exists in the user's defaults database.
     /// - Parameter key: A key in the current user‘s defaults database.
     /// - Returns: true if the element was found in the sequence; otherwise, false.
@@ -50,7 +50,7 @@ extension UserDefaults {
 // Mark: Remove
 
 extension UserDefaults {
-    
+
     /// Remove all the keys and their values stored in the user's defaults database.
     public func removeAll() {
         for (key, _) in dictionaryRepresentation() {

@@ -58,7 +58,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
         let cardItem: DemoModel = cardList[indexPath.row]
 
-        cell.setCardView()
         cell.setButton(isActive: cardItem.isLiked)
         cell.setLabelText(label: cardItem.label)
         cell.setTitleText(title: cardItem.title)
