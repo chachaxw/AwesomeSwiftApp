@@ -30,6 +30,8 @@ target 'AwesomeSwiftApp' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'SkeletonView'
+  pod 'Permission/Camera'
+  pod 'Permission/Notifications'
   pod 'AlicloudAPM', '~> 1.0.0'
   pod 'AlicloudTLog', '~> 1.0.0'
   pod 'AlicloudCrash' , '~> 1.1.0'

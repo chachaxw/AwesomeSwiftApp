@@ -81,6 +81,11 @@ PODS:
   - Localize-Swift (2.0.0)
   - Log (2.0)
   - LookinServer (1.0.0)
+  - Permission/Camera (3.1.2):
+    - Permission/Core
+  - Permission/Core (3.1.2)
+  - Permission/Notifications (3.1.2):
+    - Permission/Core
   - R.swift (5.0.0):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
@@ -135,6 +140,8 @@ DEPENDENCIES:
   - Localize-Swift (~> 2.0)
   - Log
   - LookinServer
+  - Permission/Camera
+  - Permission/Notifications
   - R.swift (= 5.0.0)
   - RxCocoa (~> 5)
   - RxFlow
@@ -185,6 +192,7 @@ SPEC REPOS:
     - Localize-Swift
     - Log
     - LookinServer
+    - Permission
     - R.swift
     - R.swift.Library
     - RxCocoa
@@ -231,6 +239,7 @@ SPEC CHECKSUMS:
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+  Permission: 4821359fb4d4367fb59aa16df38fbba5722ac842
   R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   RemoteDebugChannel: 6cf6628a167a1c6c530d32f21d16cf38a5a24bd4
@@ -249,6 +258,6 @@ SPEC CHECKSUMS:
   TRemoteDebugger: af82010a22063d31b8509497a8bfabfb3f7028c3
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: e5705b9a9913f91b0445a452145495d4ed8c2c6c
+PODFILE CHECKSUM: 701a455b2faac090eb24accc5e220f1185000971
 
 COCOAPODS: 1.9.3
