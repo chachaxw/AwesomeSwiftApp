@@ -724,6 +724,18 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		93A91CA32578C10B003D0042 /* GCDPlaygrounds */ = {
+			isa = PBXGroup;
+			children = (
+				93FF425725530699004F982B /* ThreadPlayground.playground */,
+				93FF42A62557AB3C004F982B /* DispatchQueuePlayground.playground */,
+				9304D93F2557D70600E8AEDE /* DispatchGroupPlayground.playground */,
+				931E6F422557DFDE00A4DEAD /* ThreadSafePlayground.playground */,
+				9367CD982558006A0063EC70 /* DispatchQoSPlayground.playground */,
+			);
+			path = GCDPlaygrounds;
+			sourceTree = "<group>";
+		};
 		93B4BFD6250365E200592072 /* UIScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,11 +822,7 @@
 		93FF425625530656004F982B /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				93FF425725530699004F982B /* ThreadPlayground.playground */,
-				93FF42A62557AB3C004F982B /* DispatchQueuePlayground.playground */,
-				9304D93F2557D70600E8AEDE /* DispatchGroupPlayground.playground */,
-				931E6F422557DFDE00A4DEAD /* ThreadSafePlayground.playground */,
-				9367CD982558006A0063EC70 /* DispatchQoSPlayground.playground */,
+				93A91CA32578C10B003D0042 /* GCDPlaygrounds */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
