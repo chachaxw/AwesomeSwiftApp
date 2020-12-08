@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDI-TC-8DA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDI-TC-8DA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -173,7 +173,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Uw-8y-Uda" customClass="ReportCollectionViewCell" customModule="Swift_App" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReportCollectionCell" id="0Uw-8y-Uda" customClass="ReportCollectionViewCell" customModule="Swift_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fau-bd-sbj">
@@ -196,6 +196,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="b7e-EL-70t" firstAttribute="centerX" secondItem="fau-bd-sbj" secondAttribute="centerX" id="85W-aS-udn"/>
                                                         <constraint firstItem="b7e-EL-70t" firstAttribute="top" secondItem="UKu-Qr-i5m" secondAttribute="bottom" constant="8" symbolic="YES" id="WmC-yx-3Vt"/>
@@ -205,6 +206,11 @@
                                                         <constraint firstItem="UKu-Qr-i5m" firstAttribute="centerX" secondItem="fau-bd-sbj" secondAttribute="centerX" id="sus-4V-sHV"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
+                                                <size key="customSize" width="102" height="102"/>
+                                                <connections>
+                                                    <outlet property="numLabel" destination="UKu-Qr-i5m" id="Oym-cd-2IK"/>
+                                                    <outlet property="titleLabel" destination="b7e-EL-70t" id="Ncc-6v-DIi"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -294,7 +300,7 @@
                                             <inset key="sectionInset" minX="14" minY="0.0" maxX="14" maxY="14"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="sAL-XW-Ubp" customClass="CollectionViewCell" customModule="Swift_App" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DemoCollectionCell" id="sAL-XW-Ubp" customClass="CollectionViewCell" customModule="Swift_App" customModuleProvider="target">
                                                 <rect key="frame" x="-5.666666666666667" y="0.0" width="386" height="189"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hLf-r1-jv4">

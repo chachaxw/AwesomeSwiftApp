@@ -9,6 +9,8 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    private let cellIdentifier = "ReportCollectionCell"
+
     @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet weak private var coverImageView: UIImageView!
     @IBOutlet weak private var userProfileView: UIView!
@@ -17,6 +19,8 @@ class UserViewController: UIViewController {
     @IBOutlet weak private var settingButton: UIButton!
     @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var collectionView: UICollectionView!
+
+    var cardList: [ReportItemModel] = ReportMockData.list
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,17 +62,6 @@ class UserViewController: UIViewController {
             radius: 8
         )
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UserViewController: UIScrollViewDelegate {
@@ -81,4 +74,34 @@ extension UserViewController: UIScrollViewDelegate {
             coverImageView.frame = CGRect(x: 0, y: 0, width: coverImageView.frame.width, height: imageHeight)
         }
     }
+}
+
+extension UserViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cardList.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: cellIdentifier,
+            for: indexPath
+        ) as? ReportCollectionViewCell else {
+            fatalError("DequeueReusableCell failed while casting")
+        }
+
+        let reportItem: ReportItemModel = cardList[indexPath.row]
+
+        cell.setLabel(num: String(reportItem.num), title: reportItem.title)
+
+        return cell
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+}
+
+extension UserViewController: UICollectionViewDelegate {
+
 }

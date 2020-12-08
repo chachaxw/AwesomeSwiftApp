@@ -9,9 +9,9 @@
 import UIKit
 
 class FeaturedTableViewCell: UITableViewCell {
-    @IBOutlet weak var coverImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet private weak var coverImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descLabel: UILabel!
 
     override open var frame: CGRect {
         get {
@@ -31,7 +31,7 @@ class FeaturedTableViewCell: UITableViewCell {
         super.awakeFromNib()
 
         // Initialization code
-        self.layer.cornerRadius = 14.0
+        self.layer.cornerRadius = 16.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -9,26 +9,16 @@
 import Foundation
 import UIKit
 
-class DemoModel: Identifiable {
-    var id: String
-    var label: String
-    var title: String
-    var description: String
-    var isLiked: Bool
+struct DemoModel: Identifiable {
+    let id: String
+    let label: String
+    let title: String
+    let description: String
+    let isLiked: Bool
     var url: String?
-    
-//    var imgUrl: String? = nil
-    var uiImage: UIImage? = nil
 
-    init(id: String, label: String, title: String, description: String, isLiked: Bool, uiImage: UIImage?, url: String? = nil) {
-        self.id = id
-        self.url = url
-        self.label = label
-        self.title = title
-        self.isLiked = isLiked
-        self.uiImage = uiImage
-        self.description = description
-    }
+//    var imgUrl: String?
+    var uiImage: UIImage?
 }
 
 struct DemoMockData {

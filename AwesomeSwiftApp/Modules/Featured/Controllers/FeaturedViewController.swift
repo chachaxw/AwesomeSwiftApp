@@ -67,7 +67,6 @@ extension FeaturedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.theme_backgroundColor = [AppColors.secondaryGrayColor, AppColors.deepBlackColor]
-        print("点击高亮 \(String(describing: cell))")
     }
 
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {

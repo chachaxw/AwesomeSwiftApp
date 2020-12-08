@@ -12,7 +12,7 @@ import SwiftTheme
 import UIKit
 
 class HomeViewController: UIViewController {
-    private let cellIdentifier = "CardCell"
+    private let cellIdentifier = "DemoCollectionCell"
     private let detailIdentifier = "DemoDetailStoryboard"
 
     @IBOutlet weak private var contentView: UIView!
