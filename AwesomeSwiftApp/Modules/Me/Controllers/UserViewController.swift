@@ -27,6 +27,7 @@ class UserViewController: UIViewController {
 
         self.scrollView.delegate = self
         self.scrollView.alwaysBounceVertical = true
+        self.collectionView.dataSource = self
         self.collectionView.backgroundColor = UIColor.clear
         self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
         self.contentView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
@@ -98,7 +99,7 @@ extension UserViewController: UICollectionViewDataSource {
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 1
     }
 }
 

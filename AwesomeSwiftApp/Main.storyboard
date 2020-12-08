@@ -181,13 +181,13 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKu-Qr-i5m">
-                                                            <rect key="frame" x="45.666666666666664" y="24" width="11" height="21"/>
+                                                            <rect key="frame" x="45.666666666666664" y="24" width="11" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7e-EL-70t">
-                                                            <rect key="frame" x="25.333333333333332" y="53" width="51.666666666666671" height="17"/>
+                                                            <rect key="frame" x="25.333333333333332" y="52.333333333333336" width="51.666666666666671" height="17.000000000000007"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="cF3-DS-p7P"/>
                                                             </constraints>
