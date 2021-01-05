@@ -8,10 +8,10 @@ Supports: iOS 10.x and above
 
 ## ScreenShots
 
-<img src="AwesomeSwiftApp/Resources/Images/Login Screen.png" width="180px" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Login Screen.png" width="180px" alt="Login Screen">
 <img src="AwesomeSwiftApp/Resources/Images/Home Screen.png" width="180px" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/Images/Featured Screen.png" width="180px" alt="Home Screen">
-<img src="AwesomeSwiftApp/Resources/Images/Demo Detail Screen.png" width="180px" alt="Home Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Featured Screen.png" width="180px" alt="Featured Screen">
+<img src="AwesomeSwiftApp/Resources/Images/Demo Detail Screen.png" width="180px" alt="Demo Screen">
 
 ## Branches:
 
