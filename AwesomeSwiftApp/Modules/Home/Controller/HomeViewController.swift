@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     private let cellIdentifier = "DemoCollectionCell"
     private let detailIdentifier = "DemoDetailStoryboard"
 
-    @IBOutlet weak private var contentView: UIView!
+    @IBOutlet weak private var scrollView: UIScrollView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
     @IBOutlet weak private var dateLabel: UILabel!
@@ -25,19 +25,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.scrollView.delegate = self
         dateLabel.text = Date().toFormat("EEE, d MMM")
         self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
         }
-
-        initCollectionView()
-    }
-
-    func initCollectionView() {
-        contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.deepBlackColor]
-        contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 24.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +97,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         let width = UIScreen.main.bounds.width - 14 * 2
-        return CGSize(width: width, height: 188)
+        return CGSize(width: width, height: 320)
     }
 }

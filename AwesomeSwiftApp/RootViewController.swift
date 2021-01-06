@@ -22,7 +22,9 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         super.viewDidLoad()
 
         DoraemonManager.shareInstance().install()
+
         setTheme()
+        setTabBar()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +48,7 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
         if #available(iOS 13.0, *) {
             if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
                 setTheme()
+                setTabBar()
             }
         } else {
             // Fallback on earlier versions
@@ -54,10 +57,11 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     }
 
     func setTabBar() {
-        tabBar.tintColor = UIColor.Theme.PrimaryColor
-        tabBar.isTranslucent = false
-        tabBar.backgroundColor = UIColor.white
+        print("\(ThemeManager.currentThemeIndex)")
+        tabBar.tintColor = ThemeManager.currentThemeIndex == 0 ?
+            UIColor.Theme.PrimaryColor : UIColor.Theme.SecondaryGrayColor
         tabBar.layoutSubviews()
+        tabBar.theme_backgroundColor = [AppColors.whiteColor, AppColors.blackColor]
 
         if #available(iOS 13, *) {
             let appearance = tabBar.standardAppearance.copy()

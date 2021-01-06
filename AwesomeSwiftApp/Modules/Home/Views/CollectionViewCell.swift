@@ -63,6 +63,7 @@ class CollectionViewCell: UICollectionViewCell {
             opacity: 0.8,
             radius: 8
         )
+        likeButton.theme_backgroundColor = [AppColors.whiteColor, AppColors.primaryColor]
     }
 
     func setCoverImageFromUrl(imgUrl: String) {

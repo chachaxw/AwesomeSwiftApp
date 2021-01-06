@@ -17,6 +17,7 @@ target 'AwesomeSwiftApp' do
   pod 'Log'
   pod 'Hero'
   pod 'SwiftTheme'
+  pod 'WechatOpenSDK'
   pod 'R.swift', '5.0.0'
   pod 'SwiftLint', '0.31.0'
   pod 'Alamofire', '~> 5.2'

@@ -27,21 +27,20 @@ class UserViewController: UIViewController {
 
         self.scrollView.delegate = self
         self.scrollView.alwaysBounceVertical = true
-        self.collectionView.dataSource = self
-        self.collectionView.backgroundColor = UIColor.clear
         self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
         self.contentView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
-        self.contentView.setRoundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], with: 16.0)
+        self.contentView.layer.cornerRadius = 16
 
         // Do any additional setup after loading the view.
         initProfileView()
         initSettingButton()
+        initCollectionView()
     }
 
     func initProfileView() {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
-        self.userProfileView.setRoundCorners(corners: UIRectCorner.allCorners, with: 12.0)
+        self.userProfileView.layer.cornerRadius = 12.0
         self.userProfileView.layer.opacity = 0.87
         self.userProfileView.addSubview(blurView)
     }
@@ -63,6 +62,12 @@ class UserViewController: UIViewController {
             radius: 8
         )
     }
+
+    func initCollectionView() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.backgroundColor = UIColor.clear
+    }
 }
 
 extension UserViewController: UIScrollViewDelegate {
@@ -70,9 +75,12 @@ extension UserViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
 
+        print("滑动偏移\(contentOffsetY)")
+
         if contentOffsetY < 0 {
             let imageHeight = coverImageView.frame.height - contentOffsetY
             coverImageView.frame = CGRect(x: 0, y: 0, width: coverImageView.frame.width, height: imageHeight)
+            print("图片高度\(imageHeight)")
         }
     }
 }
@@ -103,6 +111,22 @@ extension UserViewController: UICollectionViewDataSource {
     }
 }
 
-extension UserViewController: UICollectionViewDelegate {
+extension UserViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int
+//    ) -> UIEdgeInsets {
+//
+//    }
+}
 
+extension UserViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.theme_backgroundColor = [AppColors.secondaryGrayColor, AppColors.deepBlackColor]
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.blackColor]
+    }
 }

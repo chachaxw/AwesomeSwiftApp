@@ -9,7 +9,7 @@
 import Foundation
 
 struct AppColors {
-    static let primaryColor = "#274396"
+    static let primaryColor = "#1d1d1d"
     static let secondaryColor = "#1b60c0"
     static let extraLightGrayColor = "#f8f8f8"
     static let lightGrayColor = "#f4f5f6"

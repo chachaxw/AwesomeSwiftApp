@@ -125,6 +125,7 @@ PODS:
     - AliRemoteDebugInterface (>= 0.0.1.2)
     - TBJSONModel
     - TBRest (>= 1.0.0.18)
+  - WechatOpenSDK (1.8.7.1)
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
@@ -151,6 +152,7 @@ DEPENDENCIES:
   - SwiftLint (= 0.31.0)
   - SwiftTheme
   - SwiftyJSON (~> 4.0)
+  - WechatOpenSDK
 
 SPEC REPOS:
   https://github.com/aliyun/aliyun-specs.git:
@@ -204,6 +206,7 @@ SPEC REPOS:
     - SwiftLint
     - SwiftTheme
     - SwiftyJSON
+    - WechatOpenSDK
     - ZipArchive
 
 SPEC CHECKSUMS:
@@ -256,8 +259,9 @@ SPEC CHECKSUMS:
   TBJSONModel: 2c95a8789bc3d98a2a773dd09c41ddeb902a200b
   TBRest: 36fcaf59c76692eae5acf4c8fd469748d453a327
   TRemoteDebugger: af82010a22063d31b8509497a8bfabfb3f7028c3
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 701a455b2faac090eb24accc5e220f1185000971
+PODFILE CHECKSUM: d7c03585d8c1560068aea35deef48e04bd603cfb
 
 COCOAPODS: 1.9.3

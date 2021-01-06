@@ -13,8 +13,6 @@ class FeaturedViewController: UIViewController {
     private let cellIdentifier = "FeaturedTableCell"
     private let demoDetailIdentifier = "DemoDetailStoryboard"
 
-    private let searchController = UISearchController(searchResultsController: nil)
-
     @IBOutlet weak private var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -24,12 +22,6 @@ class FeaturedViewController: UIViewController {
         tableView.delegate = self
         tableView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
         view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
-
-        if #available(iOS 11.0, *) {
-            navigationItem.searchController = searchController
-        } else {
-            // Fallback on earlier versions
-        }
     }
 }
 

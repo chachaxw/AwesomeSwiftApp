@@ -19,9 +19,12 @@ class ReportCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.cornerRadius = 12
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+
     func setLabel(num: String, title: String) {
         numLabel.text = num
         titleLabel.text = title
-        print("设置cell")
     }
 }

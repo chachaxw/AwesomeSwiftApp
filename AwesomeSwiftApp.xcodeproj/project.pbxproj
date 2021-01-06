@@ -50,10 +50,6 @@
 		93A1759823A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759523A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf */; };
 		93A1759B23A4A1C200A684D6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A1759A23A4A1C200A684D6 /* UIButtonExtension.swift */; };
 		93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A1759C23A4B0E800A684D6 /* Main.storyboard */; };
-		93A3B55D253C1F8900196044 /* Home Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B55C253C1F8800196044 /* Home Screen.png */; };
-		93A3B561253C1FC700196044 /* Login Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B560253C1FC700196044 /* Login Screen.png */; };
-		93A3B565253C1FD900196044 /* Demo Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B564253C1FD900196044 /* Demo Detail Screen.png */; };
-		93A3B569253C1FED00196044 /* Featured Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A3B568253C1FED00196044 /* Featured Screen.png */; };
 		93A3B56D253EAA5B00196044 /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A3B56C253EAA5B00196044 /* OnboardingFlow.swift */; };
 		93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFD72503664E00592072 /* UIScreenExtension.swift */; };
 		93B4BFDB25036DFB00592072 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4BFDA25036DFB00592072 /* UICollectionViewCellExtension.swift */; };
@@ -158,10 +154,6 @@
 		93A1759523A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
 		93A1759A23A4A1C200A684D6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		93A1759C23A4B0E800A684D6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		93A3B55C253C1F8800196044 /* Home Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Screen.png"; sourceTree = "<group>"; };
-		93A3B560253C1FC700196044 /* Login Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login Screen.png"; sourceTree = "<group>"; };
-		93A3B564253C1FD900196044 /* Demo Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Demo Detail Screen.png"; sourceTree = "<group>"; };
-		93A3B568253C1FED00196044 /* Featured Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Featured Screen.png"; sourceTree = "<group>"; };
 		93A3B56C253EAA5B00196044 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		93AC8F1823A39C6000303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AC8F1C23A39F4900303404 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -384,10 +376,6 @@
 		2AFB31031F3853D9009C4586 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				93A3B564253C1FD900196044 /* Demo Detail Screen.png */,
-				93A3B560253C1FC700196044 /* Login Screen.png */,
-				93A3B55C253C1F8800196044 /* Home Screen.png */,
-				93A3B568253C1FED00196044 /* Featured Screen.png */,
 				2A1E773D1F384BFD006C84D4 /* Assets.xcassets */,
 			);
 			path = Images;
@@ -952,19 +940,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A3B569253C1FED00196044 /* Featured Screen.png in Resources */,
 				2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */,
 				93A1759723A3CECA00A684D6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				93A1759823A3CECA00A684D6 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				93A1759D23A4B0E800A684D6 /* Main.storyboard in Resources */,
-				93A3B561253C1FC700196044 /* Login Screen.png in Resources */,
-				93A3B565253C1FD900196044 /* Demo Detail Screen.png in Resources */,
 				FCB2C7CB1F57127800481080 /* Localizable.strings in Resources */,
 				2A1E77411F384BFD006C84D4 /* LaunchScreen.storyboard in Resources */,
 				939268E8251061AC0074D7C4 /* AliyunEmasServices-Info.plist in Resources */,
 				2A1E773E1F384BFD006C84D4 /* Assets.xcassets in Resources */,
 				93A1759623A3CECA00A684D6 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
-				93A3B55D253C1F8900196044 /* Home Screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
