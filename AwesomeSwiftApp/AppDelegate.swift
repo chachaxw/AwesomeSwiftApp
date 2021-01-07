@@ -8,9 +8,11 @@
 import Log
 import UIKit
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
 
     var window: UIWindow?
+    let log = Logger()
+    let universalLink: String = "https://app.ctirobot.com/"
     lazy private var router = RootRouter()
     lazy private var deeplinkHandler = DeeplinkHandler()
     lazy private var notificationsHandler = NotificationsHandler()
@@ -22,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Notifications
         notificationsHandler.configure()
+
+        // 注册微信OpenSDK
+        WXApi.registerApp("wxdcbe5709da8f1dd5", universalLink: universalLink)
 
         // App structure
         router.loadMainAppStructure()
@@ -37,7 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb, let url = userActivity.webpageURL {
             deeplinkHandler.handleDeeplink(with: url)
         }
-        return true
+        return WXApi.handleOpenUniversalLink(userActivity, delegate: self)
+    }
+
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        return WXApi.handleOpen(url, delegate: self)
     }
 
     func application(_ application: UIApplication,
@@ -45,5 +55,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // To enable full remote notifications functionality you should first register the device with your api service
         //https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/
         notificationsHandler.handleRemoteNotification(with: userInfo)
+    }
+
+    func onReq(_ req: BaseReq) {
+        log.info("微信终端向第三方程序发起请求 \(req)")
+    }
+
+    func onResp(_ resp: BaseResp) {
+        log.info("第三方程序向微信发送了请求 \(resp)")
     }
 }

@@ -57,7 +57,6 @@ class RootViewController: UITabBarController, CAAnimationDelegate {
     }
 
     func setTabBar() {
-        print("\(ThemeManager.currentThemeIndex)")
         tabBar.tintColor = ThemeManager.currentThemeIndex == 0 ?
             UIColor.Theme.PrimaryColor : UIColor.Theme.SecondaryGrayColor
         tabBar.layoutSubviews()

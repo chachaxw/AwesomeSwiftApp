@@ -20,6 +20,7 @@ class NotificationsHandler: NSObject {
     func registerForRemoteNotifications() {
         let application = UIApplication.shared
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) {_, _ in
             // do nothing for now
         }

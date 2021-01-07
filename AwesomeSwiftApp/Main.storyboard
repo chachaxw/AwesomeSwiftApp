@@ -240,7 +240,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2M-2D-v9x">
-                                <rect key="frame" x="344" y="64" width="32" height="32"/>
+                                <rect key="frame" x="344" y="24" width="32" height="32"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="EAp-d6-rIz"/>
@@ -251,7 +251,7 @@
                         <viewLayoutGuide key="safeArea" id="YRU-EW-4xP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j2M-2D-v9x" firstAttribute="top" secondItem="YRU-EW-4xP" secondAttribute="top" constant="20" id="5ec-uQ-Vk1"/>
+                            <constraint firstItem="j2M-2D-v9x" firstAttribute="top" secondItem="I3d-Kt-9Rq" secondAttribute="top" constant="24" id="5ec-uQ-Vk1"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="trailing" secondItem="YRU-EW-4xP" secondAttribute="trailing" id="9iA-Lh-81X"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="leading" secondItem="YRU-EW-4xP" secondAttribute="leading" id="D41-Py-dcD"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="bottom" secondItem="YRU-EW-4xP" secondAttribute="bottom" id="SOD-wc-rlm"/>
@@ -431,14 +431,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovR-gC-lub">
+                                <rect key="frame" x="64" y="630" width="262" height="44"/>
+                                <color key="backgroundColor" red="0.1176525578" green="0.79947513339999998" blue="0.54948019979999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uNH-b8-WLA"/>
+                                </constraints>
+                                <state key="normal" title="跳转至小程序">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchMiniProgram:" destination="avd-M2-C9G" eventType="touchDown" id="g0G-Ui-z6z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P4f-JZ-SsN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="P4f-JZ-SsN" firstAttribute="trailing" secondItem="ovR-gC-lub" secondAttribute="trailing" constant="64" id="ERm-qq-MwF"/>
+                            <constraint firstItem="ovR-gC-lub" firstAttribute="leading" secondItem="P4f-JZ-SsN" secondAttribute="leading" constant="64" id="GoD-fZ-dfs"/>
                             <constraint firstItem="fb5-aP-s2I" firstAttribute="trailing" secondItem="P4f-JZ-SsN" secondAttribute="trailing" id="SVF-UJ-BDj"/>
+                            <constraint firstItem="ovR-gC-lub" firstAttribute="centerX" secondItem="IHP-gM-DzE" secondAttribute="centerX" id="Um8-gL-4GX"/>
                             <constraint firstItem="fb5-aP-s2I" firstAttribute="leading" secondItem="P4f-JZ-SsN" secondAttribute="leading" id="bTm-OB-bms"/>
                             <constraint firstItem="dwK-lB-Pox" firstAttribute="centerX" secondItem="P4f-JZ-SsN" secondAttribute="centerX" id="g9q-GV-Pvf"/>
                             <constraint firstItem="dwK-lB-Pox" firstAttribute="centerY" secondItem="IHP-gM-DzE" secondAttribute="centerY" id="uQW-9U-G5l"/>
+                            <constraint firstItem="P4f-JZ-SsN" firstAttribute="bottom" secondItem="ovR-gC-lub" secondAttribute="bottom" constant="136" id="y3y-Wp-QeJ"/>
                             <constraint firstItem="fb5-aP-s2I" firstAttribute="top" secondItem="IHP-gM-DzE" secondAttribute="top" id="y8Y-Iy-wNj"/>
                         </constraints>
                     </view>

@@ -47,7 +47,7 @@ extension UserDefaults {
     }
 }
 
-// Mark: Remove
+// MARK: - Remove
 
 extension UserDefaults {
 

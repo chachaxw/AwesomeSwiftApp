@@ -188,6 +188,7 @@
 		93F9260825459BA500E7C6C6 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		93FF425725530699004F982B /* ThreadPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreadPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		93FF42A62557AB3C004F982B /* DispatchQueuePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DispatchQueuePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		93FFD77C25A7203D00112C2F /* AwesomeSwiftApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeSwiftApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwiftApp/Pods-AwesomeSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C90395231FC622D2006F1DC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsAppDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 				C90395231FC622D2006F1DC0 /* main.swift */,
 				93A1759C23A4B0E800A684D6 /* Main.storyboard */,
 				2A1E77361F384BFC006C84D4 /* AppDelegate.swift */,
+				93FFD77C25A7203D00112C2F /* AwesomeSwiftApp-Bridging-Header.h */,
 				9324074423ACE0E50025013F /* RootViewController.swift */,
 				936E9867251CEB8900CF04D9 /* Flows */,
 				2AFB31021F3853C6009C4586 /* Resources */,
@@ -904,6 +906,7 @@
 				TargetAttributes = {
 					2A1E77321F384BFC006C84D4 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1230;
 					};
 					2A1E77461F384BFD006C84D4 = {
 						CreatedOnToolsVersion = 9.0;
@@ -1276,6 +1279,7 @@
 			baseConfigurationReference = A2806466D409167661E61069 /* Pods-AwesomeSwiftApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = AwesomeSwiftApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1287,6 +1291,8 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -warn-long-expression-type-checking=500";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chacha;
 				PRODUCT_NAME = "Swift App";
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeSwiftApp/AwesomeSwiftApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1297,6 +1303,7 @@
 			baseConfigurationReference = 7047358B3341C2E87C7BE318 /* Pods-AwesomeSwiftApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = AwesomeSwiftApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1308,6 +1315,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chacha;
 				PRODUCT_NAME = "Swift App";
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeSwiftApp/AwesomeSwiftApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1423,6 +1431,7 @@
 			baseConfigurationReference = 3A8DE8CEBE1BBF372BBB9225 /* Pods-AwesomeSwiftApp.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = AwesomeSwiftApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1434,6 +1443,8 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chacha;
 				PRODUCT_NAME = "Swift App";
+				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeSwiftApp/AwesomeSwiftApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1446,6 +1457,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = AwesomeSwiftAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
