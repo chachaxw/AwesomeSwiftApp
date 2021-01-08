@@ -115,10 +115,16 @@
         <scene sceneID="Pm2-g7-4kc">
             <objects>
                 <viewController storyboardIdentifier="UserStoryboard" title="Me" id="y8H-xn-LGa" userLabel="Me" customClass="UserViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="idB-iz-Lvf" customClass="UIScrollView">
+                    <view key="view" contentMode="scaleToFill" id="idB-iz-Lvf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hI-UQ-MIb">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                                <connections>
+                                    <outlet property="delegate" destination="idB-iz-Lvf" id="Jrd-7w-nos"/>
+                                </connections>
+                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="HeaderImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3d-Kt-9Rq">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="260"/>
                                 <constraints>
@@ -240,7 +246,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2M-2D-v9x">
-                                <rect key="frame" x="344" y="24" width="32" height="32"/>
+                                <rect key="frame" x="344" y="68" width="32" height="32"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="EAp-d6-rIz"/>
@@ -251,7 +257,7 @@
                         <viewLayoutGuide key="safeArea" id="YRU-EW-4xP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j2M-2D-v9x" firstAttribute="top" secondItem="I3d-Kt-9Rq" secondAttribute="top" constant="24" id="5ec-uQ-Vk1"/>
+                            <constraint firstItem="j2M-2D-v9x" firstAttribute="top" secondItem="YRU-EW-4xP" secondAttribute="top" constant="24" id="5ec-uQ-Vk1"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="trailing" secondItem="YRU-EW-4xP" secondAttribute="trailing" id="9iA-Lh-81X"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="leading" secondItem="YRU-EW-4xP" secondAttribute="leading" id="D41-Py-dcD"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="bottom" secondItem="YRU-EW-4xP" secondAttribute="bottom" id="SOD-wc-rlm"/>
@@ -259,8 +265,12 @@
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="top" secondItem="idB-iz-Lvf" secondAttribute="top" constant="242" id="YlK-8x-MPT"/>
                             <constraint firstItem="RL7-Am-Ppo" firstAttribute="leading" secondItem="YRU-EW-4xP" secondAttribute="leading" constant="14" id="f1D-ON-5Cp"/>
                             <constraint firstItem="LMY-iH-nOP" firstAttribute="top" secondItem="RL7-Am-Ppo" secondAttribute="bottom" constant="16" id="kFn-Oa-ms9"/>
-                            <constraint firstItem="YRU-EW-4xP" firstAttribute="trailing" secondItem="RL7-Am-Ppo" secondAttribute="trailing" constant="14" id="nhd-tr-hTw"/>
+                            <constraint firstItem="3hI-UQ-MIb" firstAttribute="bottom" secondItem="YRU-EW-4xP" secondAttribute="bottom" id="lXW-Af-Eif"/>
+                            <constraint firstItem="3hI-UQ-MIb" firstAttribute="top" secondItem="I3d-Kt-9Rq" secondAttribute="top" id="ldX-la-sA8"/>
+                            <constraint firstItem="RL7-Am-Ppo" firstAttribute="trailing" secondItem="3hI-UQ-MIb" secondAttribute="trailing" constant="-14" id="nhd-tr-hTw"/>
+                            <constraint firstItem="3hI-UQ-MIb" firstAttribute="trailing" secondItem="I3d-Kt-9Rq" secondAttribute="trailing" id="rub-37-KB9"/>
                             <constraint firstItem="I3d-Kt-9Rq" firstAttribute="trailing" secondItem="YRU-EW-4xP" secondAttribute="trailing" id="sJD-rn-HUu"/>
+                            <constraint firstItem="3hI-UQ-MIb" firstAttribute="leading" secondItem="LMY-iH-nOP" secondAttribute="leading" id="vle-n8-d29"/>
                             <constraint firstItem="YRU-EW-4xP" firstAttribute="trailing" secondItem="j2M-2D-v9x" secondAttribute="trailing" constant="14" id="w0S-RE-X11"/>
                             <constraint firstItem="I3d-Kt-9Rq" firstAttribute="leading" secondItem="YRU-EW-4xP" secondAttribute="leading" id="znR-U4-lAX"/>
                         </constraints>
@@ -271,7 +281,7 @@
                         <outlet property="collectionView" destination="TkI-6j-wcY" id="K89-bl-nYW"/>
                         <outlet property="contentView" destination="LMY-iH-nOP" id="t6h-HW-3OD"/>
                         <outlet property="coverImageView" destination="I3d-Kt-9Rq" id="Mta-OK-VeJ"/>
-                        <outlet property="scrollView" destination="idB-iz-Lvf" id="Jvu-8F-HbA"/>
+                        <outlet property="scrollView" destination="3hI-UQ-MIb" id="yzn-tP-OJK"/>
                         <outlet property="settingButton" destination="j2M-2D-v9x" id="NI5-pc-Wg6"/>
                         <outlet property="userProfileView" destination="RL7-Am-Ppo" id="HAT-ig-DEh"/>
                         <outlet property="usernameView" destination="MJy-Ra-5jp" id="HwX-ny-beU"/>

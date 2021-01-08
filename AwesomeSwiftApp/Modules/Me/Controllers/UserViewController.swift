@@ -40,9 +40,12 @@ class UserViewController: UIViewController {
     func initProfileView() {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
-        self.userProfileView.layer.cornerRadius = 12.0
-        self.userProfileView.layer.opacity = 0.87
-        self.userProfileView.addSubview(blurView)
+
+        blurView.frame = self.userProfileView.bounds
+
+        self.userProfileView.insertSubview(blurView, at: 0)
+        self.userProfileView.layer.cornerRadius = 12
+        self.userProfileView.layer.masksToBounds = true
     }
 
     func initSettingButton() {

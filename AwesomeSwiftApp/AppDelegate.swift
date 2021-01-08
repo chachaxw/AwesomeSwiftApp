@@ -45,7 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
         return WXApi.handleOpenUniversalLink(userActivity, delegate: self)
     }
 
-    func application(_ app: UIApplication, open url: URL,
+    func application(_ app: UIApplication,
+                     open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         return WXApi.handleOpen(url, delegate: self)
     }
