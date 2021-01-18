@@ -44,6 +44,7 @@ class UserViewController: UIViewController {
         blurView.frame = self.userProfileView.bounds
 
         self.userProfileView.insertSubview(blurView, at: 0)
+        self.userProfileView.layer.backgroundColor = UIColor.clear.cgColor
         self.userProfileView.layer.cornerRadius = 12
         self.userProfileView.layer.masksToBounds = true
     }

@@ -17,7 +17,7 @@ queue1.async(group: group) {
     print("开始请求数据 \(Date()) thread: \(Thread.current)")
     sleep(5) // 模拟网络请求
     print("数据请求完成 \(Date()) thread: \(Thread.current)")
-    
+
     queue2.resume() // 网络数据请求完成，恢复队列，进行数据处理
 }
 

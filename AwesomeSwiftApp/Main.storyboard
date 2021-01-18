@@ -24,32 +24,32 @@
                                 <inset key="separatorInset" minX="86" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="FeaturedTableCell" id="mCZ-aB-xWL" customClass="FeaturedTableViewCell" customModule="Swift_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="94"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mCZ-aB-xWL" id="UFj-rV-M4V">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-We-yve">
-                                                    <rect key="frame" x="10" y="10" width="64" height="64"/>
+                                                    <rect key="frame" x="10" y="10" width="56" height="56"/>
                                                     <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="64" id="7y0-rz-ilb"/>
-                                                        <constraint firstAttribute="width" constant="64" id="OPo-Pp-Fhk"/>
+                                                        <constraint firstAttribute="height" constant="56" id="7y0-rz-ilb"/>
+                                                        <constraint firstAttribute="width" constant="56" id="OPo-Pp-Fhk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-Qm-f8h">
-                                                    <rect key="frame" x="82" y="8" width="298" height="42"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-Qm-f8h">
+                                                    <rect key="frame" x="74" y="8" width="306" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="tmb-Gz-2Ib"/>
                                                     </constraints>
                                                     <string key="text">How to use swift to develop an App? How to use swift to develop an App? How to use swift to develop an App? How to use swift to develop an App? </string>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Create an App using Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fq2-Kf-bLe">
-                                                    <rect key="frame" x="82" y="50" width="280" height="20"/>
+                                                    <rect key="frame" x="74" y="42" width="288" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="8Vn-Uf-sNV"/>
                                                     </constraints>
@@ -217,22 +217,6 @@
                                                     <outlet property="numLabel" destination="UKu-Qr-i5m" id="Oym-cd-2IK"/>
                                                     <outlet property="titleLabel" destination="b7e-EL-70t" id="Ncc-6v-DIi"/>
                                                 </connections>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BUB-Kq-Tuo">
-                                                <rect key="frame" x="144" y="0.0" width="102" height="102"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uim-3T-6mz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c8g-nc-oQg">
-                                                <rect key="frame" x="276" y="0.0" width="102" height="102"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HH3-2w-oxk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -441,31 +425,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovR-gC-lub">
-                                <rect key="frame" x="64" y="630" width="262" height="44"/>
-                                <color key="backgroundColor" red="0.1176525578" green="0.79947513339999998" blue="0.54948019979999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="uNH-b8-WLA"/>
-                                </constraints>
-                                <state key="normal" title="跳转至小程序">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="launchMiniProgram:" destination="avd-M2-C9G" eventType="touchDown" id="g0G-Ui-z6z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P4f-JZ-SsN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P4f-JZ-SsN" firstAttribute="trailing" secondItem="ovR-gC-lub" secondAttribute="trailing" constant="64" id="ERm-qq-MwF"/>
-                            <constraint firstItem="ovR-gC-lub" firstAttribute="leading" secondItem="P4f-JZ-SsN" secondAttribute="leading" constant="64" id="GoD-fZ-dfs"/>
                             <constraint firstItem="fb5-aP-s2I" firstAttribute="trailing" secondItem="P4f-JZ-SsN" secondAttribute="trailing" id="SVF-UJ-BDj"/>
-                            <constraint firstItem="ovR-gC-lub" firstAttribute="centerX" secondItem="IHP-gM-DzE" secondAttribute="centerX" id="Um8-gL-4GX"/>
                             <constraint firstItem="fb5-aP-s2I" firstAttribute="leading" secondItem="P4f-JZ-SsN" secondAttribute="leading" id="bTm-OB-bms"/>
                             <constraint firstItem="dwK-lB-Pox" firstAttribute="centerX" secondItem="P4f-JZ-SsN" secondAttribute="centerX" id="g9q-GV-Pvf"/>
                             <constraint firstItem="dwK-lB-Pox" firstAttribute="centerY" secondItem="IHP-gM-DzE" secondAttribute="centerY" id="uQW-9U-G5l"/>
-                            <constraint firstItem="P4f-JZ-SsN" firstAttribute="bottom" secondItem="ovR-gC-lub" secondAttribute="bottom" constant="136" id="y3y-Wp-QeJ"/>
                             <constraint firstItem="fb5-aP-s2I" firstAttribute="top" secondItem="IHP-gM-DzE" secondAttribute="top" id="y8Y-Iy-wNj"/>
                         </constraints>
                     </view>
@@ -664,7 +631,7 @@
         <scene sceneID="eNa-fB-fyN">
             <objects>
                 <navigationController title="Featured" automaticallyAdjustsScrollViewInsets="NO" id="TOc-e3-6gH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Featured" image="flame.fill" catalog="system" id="Yuz-Ha-JNb"/>
+                    <tabBarItem key="tabBarItem" title="Hot" image="hot" selectedImage="hot_dark" id="Yuz-Ha-JNb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="r3X-lu-jWA">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
@@ -686,7 +653,7 @@
         <scene sceneID="bAE-Oj-2w9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="bAa-1B-IM6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" selectedImage="person.fill" id="Tfu-ZY-Zs2"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="user-dark" selectedImage="user" id="Tfu-ZY-Zs2"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CUb-p2-8AS">
@@ -705,7 +672,7 @@
         <scene sceneID="w9u-k4-Nd6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Yuw-a7-wUl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" image="safari.fill" catalog="system" selectedImage="safari.fill" id="iGB-b2-e8d"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="discovery" selectedImage="discovery_dark" id="iGB-b2-e8d"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nOf-a0-3gB">
@@ -727,12 +694,15 @@
         <image name="HeaderImage" width="375" height="205"/>
         <image name="arrow_right" width="19" height="14"/>
         <image name="chevron_right" width="8" height="14"/>
-        <image name="flame.fill" catalog="system" width="108" height="128"/>
+        <image name="discovery" width="28" height="28"/>
+        <image name="discovery_dark" width="24" height="24"/>
+        <image name="hot" width="27" height="27"/>
+        <image name="hot_dark" width="25" height="25"/>
         <image name="line" width="61" height="3"/>
         <image name="line_reversed" width="60" height="2"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profile" width="31" height="31"/>
-        <image name="safari.fill" catalog="system" width="128" height="121"/>
+        <image name="user" width="22" height="24"/>
+        <image name="user-dark" width="22" height="24"/>
         <systemColor name="quaternaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -25,11 +25,4 @@ class DemoDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @IBAction func launchMiniProgram(_ sender: Any) {
-        let launchMiniProgramReq = WXLaunchMiniProgramReq()
-        launchMiniProgramReq.userName = "gh_82799a5c1f6a"
-
-        WXApi.send(launchMiniProgramReq)
-    }
 }
