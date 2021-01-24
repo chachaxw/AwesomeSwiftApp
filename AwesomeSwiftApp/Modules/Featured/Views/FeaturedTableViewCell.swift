@@ -17,6 +17,7 @@ class FeaturedTableViewCell: UITableViewCell {
         get {
             return super.frame
         }
+
         set (newFrame) {
             var frame = newFrame
             frame.origin.y += 10

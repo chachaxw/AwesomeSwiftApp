@@ -21,8 +21,8 @@ class RootRouter {
     private var loginId: String = "LoginStoryboard"
     private var mainId: String = "MainStoryboard"
 
-    /** Replaces root view controller. You can specify the replacment animation type.
-     If no animation type is specified, there is no animation */
+    /// Replaces root view controller. You can specify the replacment animation type.
+    /// If no animation type is specified, there is no animation
     func setRootViewController(controller: UIViewController, animatedWithOptions: UIView.AnimationOptions?) {
         guard let window = UIApplication.shared.keyWindow else {
             fatalError("No window in app")
