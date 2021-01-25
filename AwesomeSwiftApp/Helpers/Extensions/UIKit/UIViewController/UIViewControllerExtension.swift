@@ -15,7 +15,7 @@ import SwiftUI
 // MARK: - Navigation
 
 extension UIViewController {
-    
+
     /// Remove all the previous controllers from the navigation
     /// - Parameter animated: If false, replace the view controllers without any animations,
     ///                       otherwise it will be animated.
@@ -27,7 +27,7 @@ extension UIViewController {
 // MARK: - Misc
 
 extension UIViewController {
-    
+
     /// Either the viewcontroller is visible or not.
     public var isVisible: Bool {
         self.isViewLoaded && view.window != nil
@@ -45,5 +45,5 @@ extension UIViewController {
 // MARK: - ChildVC
 
 extension UIViewController {
-    
+
 }

@@ -71,8 +71,8 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let detailViewCtrl = UIStoryboard.main?.instantiateViewController(
-                withIdentifier: detailIdentifier) as? DemoDetailViewController else {
+        guard (UIStoryboard.main?.instantiateViewController(
+                withIdentifier: detailIdentifier) as? DemoDetailViewController) != nil else {
             return
         }
 
@@ -80,12 +80,12 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
+        _ = collectionView.cellForItem(at: indexPath)
 //        cell?.animate(shouldScale: true)
     }
 
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightRowAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        _ = collectionView.cellForItem(at: indexPath)
 //        cell?.animate(shouldScale: false)
     }
 }

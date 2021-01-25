@@ -10,10 +10,26 @@ import UIKit
 
 class DemoDetailViewController: UIViewController {
 
+    @IBOutlet weak private var overlayView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initOverlayView()
+    }
+
+    func initOverlayView() {
+        let layer = CAGradientLayer()
+        layer.colors = [
+            UIColor(netHex: 0x000000, alpha: 0.3).cgColor,
+            UIColor(netHex: 0xffffff, alpha: 0).cgColor,
+            UIColor(netHex: 0x000000, alpha: 0.3).cgColor
+        ]
+        layer.frame = overlayView.bounds
+        layer.startPoint = CGPoint(x: 0, y: 0)
+        layer.endPoint = CGPoint(x: 0, y: 1)
+        overlayView.layer.insertSublayer(layer, at: 0)
     }
 
     /*

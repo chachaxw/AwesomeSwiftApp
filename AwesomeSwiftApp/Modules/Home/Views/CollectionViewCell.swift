@@ -20,7 +20,6 @@ class CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 20
-        self.contentView.layer.cornerRadius = 20
     }
 
     override func layoutSubviews() {

@@ -116,11 +116,13 @@ extension UserViewController: UICollectionViewDataSource {
 }
 
 extension UserViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView,
-//        layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int
-//    ) -> UIEdgeInsets {
-//
-//    }
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        insetForSectionAt section: Int
+    ) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
+    }
 }
 
 extension UserViewController: UICollectionViewDelegate {
@@ -132,5 +134,15 @@ extension UserViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.contentView.theme_backgroundColor = [AppColors.whiteColor, AppColors.blackColor]
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let width = floor(Double(UIScreen.width - 4 * 14) / 3)
+        print("cell 大小 \(width)")
+        return CGSize(width: width, height: width)
     }
 }

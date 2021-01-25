@@ -41,6 +41,7 @@ extension UIColor {
         static let BasicGrayColor = UIColor(netHex: 0xB9B9B9)
         static let BasicRedColor = UIColor(netHex: 0xFF5450)
         static let LightShadowColor = UIColor(netHex: 0x000000, alpha: 0.08)
+        static let DarkShadowColor = UIColor(netHex: 0x000000, alpha: 0.15)
     }
 
     func isDarkColor() -> Bool {
