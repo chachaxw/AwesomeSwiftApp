@@ -10,6 +10,7 @@ import UIKit
 
 class UserViewController: UIViewController {
     private let cellIdentifier = "ReportCollectionCell"
+    private var imageHeight: CGFloat = 0
 
     @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet weak private var coverImageView: UIImageView!
@@ -19,6 +20,8 @@ class UserViewController: UIViewController {
     @IBOutlet weak private var settingButton: UIButton!
     @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet weak var coverImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var coverImageTop: NSLayoutConstraint!
 
     var cardList: [ReportItemModel] = ReportMockData.list
 
@@ -27,6 +30,7 @@ class UserViewController: UIViewController {
 
         scrollView.delegate = self
         scrollView.alwaysBounceVertical = true
+        imageHeight = coverImageView.frame.height
         view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
         contentView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
         contentView.layer.cornerRadius = 16
@@ -77,19 +81,21 @@ class UserViewController: UIViewController {
 extension UserViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let contentOffsetY = scrollView.contentOffset.y
+        let contentOffsetY = floor(scrollView.contentOffset.y)
 
         print("滑动偏移\(contentOffsetY)")
 
-        if contentOffsetY < 0 {
-            let imageHeight = coverImageView.frame.height - contentOffsetY
-            coverImageView.frame = CGRect(x: 0, y: 0, width: coverImageView.frame.width, height: imageHeight)
-            print("图片高度\(imageHeight)")
+        if contentOffsetY <= -50 {
+            let height = floor(imageHeight - contentOffsetY)
+
+            coverImageHeight.constant = height
+            print("图片高度 \(coverImageView.frame) \(coverImageView.constraints)")
         }
     }
 }
 
 extension UserViewController: UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardList.count
     }

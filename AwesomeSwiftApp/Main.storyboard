@@ -126,7 +126,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="HeaderImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3d-Kt-9Rq">
                                         <rect key="frame" x="0.0" y="-50" width="390" height="304"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="304" id="ZUy-10-dSA"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="304" id="ZUy-10-dSA"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL7-Am-Ppo">
@@ -273,6 +273,8 @@
                         <outlet property="avatarView" destination="q6r-3I-sQo" id="jSM-LW-kmf"/>
                         <outlet property="collectionView" destination="TkI-6j-wcY" id="K89-bl-nYW"/>
                         <outlet property="contentView" destination="LMY-iH-nOP" id="t6h-HW-3OD"/>
+                        <outlet property="coverImageHeight" destination="ZUy-10-dSA" id="Nq9-hV-TSr"/>
+                        <outlet property="coverImageTop" destination="WBj-0Q-bAR" id="JTf-iR-8Eq"/>
                         <outlet property="coverImageView" destination="I3d-Kt-9Rq" id="Mta-OK-VeJ"/>
                         <outlet property="scrollView" destination="3hI-UQ-MIb" id="yzn-tP-OJK"/>
                         <outlet property="settingButton" destination="j2M-2D-v9x" id="NI5-pc-Wg6"/>
