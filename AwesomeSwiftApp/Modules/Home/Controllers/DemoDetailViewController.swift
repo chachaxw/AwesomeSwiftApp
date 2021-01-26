@@ -16,15 +16,26 @@ class DemoDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
         initOverlayView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
 
     func initOverlayView() {
         let layer = CAGradientLayer()
         layer.colors = [
-            UIColor(netHex: 0x000000, alpha: 0.3).cgColor,
+            UIColor(netHex: 0x000000, alpha: 0.5).cgColor,
             UIColor(netHex: 0xffffff, alpha: 0).cgColor,
-            UIColor(netHex: 0x000000, alpha: 0.3).cgColor
+            UIColor(netHex: 0x000000, alpha: 0.5).cgColor
         ]
         layer.frame = overlayView.bounds
         layer.startPoint = CGPoint(x: 0, y: 0)

@@ -23,6 +23,10 @@ class FeaturedViewController: UIViewController {
         tableView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
         view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
 
 extension FeaturedViewController: UITableViewDataSource {

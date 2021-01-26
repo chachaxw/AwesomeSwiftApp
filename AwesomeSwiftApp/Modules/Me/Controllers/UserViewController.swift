@@ -25,11 +25,11 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.scrollView.delegate = self
-        self.scrollView.alwaysBounceVertical = true
-        self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
-        self.contentView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
-        self.contentView.layer.cornerRadius = 16
+        scrollView.delegate = self
+        scrollView.alwaysBounceVertical = true
+        view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
+        contentView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
+        contentView.layer.cornerRadius = 16
 
         // Do any additional setup after loading the view.
         initProfileView()
@@ -43,10 +43,10 @@ class UserViewController: UIViewController {
 
         blurView.frame = self.userProfileView.bounds
 
-        self.userProfileView.insertSubview(blurView, at: 0)
-        self.userProfileView.layer.backgroundColor = UIColor.clear.cgColor
-        self.userProfileView.layer.cornerRadius = 12
-        self.userProfileView.layer.masksToBounds = true
+        userProfileView.insertSubview(blurView, at: 0)
+        userProfileView.layer.backgroundColor = UIColor.clear.cgColor
+        userProfileView.layer.cornerRadius = 12
+        userProfileView.layer.masksToBounds = true
     }
 
     func initSettingButton() {
@@ -68,9 +68,9 @@ class UserViewController: UIViewController {
     }
 
     func initCollectionView() {
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.backgroundColor = UIColor.clear
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.clear
     }
 }
 

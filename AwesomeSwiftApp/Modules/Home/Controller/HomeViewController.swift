@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
+            navigationBar.isTranslucent = true
         }
     }
 
