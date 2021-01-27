@@ -30,6 +30,7 @@ target 'AwesomeSwiftApp' do
   pod 'RxFlow'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'ParallaxHeader', '~> 3.0.0'
   pod 'SkeletonView'
   pod 'MJRefresh'
   pod 'Permission/Camera'

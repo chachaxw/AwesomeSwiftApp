@@ -11,6 +11,8 @@ ${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
 ${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework
 ${BUILT_PRODUCTS_DIR}/Log/Log.framework
 ${PODS_ROOT}/LookinServer/LookinServer.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/ParallaxHeader/ParallaxHeader.framework
 ${BUILT_PRODUCTS_DIR}/Permission/Permission.framework
 ${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework

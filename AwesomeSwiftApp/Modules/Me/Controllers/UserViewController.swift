@@ -20,8 +20,6 @@ class UserViewController: UIViewController {
     @IBOutlet weak private var settingButton: UIButton!
     @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var collectionView: UICollectionView!
-    @IBOutlet weak var coverImageHeight: NSLayoutConstraint!
-    @IBOutlet weak var coverImageTop: NSLayoutConstraint!
 
     var cardList: [ReportItemModel] = ReportMockData.list
 
@@ -75,22 +73,6 @@ class UserViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.clear
-    }
-}
-
-extension UserViewController: UIScrollViewDelegate {
-
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let contentOffsetY = floor(scrollView.contentOffset.y)
-
-        print("滑动偏移\(contentOffsetY)")
-
-        if contentOffsetY <= -50 {
-            let height = floor(imageHeight - contentOffsetY)
-
-            coverImageHeight.constant = height
-            print("图片高度 \(coverImageView.frame) \(coverImageView.constraints)")
-        }
     }
 }
 
