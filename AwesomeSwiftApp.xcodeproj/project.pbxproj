@@ -18,6 +18,7 @@
 		38CF65B3160534529D8C0ADD /* Pods_AwesomeSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ABCB4B50669FECE8F50EB5 /* Pods_AwesomeSwiftApp.framework */; };
 		553FC23C214047CB001D9362 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FC23B214047CB001D9362 /* R.generated.swift */; };
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
+		93224B3525C1A9D500D24008 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */; };
 		9324074623ACE0E50025013F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324074423ACE0E50025013F /* RootViewController.swift */; };
 		932AA0C224BF5884000C8E94 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AA0C124BF5884000C8E94 /* DemoModel.swift */; };
 		932EB03A25175F3200E55BB3 /* DemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */; };
@@ -122,6 +123,7 @@
 		8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9304D93F2557D70600E8AEDE /* DispatchGroupPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DispatchGroupPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		931E6F422557DFDE00A4DEAD /* ThreadSafePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreadSafePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		932AA0C124BF5884000C8E94 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +411,14 @@
 				553FC23B214047CB001D9362 /* R.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		93224B3325C1A9B500D24008 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */,
+			);
+			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 		932AA0BC24BF5474000C8E94 /* Views */ = {
@@ -701,6 +711,7 @@
 		93A1759923A4A15400A684D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				93224B3325C1A9B500D24008 /* UIScrollView */,
 				934AF4C22512239500AD0A9E /* UIFont */,
 				934AF4BF2511DD7100AD0A9E /* UITextField */,
 				939268E92510828F0074D7C4 /* UIImage */,
@@ -1073,6 +1084,7 @@
 				93497EA9240EA66B00A40AE2 /* ContentView.swift in Sources */,
 				93B4BFD82503664E00592072 /* UIScreenExtension.swift in Sources */,
 				939268E4250E74EF0074D7C4 /* Reusable.swift in Sources */,
+				93224B3525C1A9D500D24008 /* UIScrollViewExtension.swift in Sources */,
 				93DCD01F23CC162A006DDEFD /* MenuItem.swift in Sources */,
 				2A9222821F38797600A648E6 /* ConfigurationManager.swift in Sources */,
 				934AF4C12511DD8E00AD0A9E /* UITextFieldExtension.swift in Sources */,
