@@ -33,6 +33,7 @@ target 'AwesomeSwiftApp' do
   pod 'ParallaxHeader', '~> 3.0.0'
   pod 'SkeletonView'
   pod 'MJRefresh'
+  pod 'SnapKit', '~> 5.0.0'
   pod 'Permission/Camera'
   pod 'Permission/Notifications'
   pod 'AlicloudAPM', '~> 1.0.0'

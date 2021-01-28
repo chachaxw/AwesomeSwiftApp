@@ -6,18 +6,19 @@
 //  Copyright © 2021 Chacha. All rights reserved.
 //
 
-import UIKit
 import ObjectiveC.runtime
+import ParallaxHeader
+import UIKit
 
 /**
  A UIScrollView extension with a ParallaxHeader.
  */
 extension UIScrollView {
-    
+
     private struct AssociatedKeys {
         static var descriptiveName = "AssociatedKeys.DescriptiveName.parallaxHeader"
     }
-    
+
     public var parallaxHeader: ParallaxHeader {
         get {
             if let header = objc_getAssociatedObject(
@@ -26,14 +27,14 @@ extension UIScrollView {
             ) as? ParallaxHeader {
                 return header
             }
-            
+
             let header = ParallaxHeader()
             self.parallaxHeader = header
             return header
         }
-        
+
         set(parallaxHeader) {
-            parallaxHeader.scrollView = self
+            parallaxHeader.view = self
             objc_setAssociatedObject(
                 self,
                 &AssociatedKeys.descriptiveName,

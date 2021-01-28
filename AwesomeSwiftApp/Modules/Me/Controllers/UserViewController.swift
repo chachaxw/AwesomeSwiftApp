@@ -10,15 +10,12 @@ import UIKit
 
 class UserViewController: UIViewController {
     private let cellIdentifier = "ReportCollectionCell"
-    private var imageHeight: CGFloat = 0
 
-    @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet weak private var coverImageView: UIImageView!
     @IBOutlet weak private var userProfileView: UIView!
     @IBOutlet weak private var avatarView: UIImageView!
     @IBOutlet weak private var usernameView: UILabel!
     @IBOutlet weak private var settingButton: UIButton!
-    @IBOutlet weak private var contentView: UIView!
     @IBOutlet weak private var collectionView: UICollectionView!
 
     var cardList: [ReportItemModel] = ReportMockData.list
@@ -26,12 +23,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scrollView.delegate = self
-        scrollView.alwaysBounceVertical = true
-        imageHeight = coverImageView.frame.height
         view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
-        contentView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
-        contentView.layer.cornerRadius = 16
 
         // Do any additional setup after loading the view.
         initProfileView()
@@ -72,11 +64,22 @@ class UserViewController: UIViewController {
     func initCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.clear
+        collectionView.layer.cornerRadius = 16
+        collectionView.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
+//        collectionView.parallaxHeader.view = coverImageView
+//        collectionView.parallaxHeader.height = coverImageView.frame.height
     }
 }
 
-extension UserViewController: UICollectionViewDataSource {
+extension UserViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        insetForSectionAt section: Int
+    ) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardList.count
@@ -101,19 +104,7 @@ extension UserViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-}
 
-extension UserViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(
-        _ collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        insetForSectionAt section: Int
-    ) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
-    }
-}
-
-extension UserViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.contentView.theme_backgroundColor = [AppColors.secondaryGrayColor, AppColors.deepBlackColor]

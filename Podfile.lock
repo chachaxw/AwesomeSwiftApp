@@ -108,6 +108,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
   - SkeletonView (1.8.8)
+  - SnapKit (5.0.1)
   - SwiftDate (5.1.0)
   - SwiftLint (0.31.0)
   - SwiftTheme (0.5.2)
@@ -152,6 +153,7 @@ DEPENDENCIES:
   - RxFlow
   - RxSwift (~> 5)
   - SkeletonView
+  - SnapKit (~> 5.0.0)
   - SwiftDate (~> 5.0)
   - SwiftLint (= 0.31.0)
   - SwiftTheme
@@ -208,6 +210,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SkeletonView
+    - SnapKit
     - SwiftDate
     - SwiftLint
     - SwiftTheme
@@ -259,6 +262,7 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SkeletonView: e37c282c1b228547b83daf47605f79c3aeb1df9a
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftTheme: 8b02c479bb4441b2b6790ac126e961b1b6fb0932
@@ -270,6 +274,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 19c3e181f8d412abfd55578ff74b5f38b59847e1
+PODFILE CHECKSUM: b5ed35d8b9302fd69410af5776a628943a822732
 
 COCOAPODS: 1.9.3
