@@ -258,7 +258,7 @@
         <scene sceneID="s5d-PS-Cvt">
             <objects>
                 <viewController storyboardIdentifier="HomeStoryboard" title="Discover" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoG-Bc-nPs" customClass="HomeViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3" customClass="UIScrollView">
+                    <view key="view" contentMode="scaleToFill" id="7Ke-ma-oB3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -377,7 +377,6 @@
                         <outlet property="collectionView" destination="NtY-Xd-yZ3" id="3ft-xR-eq4"/>
                         <outlet property="dateLabel" destination="yoo-hm-fIq" id="Ahs-v8-mt5"/>
                         <outlet property="navigationBar" destination="D4N-fJ-UYq" id="ccB-Ys-d7U"/>
-                        <outlet property="scrollView" destination="7Ke-ma-oB3" id="EOE-4S-UJ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYq-lm-Ga5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

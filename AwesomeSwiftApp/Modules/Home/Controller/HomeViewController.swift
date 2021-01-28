@@ -14,8 +14,9 @@ import UIKit
 class HomeViewController: UIViewController {
     private let cellIdentifier = "DemoCollectionCell"
     private let detailIdentifier = "DemoDetailStoryboard"
+    private let header = MJRefreshNormalHeader()
+    private let footer = MJRefreshAutoNormalFooter()
 
-    @IBOutlet weak private var scrollView: UIScrollView!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var navigationBar: UINavigationBar!
     @IBOutlet weak private var dateLabel: UILabel!
@@ -25,9 +26,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.scrollView.delegate = self
+        // 下拉刷新
+        header.stateLabel?.isHidden = true
+        header.lastUpdatedTimeLabel?.isHidden = true
+        header.setRefreshingTarget(self, refreshingAction: Selector(("headerRefresh")))
+        collectionView.mj_header = header
+
+        // 上拉加载
+        footer.setRefreshingTarget(self, refreshingAction: Selector(("footerRefresh")))
+        collectionView.mj_footer = footer
+
         dateLabel.text = Date().toFormat("EEE, d MMM")
-        self.view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
+        view.theme_backgroundColor = [AppColors.lightGrayColor, AppColors.darkGrayColor]
 
         if #available(iOS 11, *) {
             navigationBar.prefersLargeTitles = true
@@ -39,9 +49,21 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // 下拉刷新
+    func headerRefresh() {
+        print("下拉刷新")
+        // 结束刷新
+        collectionView.mj_header?.endRefreshing()
+    }
+
+    // 上拉加载
+    func footerRefresh() {
+        print("上拉加载")
+    }
 }
 
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath)
@@ -68,9 +90,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardList.count
     }
-}
 
-extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard (UIStoryboard.main?.instantiateViewController(
                 withIdentifier: detailIdentifier) as? DemoDetailViewController) != nil else {
@@ -89,9 +109,7 @@ extension HomeViewController: UICollectionViewDelegate {
         _ = collectionView.cellForItem(at: indexPath)
 //        cell?.animate(shouldScale: false)
     }
-}
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
