@@ -9,35 +9,6 @@
 import UIKit
 
 extension UIView {
-    @objc var borderColor: UIColor {
-        set {
-            self.layer.borderColor = newValue.cgColor
-            self.layer.borderWidth = 1
-        }
-        get {
-            return .clear
-        }
-    }
-
-    @objc var radius: CGFloat {
-        set {
-            self.layer.masksToBounds = true
-            self.layer.cornerRadius = newValue
-        }
-        get {
-            return 0
-        }
-    }
-
-    @objc var borderWidth: CGFloat {
-        set {
-            self.layer.borderWidth = newValue
-        }
-        get {
-            return 0
-        }
-    }
-
     /// Set round corners
     /// - Parameters:
     ///     - corners: The round corners
@@ -102,6 +73,16 @@ extension UIView {
         backgroundColor = nil
         layer.backgroundColor = backgroundCGColor
     }
+    
+    // Set gradient backgrounnd color
+    func setGradientBackgroundColor(startColor: UIColor, endColor: UIColor, frame: CGRect) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+        gradientLayer.frame = frame
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
 
 // MARK: - Corner Radius
@@ -123,5 +104,28 @@ extension UIView {
         layer.cornerRadius = radius
         layer.maskedCorners = maskedCorners
         layer.masksToBounds = true
+    }
+    
+    private struct AssociatedKeys {
+        static var descriptiveName = "AssociatedKeys.DescripttiveName.gradientMaskView"
+    }
+    
+    private var gradientMaskView: GradientMaskView {
+        get {
+            if let maskView = objc_getAssociatedObject(self, &AssociatedKeys.descriptiveName) as? GradientMaskView {
+                return maskView
+            }
+
+            self.gradientMaskView = GradientMaskView()
+            return self.gradientMaskView
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.descriptiveName, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+    }
+    
+    class GradientMaskView {
+        
     }
 }

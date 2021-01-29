@@ -6,40 +6,72 @@
 //  Copyright © 2020 Chacha. All rights reserved.
 //
 
+import ParallaxHeader
+import SnapKit
 import UIKit
 
 class DemoDetailViewController: UIViewController {
 
-    @IBOutlet weak private var overlayView: UIView!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var coverImage: UIImageView!
+    private var navHeight: CGFloat {
+        return navigationController?.navigationBar.layer.frame.height ?? 44
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        initOverlayView()
+        initTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.barStyle(.clear)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
 
-    func initOverlayView() {
+    func initTableView() {
         let layer = CAGradientLayer()
         layer.colors = [
             UIColor(netHex: 0x000000, alpha: 0.5).cgColor,
             UIColor(netHex: 0xffffff, alpha: 0).cgColor,
             UIColor(netHex: 0x000000, alpha: 0.5).cgColor
         ]
-        layer.frame = overlayView.bounds
+        layer.frame = coverImage.bounds
         layer.startPoint = CGPoint(x: 0, y: 0)
         layer.endPoint = CGPoint(x: 0, y: 1)
-        overlayView.layer.insertSublayer(layer, at: 0)
+        coverImage.layer.addSublayer(layer)
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.parallaxHeader.view = coverImage
+        tableView.parallaxHeader.height = 400
+        tableView.parallaxHeader.minimumHeight = 0
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(self.view).offset(-(UIScreen.statusBarHeight + navHeight))
+        }
+        tableView.parallaxHeader.parallaxHeaderDidScrollHandler = { parallaxHeader in
+            print(parallaxHeader.progress)
+
+            if parallaxHeader.progress <= 0.5 {
+                self.navigationController?.navigationBar.tintColor = .black
+            } else {
+                self.navigationController?.navigationBar.tintColor = .white
+            }
+
+            if parallaxHeader.progress <= 1.0 {
+                self.navigationController?.navigationBar.setBackgroundImage(
+                    UIColor(netHex: 0xffffff, alpha: 1).image(),
+                    for: .default
+                )
+            }
+        }
     }
 
     /*
@@ -51,4 +83,22 @@ class DemoDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+extension DemoDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+
+        cell.textLabel?.text = "some row text"
+
+        return cell
+    }
 }

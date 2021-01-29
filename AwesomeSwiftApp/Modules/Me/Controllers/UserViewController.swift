@@ -51,7 +51,7 @@ class UserViewController: UIViewController {
             size: CGSize(width: 24, height: 24)
         )
 
-        settingButton.radius = 10.0
+        settingButton.layer.cornerRadius = 10
         settingButton.setImage(icon, for: .normal)
         settingButton.setShadow(
             color: UIColor.Theme.LightShadowColor,

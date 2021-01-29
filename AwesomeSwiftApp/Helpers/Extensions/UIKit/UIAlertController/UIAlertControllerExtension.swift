@@ -71,7 +71,12 @@ extension UIAlertController {
     ///              Default value is nil.
     /// - Returns: The `UIAlertAction` created.
     @discardableResult
-    public func addAction(title: String, style: UIAlertAction.Style = .default, isEnabled: Bool = true, handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+    public func addAction(
+        title: String,
+        style: UIAlertAction.Style = .default,
+        isEnabled: Bool = true,
+        handler: ((UIAlertAction) -> Void)? = nil
+    ) -> UIAlertAction {
         let action = UIAlertAction(title: title, style: style, handler: handler)
         action.isEnabled = isEnabled
         addAction(action)
