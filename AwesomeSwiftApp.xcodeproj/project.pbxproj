@@ -20,6 +20,7 @@
 		69E40CE53FE6F6F8D2774A28 /* Pods_AwesomeSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8904EFA88EE597E4E2030796 /* Pods_AwesomeSwiftAppTests.framework */; };
 		93224B3525C1A9D500D24008 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */; };
 		9324074623ACE0E50025013F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324074423ACE0E50025013F /* RootViewController.swift */; };
+		9329B04C25C4042D008C48C1 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329B04B25C4042D008C48C1 /* UINavigationController.swift */; };
 		932AA0C224BF5884000C8E94 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AA0C124BF5884000C8E94 /* DemoModel.swift */; };
 		932EB03A25175F3200E55BB3 /* DemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */; };
 		932EB03D251761A600E55BB3 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EB03C251761A600E55BB3 /* ShadowView.swift */; };
@@ -64,7 +65,6 @@
 		93D09D1C252229F5006C89B9 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09D1B252229F5006C89B9 /* FeaturedViewController.swift */; };
 		93D09D3525237619006C89B9 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D09D3425237618006C89B9 /* AppStep.swift */; };
 		93DB5E2E23A0DFD500D14761 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 93DB5E2D23A0DFD500D14761 /* Rswift */; };
-		93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */; };
 		93DCD01623C83EEF006DDEFD /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01523C83EEF006DDEFD /* Email.swift */; };
 		93DCD01923C8445C006DDEFD /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01823C8445C006DDEFD /* EmailView.swift */; };
 		93DCD01B23C88AC4006DDEFD /* EmailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DCD01A23C88AC4006DDEFD /* EmailListView.swift */; };
@@ -126,6 +126,7 @@
 		93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		93224BF225C3B13000D24008 /* SnapKitPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SnapKitPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		9329B04B25C4042D008C48C1 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		932AA0C124BF5884000C8E94 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
 		932EB03C251761A600E55BB3 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 		93D09CAB2521A898006C89B9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		93D09D1B252229F5006C89B9 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		93D09D3425237618006C89B9 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
-		93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		93DCD01523C83EEF006DDEFD /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		93DCD01823C8445C006DDEFD /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		93DCD01A23C88AC4006DDEFD /* EmailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailListView.swift; sourceTree = "<group>"; };
@@ -430,6 +430,14 @@
 			path = SnapKitPlayground;
 			sourceTree = "<group>";
 		};
+		9329B04F25C4043D008C48C1 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				9329B04B25C4042D008C48C1 /* UINavigationController.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
 		932AA0BC24BF5474000C8E94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,7 +645,6 @@
 			isa = PBXGroup;
 			children = (
 				937F0BF323B485C600FD0126 /* UIViewExtension.swift */,
-				93DCD00F23C342D5006DDEFD /* UIView+Gradient.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -720,6 +727,7 @@
 		93A1759923A4A15400A684D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9329B04F25C4043D008C48C1 /* UINavigationController */,
 				93224B3325C1A9B500D24008 /* UIScrollView */,
 				934AF4C22512239500AD0A9E /* UIFont */,
 				934AF4BF2511DD7100AD0A9E /* UITextField */,
@@ -1122,7 +1130,6 @@
 				939268DB250E58E30074D7C4 /* UIStoryboardExtension.swift in Sources */,
 				93DCD02323CC1AF3006DDEFD /* Array+Utilities.swift in Sources */,
 				933EBD35257F7D4D0046AE1A /* ReportItemModel.swift in Sources */,
-				93DCD01023C342D5006DDEFD /* UIView+Gradient.swift in Sources */,
 				93E77F3823A37CEE00A89123 /* AppTheme.swift in Sources */,
 				93DCD01D23C898C7006DDEFD /* Data.swift in Sources */,
 				93DF248F25394EFB00FA15AF /* UserDefaultsKeys.swift in Sources */,
@@ -1133,6 +1140,7 @@
 				93F9260925459BA500E7C6C6 /* HomeFlow.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				93860AE8250E447000F72BA0 /* LoginViewController.swift in Sources */,
+				9329B04C25C4042D008C48C1 /* UINavigationController.swift in Sources */,
 				93DF245A2538227000FA15AF /* PreferencesService.swift in Sources */,
 				939268E6250F03250074D7C4 /* NibLoadable.swift in Sources */,
 				C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */,

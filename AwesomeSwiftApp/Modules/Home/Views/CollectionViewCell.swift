@@ -10,11 +10,14 @@ import FontAwesome
 import Log
 import UIKit
 
+fileprivate let coverUrl = "https://avatars.githubusercontent.com/u/9986672?s=460&u=be9147643552a1a1ec8c986ec9954e8c249d6516&v=4"
+
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var labelText: UILabel!
     @IBOutlet weak private var titleText: UILabel!
     @IBOutlet weak private var likeButton: UIButton!
     @IBOutlet weak private var coverImage: UIImageView!
+
     let log = Logger()
 
     override func awakeFromNib() {
@@ -54,7 +57,7 @@ class CollectionViewCell: UICollectionViewCell {
             size: CGSize(width: 24, height: 24)
         )
 
-        likeButton.radius = 10.0
+        likeButton.layer.cornerRadius = 10
         likeButton.setImage(isActive ? heartSolidIcon : heartIcon, for: .normal)
         likeButton.setShadow(
             color: UIColor.Theme.LightShadowColor,
@@ -66,7 +69,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
 
     func setCoverImageFromUrl(imgUrl: String) {
-        let url: URL = URL(string: imgUrl) ?? URL(string: "https://github.com/chachaxw")!
+        let url: URL = URL(string: imgUrl) ?? URL(string: coverUrl)!
         let data: NSData! = NSData(contentsOf: url)
 
         if data != nil {

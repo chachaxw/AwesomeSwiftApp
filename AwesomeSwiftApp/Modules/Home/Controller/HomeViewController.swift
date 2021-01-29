@@ -116,6 +116,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         let width = UIScreen.main.bounds.width - 14 * 2
-        return CGSize(width: width, height: 320)
+        return CGSize(width: width, height: 360)
     }
 }
