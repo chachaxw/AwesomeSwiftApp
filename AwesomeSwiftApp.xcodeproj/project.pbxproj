@@ -124,6 +124,7 @@
 		9304D93F2557D70600E8AEDE /* DispatchGroupPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DispatchGroupPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		931E6F422557DFDE00A4DEAD /* ThreadSafePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreadSafePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		93224BF225C3B13000D24008 /* SnapKitPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SnapKitPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9324074423ACE0E50025013F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		932AA0C124BF5884000C8E94 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		932EB03925175F3200E55BB3 /* DemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +420,14 @@
 				93224B3425C1A9D500D24008 /* UIScrollViewExtension.swift */,
 			);
 			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		93224BE925C3A74F00D24008 /* SnapKitPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				93224BF225C3B13000D24008 /* SnapKitPlayground.playground */,
+			);
+			path = SnapKitPlayground;
 			sourceTree = "<group>";
 		};
 		932AA0BC24BF5474000C8E94 /* Views */ = {
@@ -728,13 +737,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		93A343F3257F649D00BEE986 /* DesignPattern */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DesignPattern;
-			sourceTree = "<group>";
-		};
 		93A343F8257F741D00BEE986 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -841,7 +843,7 @@
 		93FF425625530656004F982B /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				93A343F3257F649D00BEE986 /* DesignPattern */,
+				93224BE925C3A74F00D24008 /* SnapKitPlayground */,
 				93A91CA32578C10B003D0042 /* GCDPlaygrounds */,
 			);
 			path = Playgrounds;
