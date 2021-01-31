@@ -37,17 +37,6 @@ class DemoDetailViewController: UIViewController {
     }
 
     func initTableView() {
-        let layer = CAGradientLayer()
-        layer.colors = [
-            UIColor(netHex: 0x000000, alpha: 0.5).cgColor,
-            UIColor(netHex: 0xffffff, alpha: 0).cgColor,
-            UIColor(netHex: 0x000000, alpha: 0.5).cgColor
-        ]
-        layer.frame = coverImage.bounds
-        layer.startPoint = CGPoint(x: 0, y: 0)
-        layer.endPoint = CGPoint(x: 0, y: 1)
-        coverImage.layer.addSublayer(layer)
-
         tableView.delegate = self
         tableView.dataSource = self
         tableView.parallaxHeader.view = coverImage

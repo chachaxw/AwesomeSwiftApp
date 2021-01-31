@@ -116,16 +116,63 @@ extension UIView {
                 return maskView
             }
 
-            self.gradientMaskView = GradientMaskView()
+            self.gradientMaskView = GradientMaskView(to: self)
             return self.gradientMaskView
         }
-        
+
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.descriptiveName, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
     
     class GradientMaskView {
+        private var maskView: UIView?
         
+        init(to view: UIView) {
+            self.maskView = view
+        }
+        
+        func enable(isHidden: Bool = false) {
+            if maskView == nil {
+                applyGradientMask()
+            }
+
+            self.maskView?.isHidden = isHidden
+        }
+
+        func applyGradientMask() {
+            let layer = CAGradientLayer()
+            layer.colors = [
+                UIColor(netHex: 0x000000, alpha: 0.5).cgColor,
+                UIColor(netHex: 0xffffff, alpha: 0).cgColor,
+                UIColor(netHex: 0x000000, alpha: 0.5).cgColor
+            ]
+            layer.frame = maskView?.bounds ?? CGRect()
+            layer.startPoint = CGPoint(x: 0, y: 0)
+            layer.endPoint = CGPoint(x: 0, y: 1)
+            maskView?.layer.addSublayer(layer)
+        }
+        
+        private func addAlignedConstraints() {
+//            translatesAutoresizingMaskIntoConstraints = false
+            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.top)
+            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.leading)
+            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.bottom)
+            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.trailing)
+        }
+
+        private func addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute) {
+            maskView?.addConstraint(
+                NSLayoutConstraint(
+                    item: self,
+                    attribute: attribute,
+                    relatedBy: NSLayoutConstraint.Relation.equal,
+                    toItem: maskView,
+                    attribute: attribute,
+                    multiplier: 1,
+                    constant: 0
+                )
+            )
+        }
     }
 }

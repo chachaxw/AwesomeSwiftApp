@@ -35,6 +35,7 @@ extension UIScrollView {
 
         set(parallaxHeader) {
             parallaxHeader.view = self
+
             objc_setAssociatedObject(
                 self,
                 &AssociatedKeys.descriptiveName,
