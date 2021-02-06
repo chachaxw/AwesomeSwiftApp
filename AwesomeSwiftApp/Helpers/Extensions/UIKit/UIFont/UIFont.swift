@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIFont {
-    
+
     /// A utility object for obtaining custom fonts that scale to support Dynamic Type.
     /// - Parameters:
     ///     - style: The TextStyle that will be apply to the font.
@@ -24,15 +24,18 @@ extension UIFont {
     ) -> UIFont {
         let traitcollection = UITraitCollection(preferredContentSizeCategory: sizeCategory)
         let defaultTraitCollection = UITraitCollection(traitsFrom: [UIScreen.main.traitCollection, traitcollection])
-        let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: style, compatibleWith: defaultTraitCollection)
+        let descriptor = UIFontDescriptor.preferredFontDescriptor(
+            withTextStyle: style,
+            compatibleWith: defaultTraitCollection
+        )
         let fontDescriptor: UIFont
-        
+
         if let traits = traits, let traitsDescriptor = descriptor.withSymbolicTraits(traits) {
             fontDescriptor = UIFont(descriptor: traitsDescriptor, size: 0)
         } else {
             fontDescriptor = UIFont(descriptor: descriptor, size: 0)
         }
-        
+
         return UIFontMetrics(forTextStyle: style).scaledFont(for: fontDescriptor)
     }
 }

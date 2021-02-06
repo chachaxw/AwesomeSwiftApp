@@ -43,14 +43,14 @@ struct EmailListView: View {
                         .padding(.bottom, 5)
                         .padding(.horizontal, 16)
                         .contextMenu {
-                            Button(action: {}) {
+                            Button(action: {}, label: {
                                 Text("Delete")
                                 Image(systemName: "trash")
-                            }
-                            Button(action: {}) {
+                            })
+                            Button(action: {}, label: {
                                 Text("Archive")
                                 Image(systemName: "archivebox")
-                            }
+                            })
                         }
                 }
                 .padding(.top, 16)

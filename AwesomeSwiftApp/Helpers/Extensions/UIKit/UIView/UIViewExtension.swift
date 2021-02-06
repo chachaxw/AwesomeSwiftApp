@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - Corner Radius and Gradient Corners
+
 extension UIView {
     /// Set round corners
     /// - Parameters:
@@ -73,7 +75,7 @@ extension UIView {
         backgroundColor = nil
         layer.backgroundColor = backgroundCGColor
     }
-    
+
     // Set gradient backgrounnd color
     func setGradientBackgroundColor(startColor: UIColor, endColor: UIColor, frame: CGRect) {
         let gradientLayer = CAGradientLayer()
@@ -86,6 +88,7 @@ extension UIView {
 }
 
 // MARK: - Corner Radius
+
 extension UIView {
 
     /// Apply a corner radius to the view.
@@ -105,12 +108,17 @@ extension UIView {
         layer.maskedCorners = maskedCorners
         layer.masksToBounds = true
     }
-    
+}
+
+// MARK: - Gradient Mask View 渐变蒙层
+
+extension UIView {
     private struct AssociatedKeys {
         static var descriptiveName = "AssociatedKeys.DescripttiveName.gradientMaskView"
     }
-    
-    private var gradientMaskView: GradientMaskView {
+
+    /// 带有私有设置方法的属性
+    private (set) var gradientMaskView: GradientMaskView {
         get {
             if let maskView = objc_getAssociatedObject(self, &AssociatedKeys.descriptiveName) as? GradientMaskView {
                 return maskView
@@ -121,17 +129,22 @@ extension UIView {
         }
 
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.descriptiveName, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            objc_setAssociatedObject(
+                self,
+                &AssociatedKeys.descriptiveName,
+                newValue,
+                .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+            )
         }
     }
-    
+
     class GradientMaskView {
         private var maskView: UIView?
-        
+
         init(to view: UIView) {
             self.maskView = view
         }
-        
+
         func enable(isHidden: Bool = false) {
             if maskView == nil {
                 applyGradientMask()
@@ -141,38 +154,43 @@ extension UIView {
         }
 
         func applyGradientMask() {
+            let overlay = UIView()
             let layer = CAGradientLayer()
             layer.colors = [
                 UIColor(netHex: 0x000000, alpha: 0.5).cgColor,
                 UIColor(netHex: 0xffffff, alpha: 0).cgColor,
                 UIColor(netHex: 0x000000, alpha: 0.5).cgColor
             ]
-            layer.frame = maskView?.bounds ?? CGRect()
             layer.startPoint = CGPoint(x: 0, y: 0)
             layer.endPoint = CGPoint(x: 0, y: 1)
-            maskView?.layer.addSublayer(layer)
-        }
-        
-        private func addAlignedConstraints() {
-//            translatesAutoresizingMaskIntoConstraints = false
-            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.top)
-            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.leading)
-            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.bottom)
-            addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.trailing)
-        }
+            overlay.layer.addSublayer(layer)
 
-        private func addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute) {
-            maskView?.addConstraint(
-                NSLayoutConstraint(
-                    item: self,
-                    attribute: attribute,
-                    relatedBy: NSLayoutConstraint.Relation.equal,
-                    toItem: maskView,
-                    attribute: attribute,
-                    multiplier: 1,
-                    constant: 0
-                )
-            )
+            maskView?.addSubview(overlay)
+            overlay.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
         }
+    }
+
+    private func addAlignedConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+        addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.top)
+        addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.leading)
+        addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.bottom)
+        addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute.trailing)
+    }
+
+    private func addAlignConstraintToSuperview(attribute: NSLayoutConstraint.Attribute) {
+        superview?.addConstraint(
+            NSLayoutConstraint(
+                item: self,
+                attribute: attribute,
+                relatedBy: NSLayoutConstraint.Relation.equal,
+                toItem: superview,
+                attribute: attribute,
+                multiplier: 1,
+                constant: 0
+            )
+        )
     }
 }

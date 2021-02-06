@@ -27,7 +27,6 @@ class DemoDetailViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = .white
         navigationController?.barStyle(.clear)
     }
@@ -39,6 +38,9 @@ class DemoDetailViewController: UIViewController {
     func initTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+
+        coverImage.gradientMaskView.enable()
+
         tableView.parallaxHeader.view = coverImage
         tableView.parallaxHeader.height = 400
         tableView.parallaxHeader.minimumHeight = 0
@@ -56,7 +58,7 @@ class DemoDetailViewController: UIViewController {
 
             if parallaxHeader.progress <= 1.0 {
                 self.navigationController?.navigationBar.setBackgroundImage(
-                    UIColor(netHex: 0xffffff, alpha: 1).image(),
+                    UIColor(netHex: 0xffffff, alpha: 1 - parallaxHeader.progress).image(),
                     for: .default
                 )
             }
