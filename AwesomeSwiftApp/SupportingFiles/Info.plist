@@ -31,23 +31,23 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Configuration</key>
+	<string>$(CONFIGURATION)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
 		<string>weixinULAPI</string>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>Configuration</key>
-	<string>$(CONFIGURATION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>App needs to access your Camera?</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App needs to access your Photo Library?</string>
 	<key>NSNetworkVolumesUsageDescription</key>
 	<string>App needs to access your network?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App needs to access your Photo Library?</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

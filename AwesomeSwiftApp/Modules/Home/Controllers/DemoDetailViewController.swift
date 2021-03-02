@@ -39,7 +39,7 @@ class DemoDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        coverImage.gradientMaskView.enable()
+//        coverImage.gradientMaskView.enable()
 
         tableView.parallaxHeader.view = coverImage
         tableView.parallaxHeader.height = 400

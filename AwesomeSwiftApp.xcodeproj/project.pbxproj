@@ -1311,7 +1311,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -warn-long-expression-type-checking=500";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chacha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
 				PRODUCT_NAME = "Swift App";
 				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeSwiftApp/AwesomeSwiftApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1335,7 +1335,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chacha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
 				PRODUCT_NAME = "Swift App";
 				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeSwiftApp/AwesomeSwiftApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1454,6 +1454,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = AwesomeSwiftApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1463,8 +1465,9 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chacha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AwesomeSwiftApp.chachaxw;
 				PRODUCT_NAME = "Swift App";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeSwiftApp/AwesomeSwiftApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
