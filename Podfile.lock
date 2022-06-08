@@ -106,9 +106,9 @@ PODS:
   - Permission/Core (3.1.2)
   - Permission/Notifications (3.1.2):
     - Permission/Core
-  - R.swift (5.0.0):
-    - R.swift.Library (~> 5.0.0)
-  - R.swift.Library (5.0.1)
+  - R.swift (5.4.1-alpha.5):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - RemoteDebugChannel (10.0.4.5):
     - AliHAProtocol (>= 10.0.0.3)
     - AliHASecurity
@@ -150,7 +150,7 @@ PODS:
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.2)
+  - Alamofire (~> 5.4)
   - AlicloudAPM (~> 1.0.0)
   - AlicloudCrash (~> 1.1.0)
   - AlicloudTLog (~> 1.0.0)
@@ -159,23 +159,23 @@ DEPENDENCIES:
   - DoraemonKit/WithLoad (~> 3.0.2)
   - FontAwesome.swift
   - Hero
-  - Localize-Swift (~> 2.0)
+  - Localize-Swift (~> 3.2.0)
   - Log
   - LookinServer
   - MJRefresh
   - ParallaxHeader (~> 3.0.0)
   - Permission/Camera
   - Permission/Notifications
-  - R.swift (= 5.0.0)
-  - RxCocoa (~> 5)
+  - R.swift (= 5.4.1-alpha.5)
+  - RxCocoa (~> 6.2.0)
   - RxFlow
-  - RxSwift (~> 5)
+  - RxSwift (~> 6.2.0)
   - SkeletonView
   - SnapKit (~> 5.0.0)
-  - SwiftDate (~> 5.0)
-  - SwiftLint (= 0.31.0)
+  - SwiftDate (~> 6.3.1)
+  - SwiftLint (= 0.43.1)
   - SwiftTheme
-  - SwiftyJSON (~> 4.0)
+  - SwiftyJSON (~> 5.0)
   - WechatOpenSDK
 
 SPEC REPOS:
@@ -280,8 +280,8 @@ SPEC CHECKSUMS:
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   ParallaxHeader: a343f55eb38f52a89c5820a77e14cf975b84e6aa
   Permission: 4821359fb4d4367fb59aa16df38fbba5722ac842
-  R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
-  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  R.swift: a73479da974c4f7b1591551e95c584f562af57fd
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RemoteDebugChannel: 6cf6628a167a1c6c530d32f21d16cf38a5a24bd4
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
   RxFlow: c5242626a73a03d0a0163f0ab795538c467b791f
