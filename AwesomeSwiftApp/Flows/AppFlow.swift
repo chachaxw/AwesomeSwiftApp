@@ -53,9 +53,9 @@ class AppFlow: Flow {
     func navigateToHomeScreen() -> FlowContributors {
         let homeFlow = HomeFlow(withServices: self.services)
 
-        Flows.whenReady(flow1: homeFlow) { [unowned self] root in
+        Flows.use(homeFlow, when: Flows.ExecuteStrategy.ready) { [unowned self] root in
             DispatchQueue.main.async {
-                self.rootViewCtrl.present(root, animated: true)
+                self.rootViewCtrl.pushViewController(root, animated: true)
             }
         }
 
@@ -80,7 +80,7 @@ class AppFlow: Flow {
     func navigateToOnboardingScreen() -> FlowContributors {
         let onboardingFlow = OnboardingFlow(withServices: self.services)
 
-        Flows.whenReady(flow1: onboardingFlow) { [unowned self] root in
+        Flows.use(onboardingFlow, when: Flows.ExecuteStrategy.ready) { [unowned self] root in
             DispatchQueue.main.async {
                 self.rootViewCtrl.present(root, animated: true)
             }

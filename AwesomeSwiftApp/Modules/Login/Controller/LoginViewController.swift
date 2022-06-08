@@ -61,12 +61,7 @@ class LoginViewController: UIViewController, Stepper {
             opacity: 1,
             radius: 16
         )
-        loginButton.setGradientCorners(
-            corners: UIRectCorner.allCorners,
-            with: radius,
-            startColor: UIColor(netHex: 0x4FACFE),
-            endColor: UIColor(netHex: 0x00F2FE)
-        )
+        loginButton.setRoundCorners(corners: UIRectCorner.allCorners, with: radius)
     }
 
     func initTextField() {

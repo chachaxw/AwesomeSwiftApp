@@ -47,20 +47,20 @@ class RootRouter {
 
         let appFlow = AppFlow(services: self.appServices)
 
-        Flows.whenReady(flow1: appFlow) { root in
+        Flows.use(appFlow, when: Flows.ExecuteStrategy.ready) { root in
             print("根视图控制器 \(String(describing: root))")
-//            root.view.backgroundColor = UIColor.Theme.LightGrayColor
-//            self.setRootViewController(controller: root, animatedWithOptions: nil)
+            root.view.backgroundColor = UIColor.Theme.LightGrayColor
+            self.setRootViewController(controller: root, animatedWithOptions: nil)
         }
 
         self.coordinator.coordinate(flow: appFlow, with: AppStepper(withServices: self.appServices))
 
-        guard let root = R.storyboard.main()
-            .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
-                return
-            }
-
-        root.view.backgroundColor = UIColor.Theme.LightGrayColor
-        setRootViewController(controller: root, animatedWithOptions: nil)
+//        guard let root = R.storyboard.main()
+//            .instantiateViewController(withIdentifier: mainId) as? RootViewController else {
+//                return
+//            }
+//
+//        root.view.backgroundColor = UIColor.Theme.LightGrayColor
+//        setRootViewController(controller: root, animatedWithOptions: nil)
     }
 }
