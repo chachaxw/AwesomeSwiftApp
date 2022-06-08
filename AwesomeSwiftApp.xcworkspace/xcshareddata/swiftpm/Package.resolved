@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "FontAwesome",
-        "repositoryURL": "https://github.com/thii/FontAwesome.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "51f059d794d1435a02c0ec6212a930243e1e40e0",
-          "version": "1.8.2"
-        }
-      },
-      {
-        "package": "R.swift.Library",
-        "repositoryURL": "https://github.com/mac-cain13/R.swift.Library",
-        "state": {
-          "branch": null,
-          "revision": "4a09ece7d0a30edcd95462ce7d252dd4d3a49843",
-          "version": "5.1.0"
-        }
+  "pins" : [
+    {
+      "identity" : "fontawesome.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/thii/FontAwesome.swift.git",
+      "state" : {
+        "revision" : "51f059d794d1435a02c0ec6212a930243e1e40e0",
+        "version" : "1.8.2"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "r.swift.library",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mac-cain13/R.swift.Library",
+      "state" : {
+        "revision" : "4a09ece7d0a30edcd95462ce7d252dd4d3a49843",
+        "version" : "5.1.0"
+      }
+    }
+  ],
+  "version" : 2
 }
